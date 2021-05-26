@@ -1,0 +1,15 @@
+{
+  "package-id": "radiation-dose-summary",
+  "canonical": "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/",
+  "title": "Radiation Dose Summary for Diagnostic Procedures on FHIR",
+  "introduction": "Radiation Dose Summary for Diagnostic Procedures on FHIR",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/example/example-ig",
+      "status": "ci-build",
+      "current": true
+    }
+  ]
+}

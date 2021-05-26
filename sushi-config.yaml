@@ -1,0 +1,108 @@
+# ╭─────────────────────────────────ImplementationGuide-fish.json──────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: radiation-dose-summary
+canonical: http://hl7.org/fhir/fhir-radiation-dose-summary-ig/
+version: 0.1.0
+name: RadiationDoseSummaryForDiagnosticProceduresOnFHIR
+title: Radiation Dose Summary for Diagnostic Procedures on FHIR
+status: draft
+publisher: HL7 Imaging Integration Working Group
+contact:
+  - name: Abderrazek Boufahja
+    telecom:
+      - system: email
+        value: abderrazek.boufahja@ge.com
+description: A profile on the sharing of Radiation Dose Summary.
+license: CC0-1.0
+fhirVersion: 4.0.1
+parameters:
+  apply-publisher: true
+  apply-contact: true
+  show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: ci-build
+
+pages:
+  index.md:
+    title: Home
+    generation: markdown
+  intro.md:
+    title: Introduction and Overview
+    generation: markdown
+    problematic.md:
+      title: Problematic
+      generation: markdown
+    scope.md:
+      title: Scope
+      generation: markdown
+    usecases.md:
+      title: Use Cases
+      generation: markdown
+    mindose.md:
+      title: Minimal Radiation Information
+      generation: markdown
+    glossary.md:
+      title: Glossary
+      generation: markdown
+  archi.md:
+    title: Architecture and Implementation
+    generation: markdown
+    actors.md:
+      title: Actors
+      generation: markdown
+    architecture.md:
+      title: Architecture
+      generation: markdown
+    profiles.md:
+      title: Profiles and Extensions
+      generation: markdown
+    vocabulary.md:
+      title: Terminology
+      generation: markdown
+    sec.md:
+      title: Security Considerations
+      generation: markdown
+  testing.md:
+    title: Testing and Conformance
+    generation: markdown
+    testplan.md:
+      title: Test Plan
+      generation: markdown
+    testdata.md:
+      title: Test Data
+      generation: markdown
+    samples.md:
+      title: Resources Samples
+      generation: markdown
+
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  IG Home: index.html
+  Contents: toc.html
+
+  Introduction:
+    Problematic: problematic.html
+    Scope: scope.html
+    Use Cases: usecases.html
+    Minimal Radiation Information: mindose.html
+    Glossary: glossary.html
+  
+  Architecture and Implementation:
+    Actors: actors.html
+    Architecture: architecture.html
+    Profiles and Extensions: profiles.html
+    Terminology: vocabulary.html
+    Security Considerations: sec.html
+  
+  Testing and Conformance:
+    Test Plan: testplan.html
+    Test Data: testdata.html
+    Resources Samples: samples.html
+  
+  Artifact Index: artifacts.html
