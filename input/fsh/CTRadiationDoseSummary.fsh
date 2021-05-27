@@ -13,16 +13,22 @@ Description:    "CT Radiation Dose Summary report"
 * component ^slicing.rules = #open
 
 * device 1..1
+* device ^short = "The irradiating device"
+
+* hasMember[irradiationEvent] only Reference(CTIrradiationEventSummary)
 
 // Dose measurements - Study Level
 * component contains cTDoseLengthProductTotal 1..1
 
-* component[procedureReported].valueCodeableConcept.coding = SCT#77477000 "Computed Tomography X-Ray"
+* component[procedureReported].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 
 * component[cTDoseLengthProductTotal].code.coding = DCM#113813 "CT Dose Length Product Total"
 * component[cTDoseLengthProductTotal].value[x] only Quantity
 * component[cTDoseLengthProductTotal].value[x] 1..1
 * component[cTDoseLengthProductTotal].value[x].unit = "mGy.cm"
+
+* effective[x] ^short = "Coming from EV (113809, DCM, Start of X-Ray Irradiation) from TID-10011"
+* component[cTDoseLengthProductTotal] ^short = "Describe the EV(113813, DCM, CT Dose Length Product Total) element from TID-10012"
 
 Mapping: dicom-sr-for-CTRadiationDoseSummary
 Id: dicom-sr

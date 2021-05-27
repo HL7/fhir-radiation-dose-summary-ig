@@ -10,6 +10,8 @@ Description:    "Indication observation related to the radiation administration"
 
 * subject only Reference(Patient)
 * subject 1..1
+* subject ^short = "Related Patient"
 
 * value[x] 1..1
 * value[x] only CodeableConcept or string
+* value[x] ^short = "Indications description"

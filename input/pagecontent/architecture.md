@@ -31,7 +31,7 @@ During the process of creating the Radiation Dose Summary resources, the RDSP ac
 | FHIR Resource        |      Identifier from DICOM       |
 |--------------------------|-----------------------|
 | Patient | tag(0010,0020) Patient ID |
-| Practitioner | TID 1020(Person Participant).EV (113871, DCM, "Person ID") |
+| Practitioner | TID 1020(Person Participant).EV (113871, DCM, Person ID) |
 | ImagingStudy | tag(0020,000D) Study Instance UID |
 | Device | tag(0018,1000) Device Serial Number |
 {:.table-striped .table-bordered}

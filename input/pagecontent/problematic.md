@@ -1,5 +1,9 @@
 The IHE Dose Reporter actor from the IHE REM profile gather Radiation information and dose reports from modalities. However, there is no standardization of the exposure of the gathered data to third parties in light format/API. 
 
+![Problematic](./problematic.png){: width="800px"}
+
+<br clear="all" />
+
  Dose Management systems need to share information related to the exam to multiple third parties :
 
 * Mobile Applications: like patients related mobile application, where a patient may want to centralize the report of doses injected to him

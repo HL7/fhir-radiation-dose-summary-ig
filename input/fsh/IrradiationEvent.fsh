@@ -15,6 +15,8 @@ Description:    "Irradiation event Summary"
 * identifier[irradiationEventUID].system = "irradiation-event-uid"
 * identifier[irradiationEventUID].value 1..1
 
+* identifier[irradiationEventUID] ^short = "Identifier describing the Irradiation Event UID"
+
 * code.coding = DCM#113852 "Irradiation Event"
 * subject only Reference(Patient)
 * subject 1..1
@@ -22,3 +24,4 @@ Description:    "Irradiation event Summary"
 // EV (111526, DCM, "DateTime Started")
 * effective[x] only dateTime
 * effective[x] 1..1
+* effective[x] ^short = "Irradiation event start date time"

@@ -7,7 +7,11 @@ Title:          "CT Irradiation Event Summary"
 Description:    "CT Irradiation event Summary"
 
 * value[x] 0..0
+
 * bodySite 1..1
+* bodySite from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html
+* bodySite ^short = "The bodySite describes the related target region irradiated by this irradiation event"
+* bodySite ^comment = "The related target region is described by EV (123014, DCM, Target Region)"
 
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding"
@@ -27,6 +31,11 @@ Description:    "CT Irradiation event Summary"
 * component[ctdiPhantomType].value[x] only CodeableConcept
 * component[ctdiPhantomType].value[x] 1..1
 * component[ctdiPhantomType].valueCodeableConcept from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html (extensible)
+
+* component[meanCTDIvol] ^short = "Describe the EV(113830, DCM, Mean CTDIvol) element from TID-10013"
+* component[dlp] ^short = "Describe the EV(113838, DCM, DLP) element from  TID-10013"
+* component[ctdiPhantomType] ^short = "Describe the EV(113835, DCM, CTDIw Phantom Type) element from TID-10013"
+* effective[x] ^short = "Describe the EV(111526, DCM, DateTime Started) element from TID-10013"
 
 
 Mapping: dicom-sr-for-CTIrradiationEventSummary
