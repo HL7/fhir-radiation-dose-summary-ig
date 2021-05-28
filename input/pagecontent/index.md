@@ -22,6 +22,11 @@ This IG is organized into three main sections:
     * [Resources Samples](samples.html) - Samples of resources profiled following this IG
 
 ### Copyrights and acknowledgments
+TODO
+
+### Sponsors Working Groups
+* [Imaging Integration Work Group](http://www.hl7.org/Special/committees/imagemgt/index.cfm)
+* [Clinical Quality Information Work Group](http://www.hl7.org/Special/committees/cqi/index.cfm)
 
 ### Contributors
 

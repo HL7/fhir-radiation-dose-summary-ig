@@ -6,7 +6,7 @@ Profile:        CTRadiationDoseSummary
 Parent:         RadiationDoseSummary
 Id:             ct-radiation-dose-summary
 Title:          "CT Radiation Dose Summary"
-Description:    "CT Radiation Dose Summary report"
+Description:    "Defines the Minimal Dose Information related to CT irradiation events"
 
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding"

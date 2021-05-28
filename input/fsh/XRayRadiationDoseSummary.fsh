@@ -6,7 +6,7 @@ Profile:        XRayRadiationDoseSummary
 Parent:         RadiationDoseSummary
 Id:             xray-radiation-dose-summary
 Title:          "X-Ray Radiation Dose Summary"
-Description:    "X-Ray Radiation Dose Summary report"
+Description:    "Defines the Minimal Dose Information related to X-Ray procedures"
 
 * obeys xray-procedure-reported
 

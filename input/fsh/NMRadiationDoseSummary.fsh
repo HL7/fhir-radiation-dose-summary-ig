@@ -6,7 +6,7 @@ Profile:        NMRadiationDoseSummary
 Parent:         RadiationDoseSummary
 Id:             nm-radiation-dose-summary
 Title:          "Radiopharmaceutical Radiation Dose Summary"
-Description:    "Radiopharmaceutical Radiation Dose Summary report"
+Description:    "Defines the Minimal Dose Information related to NM procedures"
 
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding"

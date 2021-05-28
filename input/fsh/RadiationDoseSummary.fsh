@@ -6,7 +6,7 @@ Profile:        RadiationDoseSummary
 Parent:         Observation
 Id:             radiation-dose-summary
 Title:          "Radiation Dose Summary"
-Description:    "Radiation Dose Summary report"
+Description:    "General Structure describing a summary of an irradiation act"
 
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"

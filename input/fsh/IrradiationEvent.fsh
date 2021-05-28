@@ -4,7 +4,7 @@ Profile:        IrradiationEventSummary
 Parent:         Observation
 Id:             irradiation-event-summary
 Title:          "Irradiation Event Summary"
-Description:    "Irradiation event Summary"
+Description:    "General Structure describing a summary of an irradiation event"
 
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -21,7 +21,6 @@ Description:    "Irradiation event Summary"
 * subject only Reference(Patient)
 * subject 1..1
 
-// EV (111526, DCM, "DateTime Started")
 * effective[x] only dateTime
 * effective[x] 1..1
 * effective[x] ^short = "Irradiation event start date time"

@@ -4,7 +4,7 @@ Profile:        CTIrradiationEventSummary
 Parent:         IrradiationEventSummary
 Id:             ct-irradiation-event-summary
 Title:          "CT Irradiation Event Summary"
-Description:    "CT Irradiation event Summary"
+Description:    "Defines the Minimal Dose Information related to CT procedures"
 
 * value[x] 0..0
 
