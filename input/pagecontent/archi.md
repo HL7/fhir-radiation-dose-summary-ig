@@ -111,27 +111,58 @@ Once the resources are shared with the FHIR server, the Radiation Dose Summary C
 
 ### Terminology
 
-#### Value Sets <a name="valuesets"></a>
+#### Value Sets Defined
 These Value Sets have been defined for this implementation guide.
 
 1. [Isotopes Value Set](ValueSet-isotope-rds-vs.html)
 2. [Procedure Reported Type Value Set](ValueSet-procedure-reported-type-rds-vs.html)
 3. [Radiopharmaceuticals Value Set](ValueSet-radiopharmaceutical-rds-vs.html)
-4. DICOM ValueSet links:
-    1. [CID 4030 CT, MR and PET Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html)
-    2. [CID 4052 Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html)
-    3. [CID 33 Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html)
-    4. [CID 11 Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html)
-    5. [CID 25 Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html)
-    6. [CID 4021 PET Radiopharmaceutical](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4021.html)
-    7. [CID 18 Isotopes in Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html)
-    8. [CID 4020 PET Radionuclide](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html)
 
-#### Code Systems <a name="codesystems"></a>
-There are no Code Systems defined for this implementation guide.
+#### Value Sets Used
+DICOM ValueSet links:
+1. [CID 4030 CT, MR and PET Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html)
+2. [CID 4052 Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html)
+3. [CID 33 Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html)
+4. [CID 11 Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html)
+5. [CID 25 Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html)
+6. [CID 4021 PET Radiopharmaceutical](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4021.html)
+7. [CID 18 Isotopes in Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html)
+8. [CID 4020 PET Radionuclide](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html)
+
+#### Code Systems Defined
+There are no code systems defined in this IG.
+
+#### Code Systems Used
+This implementation guide draws on a number of formal code systems.
+
+The following table presents the external code systems (and naming conventions) adopted in this implementation guide: 
+
+| Code System Key | Code System Name | Code System | Application |
+|--------------------------|-----------------------|--------------|---------------|
+| LOINC | Logical Observation Identifiers Names and Codes | http://loinc.org | Observation and laboratory codes |
+| SNOMED CT | Systematized Nomenclature of Medicine Clinical Terms | http://snomed.info/sct | Procedures, anatomy, products, isotopes |
+| DCM | DICOM | http://dicom.nema.org/resources/ontology/DCM | Devices, products, radiation information |
+{:.table-striped .table-bordered}
+
 
 <a name="sec"></a>
 
 ### Sercurity Consideration
-TODO
+Exchanging Radiation summary resources makes use of patient-specific information which could be exploited by malicious actors resulting in exposure of patient data. For these reason, all data exchange between the different actors must be secured appropriately with access to limited authorized individuals, data protected in transit, and appropriate audit measures taken. 
+
+Implementers SHOULD be aware of these [security considerations](http://hl7.org/fhir/R4/security.html) associated with FHIR transactions, particularly those related to:
+
+* [Communications](http://hl7.org/fhir/R4/security.html#http)
+* [Authentication](http://hl7.org/fhir/R4/security.html#authentication)
+* [Authorization/Access Control](http://hl7.org/fhir/R4/security.html#authorization/access%20control)
+* [Audit Logging](http://hl7.org/fhir/R4/security.html#audit%20logging)
+* [Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)
+* [Security Labels](http://hl7.org/fhir/R4/security-labels.html)
+* [Narrative](http://hl7.org/fhir/R4/security.html#narrative)
+
+These security requirements are highlighted in the context of this IG:
+* Systems **SHALL** keep audit logs of the various transactions. Some auditing workflows can be used like IHE ATNA or RESTful ATNA.
+* Systems **SHALL** use TLS version 1.2 or higher for all transmissions not taking place over a secure network connection. IHE ATNA may be followed for the TLS usage.
+* Systems **SHALL** conform to FHIR [Communications Security requirements](http://hl7.org/fhir/R4/security.html#http).
+* Systems **SHALL** implement consent requirements per their country, state, local, and institutional policies.
 

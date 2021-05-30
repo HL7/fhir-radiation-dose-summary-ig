@@ -35,24 +35,9 @@ pages:
   index.md:
     title: Home
     generation: markdown
-  intro.md:
-    title: Introduction and Overview
+  background.md:
+    title: Background
     generation: markdown
-    problematic.md:
-      title: Problematic
-      generation: markdown
-    scope.md:
-      title: Scope
-      generation: markdown
-    usecases.md:
-      title: Use Cases
-      generation: markdown
-    mindose.md:
-      title: Minimal Radiation Information
-      generation: markdown
-    glossary_ref.md:
-      title: Glossary and References
-      generation: markdown
   archi.md:
     title: Architecture and Implementation
     generation: markdown
@@ -67,14 +52,7 @@ pages:
 menu:
   IG Home: index.html
   Contents: toc.html
-
-  Introduction:
-    Problematic: problematic.html
-    Scope: scope.html
-    Use Cases: usecases.html
-    Minimal Radiation Information: mindose.html
-    Glossary &amp; References: glossary_ref.html
-  
+  Background: background.html
   Architecture &amp; Implementation: archi.html
   Testing &amp; Conformance: testing.html
   Artifact Index: artifacts.html
