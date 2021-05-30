@@ -1,6 +1,6 @@
 This IG standardizes the sharing of minimal radiation information following a performed exam. Minimal radiation information is required by multiple stakeholders including RIS, EHR, and national/regional stakeholders and their associated regulations. This IG standardizes data sharing from dose management systems to third parties. The IG exposes radiation information related to (and coming from) imaging procedures, but not medications.
 
-### Organization of this guide
+### Organization of this implementation guide
 
 This IG is organized into three main sections:
 

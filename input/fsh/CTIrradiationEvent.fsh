@@ -9,7 +9,7 @@ Description:    "Defines the Minimal Dose Information related to CT procedures"
 * value[x] 0..0
 
 * bodySite 1..1
-* bodySite from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html
+* bodySite from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html (extensible)
 * bodySite ^short = "The bodySite describes the related target region irradiated by this irradiation event"
 * bodySite ^comment = "The related target region is described by EV (123014, DCM, Target Region)"
 
@@ -50,3 +50,6 @@ Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TI
 * component[dlp] -> "TID10013(CT Irradiation Event Data).EV(113838, DCM, DLP)"
 * component[meanCTDIvol] -> "TID10013(CT Irradiation Event Data).EV(113830, DCM, Mean CTDIvol)"
 * component[ctdiPhantomType] -> "TID10013(CT Irradiation Event Data).EV(113835, DCM, CTDIw Phantom Type)"
+
+
+

@@ -33,8 +33,22 @@ Description:    "Modality profiling as a Device resource"
 * deviceName ^slicing.rules = #open
 * deviceName ^slicing.description = "name of the device"
 
-* deviceName contains manufacturer 0..1 and manufacturermodelName 0..1
+* deviceName contains manufacturer 0..1 and manufacturerModelName 0..1
 * deviceName[manufacturer].type = DEViCETYPE#manufacturer-name "Manufacturer name"
 * deviceName[manufacturer] ^short = "The manufacturer of the modality"
-* deviceName[manufacturermodelName].type = DEViCETYPE#model-name "Model name"
-* deviceName[manufacturermodelName] ^short = "The model name of the modality"
+* deviceName[manufacturerModelName].type = DEViCETYPE#model-name "Model name"
+* deviceName[manufacturerModelName] ^short = "The model name of the modality"
+
+
+Mapping: equipement-module-for-ModalityDevice
+Id: dicom-sr
+Title: "DICOM Equipement Module"
+Source: ModalityDevice
+Target: "http://dicom.nema.org/medical/Dicom/2016b/output/chtml/part03/sect_C.7.5.html"
+* -> "General Equipment Module"
+* identifier[deviceSerialNumber] -> "tag(0018,1000) Device Serial Number"
+* identifier[deviceUID] -> "tag(0018,1002) Device UID"
+* manufacturer -> "tag(0008,0070) manufacturer"
+* serialNumber -> "tag(0018,1000) Device Serial Number"
+* deviceName[manufacturer] -> "tag(0008,0070) manufacturer"
+* deviceName[manufacturerModelName] -> "tag(0008,1090) Manufacturer's Model Name"

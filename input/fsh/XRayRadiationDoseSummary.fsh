@@ -22,31 +22,31 @@ Description:    "Defines the Minimal Dose Information related to X-Ray procedure
 * component contains totalNumberOfRadiographicFrames 0..1
 * component[entranceExposureAtRP].code.coding = DCM#111636 "Entrance Exposure at RP"
 * component[entranceExposureAtRP].value[x] only Quantity
-* component[entranceExposureAtRP].value[x] 1..1
-* component[entranceExposureAtRP].value[x].unit = "mGy"
+* component[entranceExposureAtRP].valueQuantity 1..1
+* component[entranceExposureAtRP].valueQuantity.unit = "mGy"
 * component[accumulatedAverageGlandularDose].code.coding = DCM#111637 "Accumulated Average Glandular Dose"
 * component[accumulatedAverageGlandularDose].value[x] only Quantity
-* component[accumulatedAverageGlandularDose].value[x] 1..1
-* component[accumulatedAverageGlandularDose].value[x].unit = "mGy"
+* component[accumulatedAverageGlandularDose].valueQuantity 1..1
+* component[accumulatedAverageGlandularDose].valueQuantity.unit = "mGy"
 * component[doseAreaProductTotal].code.coding = DCM#113722 "Dose Area Product Total"
 * component[doseAreaProductTotal].value[x] only Quantity
-* component[doseAreaProductTotal].value[x] 1..1
-* component[doseAreaProductTotal].value[x].unit = "mGy.cm2"
+* component[doseAreaProductTotal].valueQuantity 1..1
+* component[doseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
 * component[fluoroDoseAreaProductTotal].code.coding = DCM#113726 "Fluoro Dose Area Product Total"
 * component[fluoroDoseAreaProductTotal].value[x] only Quantity
-* component[fluoroDoseAreaProductTotal].value[x] 1..1
-* component[fluoroDoseAreaProductTotal].value[x].unit = "mGy.cm2"
+* component[fluoroDoseAreaProductTotal].valueQuantity 1..1
+* component[fluoroDoseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
 * component[acquisitionDoseAreaProductTotal].code.coding = DCM#113727 "Acquisition Dose Area Product Total"
 * component[acquisitionDoseAreaProductTotal].value[x] only Quantity
-* component[acquisitionDoseAreaProductTotal].value[x] 1..1
-* component[acquisitionDoseAreaProductTotal].value[x].unit = "mGy.cm2"
+* component[acquisitionDoseAreaProductTotal].valueQuantity 1..1
+* component[acquisitionDoseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
 * component[totalFluoroTime].code.coding = DCM#113730 "Total Fluoro Time"
 * component[totalFluoroTime].value[x] only Quantity
-* component[totalFluoroTime].value[x] 1..1
-* component[totalFluoroTime].value[x].unit = "s"
+* component[totalFluoroTime].valueQuantity 1..1
+* component[totalFluoroTime].valueQuantity.unit = "s"
 * component[totalNumberOfRadiographicFrames].code.coding = DCM#113731 "Total Number of Radiographic Frames"
 * component[totalNumberOfRadiographicFrames].value[x] only integer
-* component[totalNumberOfRadiographicFrames].value[x] 1..1
+* component[totalNumberOfRadiographicFrames].valueInteger 1..1
 
 Invariant: xray-procedure-reported
 Description: "Procedure Reported shall be (113704, DCM, Projection X-Ray) or (71651007, SCT, Mammography)"

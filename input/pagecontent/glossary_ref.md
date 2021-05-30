@@ -52,12 +52,4 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 16. [Radiologist Compliance With California CT Dose Reporting Requirements: A Single-Center Review of Pediatric Chest CT](https://www.ajronline.org/doi/pdf/10.2214/AJR.14.13693)
 17. University of California Dose Optimization and Standardization Endeavor (UC-DOSE). [Recommendations for compliance with California Senate Bill 1237 and related pending legislation](http://files.ctctcdn.com/da9de144201/b78c37fa-a36b-4888-a418-fa21a314393e.pdf)
 
-### Download
-
-This implementation guide is web-based and is intended to be browsed online. However, for the convenience of implementers, both this implementation guide, various sub-packages of it and some of the source specifications are available for download. The following links allow you to download various parts of this implementation guide and other referenced implementation guides for local use.
-
-*   This [full IG](full-ig.zip)
-*   The [resource definitions](definitions.json.zip) from this IG for use with the FHIR validator (see below)
-*   The full FHIR [R4](http://hl7.org/fhir/R4/fhir-spec.zip) specifications
-*   A [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar) that can be used to check FHIR resource instance validity
 

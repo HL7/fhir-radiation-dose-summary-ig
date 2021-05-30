@@ -24,8 +24,8 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 
 * component[cTDoseLengthProductTotal].code.coding = DCM#113813 "CT Dose Length Product Total"
 * component[cTDoseLengthProductTotal].value[x] only Quantity
-* component[cTDoseLengthProductTotal].value[x] 1..1
-* component[cTDoseLengthProductTotal].value[x].unit = "mGy.cm"
+* component[cTDoseLengthProductTotal].valueQuantity 1..1
+* component[cTDoseLengthProductTotal].valueQuantity.unit = "mGy.cm"
 
 * effective[x] ^short = "Coming from EV (113809, DCM, Start of X-Ray Irradiation) from TID-10011"
 * component[cTDoseLengthProductTotal] ^short = "Describe the EV(113813, DCM, CT Dose Length Product Total) element from TID-10012"
@@ -47,3 +47,9 @@ Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CT
 * performer[irradiationAutorizingPerson] -> "TID10011 (CT Radiation Dose)"
 * component[procedureReported] -> "TID10011(CT Radiation Dose).EV(121058, DCM, Procedure reported)"
 * component[cTDoseLengthProductTotal] -> "TID10011(CT Radiation Dose).TID10012(CT Accumulated Dose Data).EV(113813, DCM, CT Dose Length Product Total)"
+
+
+
+
+
+
