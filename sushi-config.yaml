@@ -4,13 +4,19 @@
 # │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: radiation-dose-summary
-canonical: http://hl7.org/fhir/fhir-radiation-dose-summary-ig/
+canonical: http://hl7.org/fhir/fhir-radiation-dose-summary-ig
 version: 0.1.0
 name: RadiationDoseSummaryForDiagnosticProceduresOnFHIR
 title: Radiation Dose Summary for Diagnostic Procedures on FHIR
 status: draft
-publisher: HL7 Imaging Integration Working Group
+publisher: 
+  - name: HL7 Imaging Integration Working Group
+  - url: http://www.hl7.org/Special/committees/imagemgt/index.cfm
 contact:
+  - name: HL7 Imaging Integration Workgroup
+    telecom:
+      - system: url
+        value: http://www.hl7.org/Special/committees/imagemgt/index.cfm
   - name: Abderrazek Boufahja
     telecom:
       - system: email
@@ -19,9 +25,9 @@ description: A profile on the sharing of Radiation Dose Summary.
 license: CC0-1.0
 fhirVersion: 4.0.1
 parameters:
-  apply-publisher: true
-  apply-contact: true
   show-inherited-invariants: false
+  generate-turtle: false
+  usage-stats-opt-out: true
 copyrightYear: 2020+
 releaseLabel: ci-build
 
@@ -44,39 +50,15 @@ pages:
     mindose.md:
       title: Minimal Radiation Information
       generation: markdown
-    glossary.md:
-      title: Glossary
+    glossary_ref.md:
+      title: Glossary and References
       generation: markdown
   archi.md:
     title: Architecture and Implementation
     generation: markdown
-    actors.md:
-      title: Actors
-      generation: markdown
-    architecture.md:
-      title: Architecture
-      generation: markdown
-    profiles.md:
-      title: Profiles and Extensions
-      generation: markdown
-    vocabulary.md:
-      title: Terminology
-      generation: markdown
-    sec.md:
-      title: Security Considerations
-      generation: markdown
   testing.md:
     title: Testing and Conformance
     generation: markdown
-    testplan.md:
-      title: Test Plan
-      generation: markdown
-    testdata.md:
-      title: Test Data
-      generation: markdown
-    samples.md:
-      title: Resources Samples
-      generation: markdown
 
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -91,18 +73,8 @@ menu:
     Scope: scope.html
     Use Cases: usecases.html
     Minimal Radiation Information: mindose.html
-    Glossary: glossary.html
+    Glossary &amp; References: glossary_ref.html
   
-  Architecture and Implementation:
-    Actors: actors.html
-    Architecture: architecture.html
-    Profiles and Extensions: profiles.html
-    Terminology: vocabulary.html
-    Security Considerations: sec.html
-  
-  Testing and Conformance:
-    Test Plan: testplan.html
-    Test Data: testdata.html
-    Resources Samples: samples.html
-  
+  Architecture &amp; Implementation: archi.html
+  Testing &amp; Conformance: testing.html
   Artifact Index: artifacts.html
