@@ -30,19 +30,19 @@ This chapter describes testing data and testing plan, and provide some samples f
 * The RDSP actor collect the identifiers of the Patient, the Device, the Practitioner, and the ImagingStudy from the FHIR Server
     * If some of the resources are not found, the RDSP actor construct them in order to share them with the FHIR Server
 * The RDSP construct the Radiation Dose Summary resource and POST it with the FHIR server
-* The RDSC actor query the the FHIR server and collect radiation summary information
+* The RDSC actor query the FHIR server and collect radiation summary information
 * Optionally, the RDSC actor enhance the FHIR server with the Radiation Summary Report.
 
 ##### Validation
 
-* The generated Radiation Summary resources shall pass the validation tools execution, using the FHIR [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar)
+* The generated Radiation Summary resources shall pass the validation tools execution, using the FHIR [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"}
 
 <a name="testdata"></a>
 
 ### Test Data
 Some RDSRs and RRDSRs can be downloaded from IHE google drive, and can be used in the generation of the Radiation Dose Summary resources. Here are the links to these DICOM objects:
-* [REM samples (CT RDSRs and X-Ray RDSRs)](https://drive.google.com/drive/u/0/folders/1M3OLxdHU25q8vNKQSr-O3Aip__YOYly0)
-* [REM-NM samples (RRDSRs)](https://drive.google.com/drive/u/0/folders/1fE1BGXQDhqjzTbESt38qtiJ1Q7Js6Gg3)
+* [REM samples (CT RDSRs and X-Ray RDSRs)](https://drive.google.com/drive/u/0/folders/1M3OLxdHU25q8vNKQSr-O3Aip__YOYly0){:target="_blank"}
+* [REM-NM samples (RRDSRs)](https://drive.google.com/drive/u/0/folders/1fE1BGXQDhqjzTbESt38qtiJ1Q7Js6Gg3){:target="_blank"}
 
 Also, examples of RDSRs and RRDSRs can be accessed through the IHE Connectathon Samples sharing.
 
@@ -113,7 +113,7 @@ This implementation guide is web-based and is intended to be browsed online. How
 
 *   This [full IG](full-ig.zip)
 *   The [resource definitions](definitions.json.zip) from this IG for use with the FHIR validator (see below)
-*   The full FHIR [R4](http://hl7.org/fhir/R4/fhir-spec.zip) specifications
-*   A [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar) that can be used to check FHIR resource instance validity
+*   The full FHIR [R4](http://hl7.org/fhir/R4/fhir-spec.zip){:target="_blank"} specifications
+*   A [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"} that can be used to check FHIR resource instance validity
 
 

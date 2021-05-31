@@ -17,13 +17,13 @@ Description:    "Defines the Minimal Dose Information related to X-Ray procedure
 * device 1..1
 
 // Dose measurements - Study Level
-* component contains entranceExposureAtRP 0..1 and accumulatedAverageGlandularDose 0..1 and doseAreaProductTotal 0..1 
+* component contains doseRPTotal 0..1 and accumulatedAverageGlandularDose 0..1 and doseAreaProductTotal 0..1 
 * component contains fluoroDoseAreaProductTotal 0..1 and acquisitionDoseAreaProductTotal 0..1 and totalFluoroTime 0..1 
 * component contains totalNumberOfRadiographicFrames 0..1
-* component[entranceExposureAtRP].code.coding = DCM#111636 "Entrance Exposure at RP"
-* component[entranceExposureAtRP].value[x] only Quantity
-* component[entranceExposureAtRP].valueQuantity 1..1
-* component[entranceExposureAtRP].valueQuantity.unit = "mGy"
+* component[doseRPTotal].code.coding = DCM#113725 "Dose (RP) Total"
+* component[doseRPTotal].value[x] only Quantity
+* component[doseRPTotal].valueQuantity 1..1
+* component[doseRPTotal].valueQuantity.unit = "mGy"
 * component[accumulatedAverageGlandularDose].code.coding = DCM#111637 "Accumulated Average Glandular Dose"
 * component[accumulatedAverageGlandularDose].value[x] only Quantity
 * component[accumulatedAverageGlandularDose].valueQuantity 1..1
@@ -67,7 +67,7 @@ Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XR
 * subject -> "tag(0010,0020) [Patient ID]"
 * effective[x] -> "tag(0008,0021) [Series Date] + tag(0008,0031) [Series Time]"
 * device -> "TID10011 (CT Radiation Dose).TID 1002 (Observer Context).TID 1004 (Device Observer Identifying Attributes)"
-* component[entranceExposureAtRP] -> "TID10011 (CT Radiation Dose).TID 10002 (Accumulated X-Ray Dose).TID 10007 (Accumulated Total Projection Radiography Dose).EV (113725, DCM, Dose (RP) Total)"
+* component[doseRPTotal] -> "TID10011 (CT Radiation Dose).TID 10002 (Accumulated X-Ray Dose).TID 10007 (Accumulated Total Projection Radiography Dose).EV (113725, DCM, Dose (RP) Total)"
 * component[accumulatedAverageGlandularDose] -> "TID10011 (CT Radiation Dose).TID 10002 (Accumulated X-Ray Dose).TID 10005 (Accumulated Mammography X-Ray Dose).EV (111637, DCM, Accumulated Average Glandular Dose)"
 * component[doseAreaProductTotal] -> "TID10011 (CT Radiation Dose).TID 10002 (Accumulated X-Ray Dose).TID 10007 (Accumulated Total Projection Radiography Dose).EV (113722, DCM, Dose Area Product Total)"
 * component[fluoroDoseAreaProductTotal] -> "TID10011 (CT Radiation Dose).TID 10002 (Accumulated X-Ray Dose).TID 10004 (Accumulated Fluoroscopy and Acquisition Projection X-Ray Dose).EV (113726, DCM, Fluoro Dose Area Product Total)"

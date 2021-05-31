@@ -12,7 +12,7 @@ This chapter describes the different architecture descriptions of the resources,
 * [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) profiles the Observation resource to provide the base for the Radiation Dose Summary reporting.
     * [CT Radiation Dose Summary](StructureDefinition-ct-radiation-dose-summary.html) profiles the Observation resource by extending the Radiation Dose Summary profile with minimal dose information related to CT procedures.
     * [X-Ray Radiation Dose Summary](StructureDefinition-xray-radiation-dose-summary.html) profiles the Observation resource by extending the Radiation Dose Summary profile with minimal dose information related to X-Ray procedures (XA, RF, MG, etc.)
-    * [Radiopharmaceutical Radiation Dose Summary](StructureDefinition-nm-radiation-dose-summary.html) profiles the Observation resource by extending the Radiation Dose Summary profile with minimal dose information related to nuclear medecine imaging procedures.
+    * [Radiopharmaceutical Radiation Dose Summary](StructureDefinition-nm-radiation-dose-summary.html) profiles the Observation resource by extending the Radiation Dose Summary profile with minimal dose information related to nuclear medicine imaging procedures.
 * [Irradiation Event Summary](StructureDefinition-irradiation-event-summary.html) profiles the Observation resource in order to describe minimal dose information related to irradiation events.
     * [CT Irradiation Event Summary](StructureDefinition-ct-irradiation-event-summary.html) profiles the Observation resource by extending Irradiation Event Summary profile, and adding minimal dose information related to CT Irradiation Events.
 * [Radiation Summary Report](StructureDefinition-radiation-summary-report.html) profiles Composition resource and defines a report document describing the irradiation act.
@@ -56,18 +56,18 @@ A list of actors are identified within this IG:
 <br clear="all" />
 
 #### Radiation Dose Summary Producer
-The radiation dose summary producer (RDSP) actor is responsible on the creation of the Radiation Dose Summary observation, and sharing it with the FHIR Server. The RDSP actor shall consider synchronizing with the FHIR server multiple resources, in order to avoid dupplicating resources in the FHIR server. For example, the RDSP actor shall check if the patient already exists in the FHIR server, and if so, only a reference to this patient is created, and the POST bundle from the RDSP actor to the FHIR server shall not contain a Patient resource.
+The radiation dose summary producer (RDSP) actor is responsible on the creation of the Radiation Dose Summary observation, and sharing it with the FHIR Server. The RDSP actor shall consider synchronizing with the FHIR server multiple resources, in order to avoid duplicating resources in the FHIR server. For example, the RDSP actor shall check if the patient already exists in the FHIR server, and if so, only a reference to this patient is created, and the POST bundle from the RDSP actor to the FHIR server shall not contain a Patient resource.
 Generally, this actor can be implemented within a Dose Management System.
 
 #### FHIR Server
 The FHIR Server has two functions:
 1. Provide the diagnostic procedure context to both the Radiation Dose Summary Producer and Consumer actors
-2. Store the Radiation Dose Summary resources and Irradiation Event resources from the sharings performed from the Producer actor
-Thus, the FHIR server can be devided in fact in two actors: one for the contextual resources, and one for the Radiation Dose resources.
+2. Store the Radiation Dose Summary resources and Irradiation Event resources from the sharing performed from the Producer actor
+Thus, the FHIR server can be divided in fact in two actors: one for the contextual resources, and one for the Radiation Dose resources.
 
 The contextual resources are resources managed by the FHIR server and related to the imaging procedure, and works as a source of truth for these resources:
 1. The Patient resources: the patients having exams.
-2. The Device and DeviceDefinition resources: the modalities participating in the irradiation of the patients.
+2. The Device resources: the modalities participating in the irradiation of the patients.
 3. The Practitioner resources: the irradiating authorizing persons responsible on the exams performed on the patients.
 4. The ImagingStudy resources: resources describing the performed exams.
 
@@ -81,7 +81,7 @@ The radiation dose summary consumer (RDSC) actor is responsible on the interpret
 * Some consumers may act as a light Dose registry, by collecting the radiation summary information for a patient or a group of patients in a regional or national infrastructure. Such registries can create valuable data for regulations purpose, or for population radiation estimations.
 
 #### Actors grouping
-The FHIR Server can be grouped with the Radiation Dose Summary Producer actor within the Dose Management System. Thus, the Dose Management System is managing all the resources and references between resources. Another possible grouping is between the FHIR Server and the Radiation Dose Summary Consumer actor. This can happen for example within EMR systems or RIS and EHR systems. In this case, the source of truth for contextual resources are independant from the Dose Management System.
+The FHIR Server can be grouped with the Radiation Dose Summary Producer actor within the Dose Management System. Thus, the Dose Management System is managing all the resources and references between resources. Another possible grouping is between the FHIR Server and the Radiation Dose Summary Consumer actor. This can happen for example within EMR systems or RIS and EHR systems. In this case, the source of truth for contextual resources are independent from the Dose Management System.
 
 #### Actors communication
 
@@ -91,7 +91,7 @@ The following sequence diagram describes the typical workflow between the RDSP a
 
 <br clear="all" />
 
-During this workflow, a patient arrive to the hosptial and perform an exam within an irradiating modality. The detailed radiation information are shared with the Radiation Dose Summary Producer actor, which may generally be a Dose Management System. 
+During this workflow, a patient arrive to the hospital and perform an exam within an irradiating modality. The detailed radiation information are shared with the Radiation Dose Summary Producer actor, which may generally be a Dose Management System. 
 During the process of creating the Radiation Dose Summary resources, the RDSP actor perform a list of query to the FHIR server, in order to collect the right IDs to be referred in the newly created resources. The RDSP shall for instance collect the corresponding IDs for the Patient, the Practitioner, the Modality, and the ImagingStudy resources. Most of these resources can be identified from the DICOM RDSR shared from the modality. Some unique identifiers can be used to query the FHIR server. Here is a mapping between the FHIR resources and the identifiers from DICOM:
 
 | FHIR Resource        |      Identifier from DICOM       |
@@ -102,9 +102,9 @@ During the process of creating the Radiation Dose Summary resources, the RDSP ac
 | Device | tag(0018,1000) Device Serial Number |
 {:.table-striped .table-bordered}
 
-The IDs collected are used to construct the Radiation Dose Summary resources and their related Irradiation Event resources. Then, these resources are shared with the FHIR server through a POST of a bundle. The bundle may contains temporary resources related to Patient, ImagingStudy, and other contextual resources, if the FHIR server has no reference of them.
+The IDs collected are used to construct the Radiation Dose Summary resources and their related Irradiation Event resources. Then, these resources are shared with the FHIR server through a POST of a bundle. The bundle may contain temporary resources related to Patient, ImagingStudy, and other contextual resources, if the FHIR server has no reference of them.
 
-Once the resources are shared with the FHIR server, the Radiation Dose Summary Consumer can search and retrieve the resources from the FHIR server and use them for their own purpose. The RDSC actor can optionnaly enrich the FHIR server resources by posting a Composition document as profiled by the Radiation Summary Report.
+Once the resources are shared with the FHIR server, the Radiation Dose Summary Consumer can search and retrieve the resources from the FHIR server and use them for their own purpose. The RDSC actor can optionally enrich the FHIR server resources by posting a Composition document as profiled by the Radiation Summary Report.
 
 
 <a name="terminology"></a>
@@ -120,14 +120,14 @@ These Value Sets have been defined for this implementation guide.
 
 #### Value Sets Used
 DICOM ValueSet links:
-1. [CID 4030 CT, MR and PET Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html)
-2. [CID 4052 Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html)
-3. [CID 33 Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html)
-4. [CID 11 Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html)
-5. [CID 25 Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html)
-6. [CID 4021 PET Radiopharmaceutical](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4021.html)
-7. [CID 18 Isotopes in Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html)
-8. [CID 4020 PET Radionuclide](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html)
+1. [CID 4030 CT, MR and PET Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html){:target="_blank"}
+2. [CID 4052 Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html){:target="_blank"}
+3. [CID 33 Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html){:target="_blank"}
+4. [CID 11 Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html){:target="_blank"}
+5. [CID 25 Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html){:target="_blank"}
+6. [CID 4021 PET Radiopharmaceutical](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4021.html){:target="_blank"}
+7. [CID 18 Isotopes in Radiopharmaceuticals](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html){:target="_blank"}
+8. [CID 4020 PET Radionuclide](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html){:target="_blank"}
 
 #### Code Systems Defined
 There are no code systems defined in this IG.
@@ -147,22 +147,22 @@ The following table presents the external code systems (and naming conventions) 
 
 <a name="sec"></a>
 
-### Sercurity Consideration
-Exchanging Radiation summary resources makes use of patient-specific information which could be exploited by malicious actors resulting in exposure of patient data. For these reason, all data exchange between the different actors must be secured appropriately with access to limited authorized individuals, data protected in transit, and appropriate audit measures taken. 
+### Security Consideration
+Exchanging Radiation summary resources makes use of patient-specific information which could be exploited by malicious actors resulting in exposure of patient data. For these reasons, all data exchange between the different actors must be secured appropriately with access to limited authorized individuals, data protected in transit, and appropriate audit measures taken. 
 
-Implementers SHOULD be aware of these [security considerations](http://hl7.org/fhir/R4/security.html) associated with FHIR transactions, particularly those related to:
+Implementers SHOULD be aware of these [security considerations](http://hl7.org/fhir/R4/security.html){:target="_blank"} associated with FHIR transactions, particularly those related to:
 
-* [Communications](http://hl7.org/fhir/R4/security.html#http)
-* [Authentication](http://hl7.org/fhir/R4/security.html#authentication)
-* [Authorization/Access Control](http://hl7.org/fhir/R4/security.html#authorization/access%20control)
-* [Audit Logging](http://hl7.org/fhir/R4/security.html#audit%20logging)
-* [Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)
-* [Security Labels](http://hl7.org/fhir/R4/security-labels.html)
-* [Narrative](http://hl7.org/fhir/R4/security.html#narrative)
+* [Communications](http://hl7.org/fhir/R4/security.html#http){:target="_blank"}
+* [Authentication](http://hl7.org/fhir/R4/security.html#authentication){:target="_blank"}
+* [Authorization/Access Control](http://hl7.org/fhir/R4/security.html#authorization/access%20control){:target="_blank"}
+* [Audit Logging](http://hl7.org/fhir/R4/security.html#audit%20logging){:target="_blank"}
+* [Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures){:target="_blank"}
+* [Security Labels](http://hl7.org/fhir/R4/security-labels.html){:target="_blank"}
+* [Narrative](http://hl7.org/fhir/R4/security.html#narrative){:target="_blank"}
 
 These security requirements are highlighted in the context of this IG:
 * Systems **SHALL** keep audit logs of the various transactions. Some auditing workflows can be used like IHE ATNA or RESTful ATNA.
 * Systems **SHALL** use TLS version 1.2 or higher for all transmissions not taking place over a secure network connection. IHE ATNA may be followed for the TLS usage.
-* Systems **SHALL** conform to FHIR [Communications Security requirements](http://hl7.org/fhir/R4/security.html#http).
+* Systems **SHALL** conform to FHIR [Communications Security requirements](http://hl7.org/fhir/R4/security.html#http){:target="_blank"}.
 * Systems **SHALL** implement consent requirements per their country, state, local, and institutional policies.
 

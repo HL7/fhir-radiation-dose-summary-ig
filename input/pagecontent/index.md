@@ -4,29 +4,30 @@ This IG standardizes the sharing of minimal radiation information following a pe
 
 This IG is organized into three main sections:
 
-* Chapter I: Introduction and overview
-    * [Problematic](problematic.html) - Description of the problematic
-    * [Scope](scope.html) - Scope of the IG
-    * [Use cases](usecases.html) - Key use cases covered by the IG
-    * [Minimal Radiation Information](mindose.html) - Description of data shared through this IG
-    * [Gloassary](glossary.html) - Glossary
-* Chapter II: Architecture & Implementation
-    * [Architecture](architecure.html) - Resources architecture
-    * [Actors](actors.html) - Actors participating in the IG
-    * [Profiles & Extensions](profiles.html) - FHIR Profiles and extensions defined in the IG
-    * [Terminology](terminology.html) - Value Sets defined
-    * [Sercurity Consideration](sec.html) - Security aspect to be taken in consideration
-* Chapter III: Testing & Conformance
-    * [Test Plan](testplan.html) - Test plans for different actors 
-    * [Test Data](testdata.html) - Test data that can be used
-    * [Resources Samples](samples.html) - Samples of resources profiled following this IG
+* [Chapter I](background.html): Background - Introduction and overview
+    * [Problematic](background.html#problematic) - Description of the problematic
+    * [Scope](background.html#scope) - Scope of the IG
+    * [Use cases](background.html#usecases) - Key use cases covered by the IG
+    * [Minimal Radiation Information](background.html#mindose) - Description of data shared through this IG
+    * [Gloassary](background.html#glossary) - Glossary
+    * [References](background.html#references) - References
+* [Chapter II](archi.html): Architecture & Implementation
+    * [Profiles & Extensions](archi.html#profiles) - FHIR Profiles and extensions defined in the IG
+    * [Actors](archi.html#actors) - Actors participating in the IG
+    * [Terminology](archi.html#terminology) - Value Sets defined and used
+    * [Security Consideration](archi.html#sec) - Security aspect to be taken in consideration
+* [Chapter III](testing.html): Testing & Conformance
+    * [Test Plan](testing.html#testplan) - Test plans for different actors 
+    * [Test Data](testing.html#testdata) - Test data that can be used
+    * [Resources Samples](testing.html#samples) - Samples of resources profiled following this IG
+    * [Download](testing.html#download) - Resources available for download
 
 ### Copyrights and acknowledgments
 TODO
 
 ### Sponsors Working Groups
-* [Imaging Integration Work Group](http://www.hl7.org/Special/committees/imagemgt/index.cfm)
-* [Clinical Quality Information Work Group](http://www.hl7.org/Special/committees/cqi/index.cfm)
+* [Imaging Integration Work Group](http://www.hl7.org/Special/committees/imagemgt/index.cfm){:target="_blank"}
+* [Clinical Quality Information Work Group](http://www.hl7.org/Special/committees/cqi/index.cfm){:target="_blank"}
 
 ### Contributors
 

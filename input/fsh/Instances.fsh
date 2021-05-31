@@ -161,7 +161,7 @@ Description: "CT Radiation Dose Summary example 2"
 * device.display = "XA01"
 * component[0].code.coding = DCM#121058 "Procedure reported"
 * component[0].valueCodeableConcept.coding = DCM#113704 "Projection X-Ray"
-* component[1].code.coding = DCM#111636 "Entrance Exposure at RP"
+* component[1].code.coding = DCM#113725 "Dose (RP) Total"
 * component[1].valueQuantity.value = 212
 * component[1].valueQuantity.unit = "mGy"
 * component[2].code.coding = DCM#113722 "Dose Area Product Total"
