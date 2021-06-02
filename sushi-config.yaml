@@ -3,7 +3,7 @@
 # │  supported properties, see:                                                                    │
 # │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: radiation-dose-summary
+id: hl7.fhir.uv.radiation-dose-summary
 canonical: http://hl7.org/fhir/fhir-radiation-dose-summary-ig
 version: 0.1.0
 name: RadiationDoseSummaryForDiagnosticProceduresOnFHIR
