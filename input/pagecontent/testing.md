@@ -26,16 +26,16 @@ This chapter describes testing data and testing plan, and provide some samples f
 
 ##### Steps
 
-* The RDSP actor gather an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR)
-* The RDSP actor collect the identifiers of the Patient, the Device, the Practitioner, and the ImagingStudy from the FHIR Server
-    * If some of the resources are not found, the RDSP actor construct them in order to share them with the FHIR Server
-* The RDSP construct the Radiation Dose Summary resource and POST it with the FHIR server
-* The RDSC actor query the FHIR server and collect radiation summary information
-* Optionally, the RDSC actor enhance the FHIR server with the Radiation Summary Report.
+* The RDSP actor gathers an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR)
+* The RDSP actor collects the identifiers of the Patient, the Device, the Practitioner, and the ImagingStudy from the FHIR Server
+    * If some of the resources are not found, the RDSP actor constructs them in order to share them with the FHIR Server
+* The RDSP actor constructs the Radiation Dose Summary resource and POST it to the FHIR server
+* The RDSC actor queries the FHIR server and collects radiation summary information
+* Optionally, the RDSC actor enhances the FHIR server with the Radiation Summary Report.
 
 ##### Validation
 
-* The generated Radiation Summary resources shall pass the validation tools execution, using the FHIR [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"}
+* The generated Radiation Summary resources shall pass the validation tool testing, using the FHIR [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"}
 
 <a name="testdata"></a>
 
@@ -58,7 +58,7 @@ Here are some examples of queries and searching use cases that can be performed 
 | Search all the Dose summaries within the FHIR Server | GET /fhir/Observation?code=73569-6 |
 | View specific Dose Summary | GET /fhir/Observation/19 |
 | Access Device dose summaries | GET /fhir/Observation?code=73569-6&device=22  |
-| Search Dose Summary of a patient through the last year | GET /fhir/Observation?code=73569-6&patient=8&date=gt2019-01-01 |
+| Search Dose Summary of a patient through the last year | GET /fhir/Observation?code=73569-6&patient=8&date=gt2020-01-01 |
 | Search Dose Summary related to the study | GET /fhir/Observation?code=73569-6&part-of=1232 |
 {:.table-striped .table-bordered}
 
@@ -114,6 +114,6 @@ This implementation guide is web-based and is intended to be browsed online. How
 *   This [full IG](full-ig.zip)
 *   The [resource definitions](definitions.json.zip) from this IG for use with the FHIR validator (see below)
 *   The full FHIR [R4](http://hl7.org/fhir/R4/fhir-spec.zip){:target="_blank"} specifications
-*   A [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"} that can be used to check FHIR resource instance validity
+*   A [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"} that can be used to check FHIR resource instance validity.
 
 

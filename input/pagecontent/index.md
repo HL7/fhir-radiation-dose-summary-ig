@@ -9,7 +9,7 @@ This IG is organized into three main sections:
     * [Scope](background.html#scope) - Scope of the IG
     * [Use cases](background.html#usecases) - Key use cases covered by the IG
     * [Minimal Radiation Information](background.html#mindose) - Description of data shared through this IG
-    * [Gloassary](background.html#glossary) - Glossary
+    * [Glossary](background.html#glossary) - Glossary
     * [References](background.html#references) - References
 * [Chapter II](archi.html): Architecture & Implementation
     * [Profiles & Extensions](archi.html#profiles) - FHIR Profiles and extensions defined in the IG
