@@ -88,7 +88,7 @@ The FHIR Server can be grouped with the Radiation Dose Summary Producer actor wi
 
 The following sequence diagram describes the typical workflow between the RDSP actor, the FHIR server, and the RDSC actor.
 
-![Actors relationship](./seq.png){: width="900px"}
+![Actors relationship](./seq-simplified.png){: width="900px"}
 
 <br clear="all" />
 

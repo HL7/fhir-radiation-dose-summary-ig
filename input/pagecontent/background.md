@@ -18,10 +18,10 @@ The IHE Dose Reporter actor from the IHE REM profile gathers Radiation informati
 
 <br clear="all" />
 
- Dose Management systems need to share information related to the exam to multiple third parties :
+ Dose Management systems need to share information related to the exam to multiple third parties:
 
 * Mobile Applications: like patients related mobile applications, where a patient may want to centralize the report of doses injected to him
-* RIS/EHR : many RIS/EHR systems do not have capabilities to read DICOM SR documents and prefer to contact the hospital dose management system in order to gather a summary of the dose report; and in order to include the radiation summary under the final imaging report.
+* RIS/EHR: many RIS/EHR systems do not have capabilities to read DICOM SR documents and prefer to contact the hospital dose management system in order to gather a summary of the dose report; and in order to include the radiation summary under the final imaging report.
 * Third backend systems: some third backend applications may want to gather a summary of the exam’s radiations for some proprietary usage; gathering the complete RDSR is useless for most of the non Dose Management systems.
 
 The RDSRs have a complete and a strong structure for sharing the dose information from the modalities to the Dose Consumer/Reporter actors, and also between the Dose Reporter and the Dose Registry systems. However, most of third party applications have a very light needs for the Dose report. For example, RIS systems in France need only, for CT exams, the Dose Length Product Total data from the CT RDSR, in order to fit local regulations. 
@@ -39,10 +39,10 @@ Scope:
 
 Out Of Scope:
 * Share details of the radiation administration
-* Share enhanced data (SSDE, Organ Dose, etc) to third applications
+* Share enhanced data (SSDE, Organ Dose, etc.) to third applications
 * Irradiations received by the practitioner
 
-Dealing with sharing details of radiation procedures, like the X-Ray parameters, the modality configuration, etc, is out of scope. Also, sharing the details of enhanced dose data, like the size specific dose estimation, is also out of scope. Other means exist to share this detailed information, mainly the DICOM Radiation Structured Reports (RDSRs).
+Dealing with sharing details of radiation procedures, like the X-Ray parameters, the modality configuration, etc., is out of scope. Also, sharing the details of enhanced dose data, like the size specific dose estimation, is also out of scope. Other means exist to share this detailed information, mainly the DICOM Radiation Structured Reports (RDSRs).
 
 Radiotherapy procedures are not covered by the scope of this work, only diagnostic imaging radiations is covered by this work. 
 
@@ -179,6 +179,9 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |CDA| Clinical Document Architecture |
 |CDS| Clinical Decision Support |
 |CT| Computed Tomography |
+|CTDI| Computed Tomography Dose Index |
+|DAP| Dose Area Product |
+|DLP| Dose Length Product |
 |DICOM| Digital Imaging and Communications in Medicine |
 |EHR| Electronic Health Record |
 |EMR| Electronic Medical Record |
@@ -199,6 +202,7 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |REM-NM| Radiation Exposure Monitoring for Nuclear Medicine |
 |RF| Radio Fluoroscopy |
 |RIS| Radiology Information System |
+|RP|  Reference Point |
 |RRDSR| Radiopharmaceutical Radiation Dose Structured Report |
 |SFR| French Society of Radiology |
 |SR| Structured Report |

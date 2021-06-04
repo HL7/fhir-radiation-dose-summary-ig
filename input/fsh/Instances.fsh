@@ -2,6 +2,8 @@ Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
 Alias: SCT = http://snomed.info/sct
 Alias: LOINC =  http://loinc.org
 
+
+// Example 1 //
 Instance: CTRadiationDoseSummary-139
 InstanceOf: CTRadiationDoseSummary
 Usage: #example
@@ -15,9 +17,9 @@ Description: "CT Radiation Dose Summary example 1"
 * identifier[2].value = "AN12322332"
 * partOf = Reference(ImagingStudy/342)
 * status = #final
-* code.coding = LOINC#73569-6 "Radiation exposure and protection information"
+* code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * effectiveDateTime = "2015-01-01T22:23:30.000Z"
 * performer = Reference(Practitioner/33)
 * performer.display = "John Moore"
@@ -25,8 +27,10 @@ Description: "CT Radiation Dose Summary example 1"
 * device.display = "CT01"
 * hasMember[0] = Reference(Observation/839)
 * hasMember[0].display = "Irradiation Event - 1"
+* hasMember[0].type = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/ct-radiation-dose-summary"
 * hasMember[1] = Reference(Observation/393)
 * hasMember[1].display = "Irradiation Event - 2"
+* hasMember[1].type = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/ct-radiation-dose-summary"
 * component[0].code.coding = DCM#121058 "Procedure reported"
 * component[0].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 * component[1].code.coding = DCM#113813 "CT Dose Length Product Total"
@@ -44,7 +48,7 @@ Description: "CT Irradiation Event Summary instance 1 for example 1"
 * status = #final
 * code.coding = DCM#113852 "Irradiation Event"
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * effectiveDateTime = "2015-01-01T22:25:30.000Z"
 * bodySite = SCT#7832008 "Abdominal aorta"
 * component[0].code.coding = DCM#113830 "Mean CTDIvol"
@@ -68,7 +72,7 @@ Description: "CT Irradiation Event Summary instance 2 for example 1"
 * status = #final
 * code.coding = DCM#113852 "Irradiation Event"
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * effectiveDateTime = "2015-01-01T22:29:30.000Z"
 * bodySite = SCT#7832008 "Abdominal aorta"
 * component[0].code.coding = DCM#113830 "Mean CTDIvol"
@@ -88,10 +92,10 @@ Description: "Patient for example 1"
 * id = "56"
 * identifier[0].system = "ipdauth1"
 * identifier[0].value = "PAT3421"
-* name[0].family = "Payet"
-* name[0].given = "Pascal"
+* name[0].family = "Dupony"
+* name[0].given = "Pascale"
 * birthDate = "1990-03-18"
-* gender = #male
+* gender = #female
 
 
 Instance: Practitioner-33
@@ -118,7 +122,7 @@ Description: "ImagingStudy for example 1"
 * identifier[1].value = "AN12322332"
 * status = #available
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * started = "2015-01-01T22:20:00.000Z"
 
 
@@ -140,6 +144,59 @@ Description: "ModalityDevice for example 1"
 * type.coding = DCM#CT "Computed Tomography"
 
 
+Instance: RadiationSummaryReport-1
+InstanceOf: RadiationSummaryReport
+Usage: #example
+Description: "Radiation Summary Report for example 1"
+* id = "1"
+* status = #final
+* type.coding = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
+* subject = Reference(Patient/56)
+* subject.display = "Pascale Dupont"
+* date = "2015-01-01T23:43:30.000Z"
+* author = Reference(Practitioner/33)
+* author.display = "John Moore"
+* title = "Radiation exposure and protection information"
+* section[0].code.coding = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
+* section[0].entry = Reference(Observation/139)
+* section[0].entry.display = "Radiation Dose Summary"
+* section[1].code.coding = DCM#121109 "Indications for Procedure"
+* section[1].entry = Reference(Observation/33)
+* section[1].entry.display = "Indications"
+* section[2].code.coding = LOINC#82810-3 "Pregnancy status"
+* section[2].entry = Reference(Observation/34)
+* section[2].entry.display = "Pregnancy Status"
+
+
+Instance: Indications-1
+InstanceOf: IndicationObservation
+Usage: #example
+Description: "Indication Observation for example 1"
+* id = "33"
+* status = #final
+* code.coding = DCM#121109 "Indications for Procedure"
+* subject = Reference(Patient/56)
+* subject.display = "Pascale Dupont"
+* valueString = "Exam to check right kidney"
+
+
+Instance: PregnancyStatus-1
+InstanceOf: PregnancyStatus
+Usage: #example
+Description: "Pregnancy Status for example 1"
+* id = "34"
+* status = #final
+* code.coding = LOINC#82810-3 "Pregnancy status"
+* subject = Reference(Patient/56)
+* effectiveDateTime = "2015-01-01T23:43:30.000Z"
+* subject.display = "Pascale Dupont"
+* valueCodeableConcept = SCT#77386006 "Pregnant (finding)"
+* component[0].code.coding = LOINC#11778-8 "Delivery date Estimated"
+* component[0].valueDateTime = "2015-06-02T00:00:00.000Z"
+
+
+
+// Example 2 //
 Instance: XRayRadiationDoseSummary-545
 InstanceOf: XRayRadiationDoseSummary
 Usage: #example
@@ -151,9 +208,9 @@ Description: "CT Radiation Dose Summary example 2"
 * identifier[1].value = "AN1232234"
 * partOf = Reference(ImagingStudy/344)
 * status = #final
-* code.coding = LOINC#73569-6 "Radiation exposure and protection information"
+* code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * effectiveDateTime = "2019-01-23T12:00:30.000Z"
 * performer = Reference(Practitioner/33)
 * performer.display = "John Moore"
@@ -165,11 +222,11 @@ Description: "CT Radiation Dose Summary example 2"
 * component[1].valueQuantity.value = 212
 * component[1].valueQuantity.unit = "mGy"
 * component[2].code.coding = DCM#113722 "Dose Area Product Total"
-* component[2].valueQuantity.value = 136.39
-* component[2].valueQuantity.unit = "dGy.cm2"
+* component[2].valueQuantity.value = 13639
+* component[2].valueQuantity.unit = "mGy.cm2"
 * component[3].code.coding = DCM#113726 "Fluoro Dose Area Product Total"
-* component[3].valueQuantity.value = 45.23
-* component[3].valueQuantity.unit = "dGy.cm2"
+* component[3].valueQuantity.value = 4523
+* component[3].valueQuantity.unit = "mGy.cm2"
 * component[3].code.coding = DCM#113730 "Total Fluoro Time"
 * component[3].valueQuantity.value = 450
 * component[3].valueQuantity.unit = "s"
@@ -188,7 +245,7 @@ Description: "ImagingStudy for example 2"
 * identifier[1].value = "AN1232234"
 * status = #available
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * started = "2019-01-23T11:45:30.000Z"
 
 
@@ -210,6 +267,7 @@ Description: "ModalityDevice for example 2"
 * type.coding = DCM#XA "X-Ray Angiography"
 
 
+// Example 3 //
 Instance: NMRadiationDoseSummary-122
 InstanceOf: NMRadiationDoseSummary
 Usage: #example
@@ -221,19 +279,19 @@ Description: "NM Radiation Dose Summary example 3"
 * identifier[1].value = "AN6545"
 * partOf = Reference(ImagingStudy/22)
 * status = #final
-* code.coding = LOINC#73569-6 "Radiation exposure and protection information"
+* code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * effectiveDateTime = "2019-01-23T12:00:30.000Z"
 * performer = Reference(Practitioner/33)
 * performer.display = "John Moore"
-* component[0].code.coding = DCM#121058 "Procedure reported"
+* component[0].code = DCM#121058 "Procedure reported"
 * component[0].valueCodeableConcept.coding = DCM#113502 "Radiopharmaceutical Administration"
-* component[1].code.coding = DCM#113507 "Administered activity"
+* component[1].code = DCM#113507 "Administered activity"
 * component[1].valueQuantity.value = 154
 * component[1].valueQuantity.unit = "MBq"
-* component[2].code.coding = SCT#349358000 "Radiopharmaceutical agent"
-* component[2].valueCodeableConcept.coding = SCT#429296007 "Ioflupane I^123^"
+* component[2].code = SCT#349358000 "Radiopharmaceuticals"
+* component[2].valueCodeableConcept.coding = SCT#429296007 "Product containing ioflupane (123-I) (medicinal product)"
 
 
 Instance: ImagingStudy-22
@@ -249,5 +307,5 @@ Description: "ImagingStudy for example 3"
 * identifier[1].value = "AN6545"
 * status = #available
 * subject = Reference(Patient/56)
-* subject.display = "Pascal Payet"
+* subject.display = "Pascale Dupont"
 * started = "2019-01-23T11:45:30.000Z"

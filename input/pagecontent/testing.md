@@ -26,6 +26,10 @@ This chapter describes testing data and testing plan, and provide some samples f
 
 ##### Steps
 
+Here are the different steps that needs to be performed: 
+![Actors relationship](./seq.png){: width="900px"}
+
+<br clear="all" />
 * The RDSP actor gathers an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR)
 * The RDSP actor collects the identifiers of the Patient, the Device, the Practitioner, and the ImagingStudy from the FHIR Server
     * If some of the resources are not found, the RDSP actor constructs them in order to share them with the FHIR Server
@@ -35,7 +39,7 @@ This chapter describes testing data and testing plan, and provide some samples f
 
 ##### Validation
 
-* The generated Radiation Summary resources shall pass the validation tool testing, using the FHIR [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"}
+* The generated Radiation Summary resources shall pass the validation tool testing, using the FHIR [validator](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar){:target="_blank"}
 
 <a name="testdata"></a>
 
@@ -51,7 +55,7 @@ Also, examples of RDSRs and RRDSRs can be accessed through the IHE Connectathon 
 ### Resources samples
 #### Radiation Dose Summary Consumer search query samples
 
-Here are some examples of queries and searching use cases that can be performed by the RDSC actor :
+Here are some examples of queries and searching use cases that can be performed by the RDSC actor:
 
 | Query Description | Query URL |
 |-------------------|--------------------------------------------------------------|
@@ -78,6 +82,11 @@ Here is an example of the Radiation Dose Summary Profile resource related to CT 
 * [Patient-56](Patient-56.html)
 * [Practitioner-33](Practitioner-33.html)
 * [ModalityDevice-539](Device-539.html)
+
+A sample of Dose Summary Report profile exists with relationship to Indications profile and Pregnancy Status profile:
+* [RadiationSummaryReport-1](RadiationSummaryReport-1.html)
+* [Indications-1](Indications-1.html)
+* [PregnancyStatus-1](PregnancyStatus-1.html)
 
 ##### X-Ray sample
 Here is an example of the Radiation Dose Summary Profile resource related to XA exam, and its dependencies:
@@ -114,6 +123,6 @@ This implementation guide is web-based and is intended to be browsed online. How
 *   This [full IG](full-ig.zip)
 *   The [resource definitions](definitions.json.zip) from this IG for use with the FHIR validator (see below)
 *   The full FHIR [R4](http://hl7.org/fhir/R4/fhir-spec.zip){:target="_blank"} specifications
-*   A [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar){:target="_blank"} that can be used to check FHIR resource instance validity.
+*   A [validator](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar){:target="_blank"} that can be used to check FHIR resource instance validity.
 
 

@@ -5,6 +5,7 @@ Parent:         Device
 Id:             modality-device
 Title:          "Modality Device"
 Description:    "Modality profiling as a Device resource"
+* insert RDSStructureDefinitionContent
 
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"

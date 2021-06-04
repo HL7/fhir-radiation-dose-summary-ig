@@ -7,10 +7,13 @@ Parent:         RadiationDoseSummary
 Id:             ct-radiation-dose-summary
 Title:          "CT Radiation Dose Summary"
 Description:    "Defines the Minimal Dose Information related to CT irradiation events"
+* insert RDSStructureDefinitionContent
 
-* component ^slicing.discriminator.type = #value
-* component ^slicing.discriminator.path = "code.coding"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
+* component ^slicing.ordered = false
+* component ^slicing.description = "Slice on component.code"
 
 * device 1..1
 * device ^short = "The irradiating device"
@@ -22,7 +25,7 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 
 * component[procedureReported].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 
-* component[cTDoseLengthProductTotal].code.coding = DCM#113813 "CT Dose Length Product Total"
+* component[cTDoseLengthProductTotal].code = DCM#113813 "CT Dose Length Product Total"
 * component[cTDoseLengthProductTotal].value[x] only Quantity
 * component[cTDoseLengthProductTotal].valueQuantity 1..1
 * component[cTDoseLengthProductTotal].valueQuantity.unit = "mGy.cm"

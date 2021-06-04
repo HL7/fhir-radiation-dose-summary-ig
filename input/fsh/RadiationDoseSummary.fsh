@@ -7,6 +7,7 @@ Parent:         Observation
 Id:             radiation-dose-summary
 Title:          "Radiation Dose Summary"
 Description:    "General Structure describing a summary of an irradiation act"
+* insert RDSStructureDefinitionContent
 
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -36,7 +37,7 @@ Description:    "General Structure describing a summary of an irradiation act"
 * partOf[imagingStudyRef] only Reference(ImagingStudy)
 * partOf[imagingStudyRef] ^short = "Related ImagingStudy"
 
-* code.coding = LOINC#73569-6 "Radiation exposure and protection information"
+* code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject only Reference(Patient)
 * subject 1..1
 * subject ^short = "Irradiated patient"
@@ -76,14 +77,17 @@ Description:    "General Structure describing a summary of an irradiation act"
 * performer 1..1
 * performer[irradiationAutorizingPerson] ^short = "Related irradiation authorizing person"
 
-* component ^slicing.discriminator.type = #value
-* component ^slicing.discriminator.path = "code.coding"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
+* component ^slicing.ordered = false
+* component ^slicing.description = "Slice on component.code"
 
-// Dose measurements - Study Level
+// Dose measurements - Procedure Level
 * component 1..*
+* component.code from ComponentRadiationDoseSummaryVS (extensible)
 * component contains procedureReported 1..1
-* component[procedureReported].code.coding = DCM#121058 "Procedure reported"
+* component[procedureReported].code = DCM#121058 "Procedure reported"
 * component[procedureReported].value[x] only CodeableConcept
 * component[procedureReported].valueCodeableConcept from ProcedureReportedTypeVS (required)
 * component[procedureReported] ^short = "Related Reported Procedure."
@@ -94,8 +98,29 @@ ValueSet: ProcedureReportedTypeVS
 Id: procedure-reported-type-rds-vs
 Title: "Procedure Reported Type Value Set"
 Description: "What is the type of procedure reported in the Radiation Dose Summary"
+* ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 //* SCT#373205008 "Nuclear medicine imaging procedure"
 * DCM#113502 "Radiopharmaceutical Administration"
 * SCT#77477000 "Computerized tomography"
 * DCM#113704 "Projection X-Ray"
 * SCT#71651007 "Mammography"
+
+ValueSet: ComponentRadiationDoseSummaryVS
+Id: component-radiation-dose-summary-vs
+Title: "Components' Code for Radiation Dose Summary"
+Description: "Value Set describing the list of minimal dose information related to Procedure and Administration level"
+* ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* DCM#121058 "Procedure reported"
+* DCM#113813 "CT Dose Length Product Total"
+* DCM#113725 "Dose (RP) Total"
+* DCM#111637 "Accumulated Average Glandular Dose"
+* DCM#113722 "Dose Area Product Total"
+* DCM#113726 "Fluoro Dose Area Product Total"
+* DCM#113727 "Acquisition Dose Area Product Total"
+* DCM#113730 "Total Fluoro Time"
+* DCM#113731 "Total Number of Radiographic Frames"
+* DCM#113507 "Administered activity"
+* SCT#349358000 "Radiopharmaceuticals"
+* SCT#89457008 "Radioisotope"
+* DCM#123005 "Radiopharmaceutical Volume"
+* SCT#410675002 "Route of administration"

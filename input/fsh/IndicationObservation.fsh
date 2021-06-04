@@ -5,6 +5,7 @@ Parent:         Observation
 Id:             indication-observation
 Title:          "Indication Observation"
 Description:    "Indication observation related to the radiation administration"
+* insert RDSStructureDefinitionContent
 
 * code.coding = DCM#121109 "Indications for Procedure"
 
