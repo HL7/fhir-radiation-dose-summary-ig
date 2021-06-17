@@ -1,4 +1,4 @@
-This chapter describes the different architecture descriptions of the resources, profiles and actors identified within the IG.
+This chapter describes the different architecture aspects of the resources, profiles and actors identified within the IG.
 
 1. [Profiles & Extensions](#profiles) - FHIR Profiles and extensions defined in the IG
 2. [Actors](#actors) - Actors participating in the IG
@@ -40,7 +40,7 @@ A general Dose Summary profile is defined, and extended by three different Profi
 * X-Ray Dose Summary Profile
 * NM Dose Summary Profile
 
-A general Irradiation Event profile is defined, and extended by on profile: CT Irradiation Event. Following the analysis of different national and regional recommendation, only a need for CT Irradiation event profiling was found, the details of X-Ray and NM irradiations events were not highlighted as needed during a radiation summary report. Thus, no Profiles related to X-Ray and NM irradiation events were created.
+A general Irradiation Event profile is defined, and extended by on profile: CT Irradiation Event. Following the analysis of different national and regional recommendations, only a need for CT Irradiation event profiling was found, the details of X-Ray and NM irradiations events were not highlighted as needed during a radiation summary report. Thus, no Profiles related to X-Ray and NM irradiation events were created.
 
 
 <a name="actors"></a>

@@ -15,9 +15,9 @@ This IG is organized into three main sections:
     * [Profiles & Extensions](archi.html#profiles) - FHIR Profiles and extensions defined in the IG
     * [Actors](archi.html#actors) - Actors participating in the IG
     * [Terminology](archi.html#terminology) - Value Sets defined and used
-    * [Security Consideration](archi.html#sec) - Security aspect to be taken in consideration
+    * [Security Consideration](archi.html#sec) - Security aspects to be taken in consideration
 * [Chapter III](testing.html): Testing & Conformance
-    * [Test Plan](testing.html#testplan) - Test plans for different actors 
+    * [Test Plan](testing.html#testplan) - Test plans for the different actors 
     * [Test Data](testing.html#testdata) - Test data that can be used
     * [Resources Samples](testing.html#samples) - Samples of resources profiled following this IG
     * [Download](testing.html#download) - Resources available for download
