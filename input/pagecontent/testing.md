@@ -71,7 +71,7 @@ Here are some examples of queries and searching use cases that can be performed 
 ##### CT sample
 Here is an example of the Radiation Dose Summary Profile resource related to CT exam, and its dependencies:
 
-![Example 1](./example1.png){: width="1000px"}
+![Example 1](./example1.png){: width="100%"}
 
 <br clear="all" />
 
@@ -91,7 +91,7 @@ A sample of Dose Summary Report profile exists with relationship to Indications 
 ##### X-Ray sample
 Here is an example of the Radiation Dose Summary Profile resource related to XA exam, and its dependencies:
 
-![Example 2](./example2.png){: width="1000px"}
+![Example 2](./example2.png)
 
 <br clear="all" />
 
@@ -104,8 +104,7 @@ Here is an example of the Radiation Dose Summary Profile resource related to XA 
 ##### NM sample
 Here is an example of the Radiation Dose Summary Profile resource related to Radiopharmaceutical administration, and its dependencies:
 
-![Example 3](./example3.png){: width="1000px"}
-
+![Example 3](./example3.png)
 <br clear="all" />
 
 * [NMRadiationDoseSummary-122](Observation-122.html)
