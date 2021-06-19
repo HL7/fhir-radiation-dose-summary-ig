@@ -27,7 +27,7 @@ There is no special supporting DataType profiles defined by this IG.
 There is no special supporting extensions defined by this IG.
 
 #### Profiles relationship
-![Profiles relationship](./archi.png){: width="900px"}
+![Profiles relationship](./archi.png){: width="100%"}
 
 <br clear="all" />
 
@@ -51,7 +51,7 @@ A list of actors are identified within this IG:
 * FHIR Server
 * Radiation Dose Summary Consumer
 
-![Actors](./actors.png){: width="900px"}
+![Actors](./actors.png){: width="100%"}
 
 <br clear="all" />
 

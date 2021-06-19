@@ -1,0 +1,75 @@
+@startuml
+hide footbox
+skinparam sequenceMessageAlign center
+skinparam sequence {
+ArrowColor #005500
+LifeLineBorderColor Black
+ActorFontColor Black
+ActorBorderColor Black
+ParticipantBorderColor Black
+ParticipantBackgroundColor #c9f4ff
+ActorBackgroundColor #c9f4ff
+}
+
+actor Patient
+participant "Irradiating Modality" as IrradiatingModality
+participant "RDSP Actor" as RDSP
+participant "FHIR Server" as server
+participant "RDSC Actor" as RDSC
+
+note over Patient #fce079: Patient ID =  PIDXX
+note over IrradiatingModality #fce079: Device ID = DevXX\nPractitioner ID = PractXX\nStudyInstanceUID = SIUD
+
+Patient -> IrradiatingModality : perform diagnostic imaging
+activate IrradiatingModality #b3ffd7
+
+IrradiatingModality -> RDSP : Share Radiation Information (RDSR)
+activate RDSP  #b3ffd7
+RDSP --> IrradiatingModality : return
+deactivate RDSP
+
+IrradiatingModality --> Patient: return
+deactivate IrradiatingModality
+
+activate RDSP #b3ffd7
+
+RDSP -> server : GET Patient?identifier=PIDXX
+activate server #b3ffd7
+server --> RDSP : return Patient
+deactivate server
+
+RDSP -> server : GET Device?identifier=DevXX
+activate server #b3ffd7
+server --> RDSP : return Device
+deactivate server
+
+RDSP -> server : GET Practitioner?identifier=PractXX
+activate server #b3ffd7
+server --> RDSP : return Practitioner
+deactivate server
+
+RDSP -> server : GET ImagingStudy?identifier=SIUID
+activate server #b3ffd7
+server --> RDSP : return ImagingStudy
+deactivate server
+
+RDSP -> RDSP  : Construct \nRadiation Dose Summary Resources
+activate RDSP #b3ffd7
+deactivate RDSP
+
+RDSP -> server : POST \nRadiation Dose Summary
+activate server #b3ffd7
+server --> RDSP : return
+deactivate server
+deactivate RDSP
+
+RDSC -> server: Search and GET \nRadiation Dose Summary Resources
+activate server #b3ffd7
+server --> RDSC : return resources
+deactivate server
+
+RDSC -> server: POST \nRadiation Summary Report
+activate server #b3ffd7
+server --> RDSC : return
+deactivate server
+@enduml
