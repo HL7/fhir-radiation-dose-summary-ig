@@ -18,6 +18,10 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 * device 1..1
 * device ^short = "The irradiating device"
 
+* hasMember ^slicing.discriminator.type = #profile
+* hasMember ^slicing.discriminator.path = "reference"
+* hasMember ^slicing.rules = #open
+* hasMember ^slicing.description = "Description of the related related observation"
 * hasMember[irradiationEvent] only Reference(CTIrradiationEventSummary)
 
 // Dose measurements - Study Level

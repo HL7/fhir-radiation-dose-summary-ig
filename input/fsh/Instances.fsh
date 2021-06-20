@@ -1,7 +1,8 @@
 Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
 Alias: SCT = http://snomed.info/sct
 Alias: LOINC =  http://loinc.org
-
+Alias: DCMIdType = http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type
+Alias: HL7IdType = http://terminology.hl7.org/CodeSystem/v2-0203
 
 // Example 1 //
 Instance: CTRadiationDoseSummary-139
@@ -9,11 +10,13 @@ InstanceOf: CTRadiationDoseSummary
 Usage: #example
 Description: "CT Radiation Dose Summary example 1"
 * id = "139"
-* identifier[0].system = "study-instance-uid"
+* identifier[0].type = DCMIdType#study-instance-uid "Study Instance UID"
+* identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "1.2.840.121.3.32.0.1.1323423"
-* identifier[1].system = "sr-sop-instance-uid"
+* identifier[1].type = DCMIdType#sop-instance-uid "SOP Instance UID"
+* identifier[1].system = "urn:dicom:uid"
 * identifier[1].value = "1.2.840.121.3.32.0.1.1323423.122"
-* identifier[2].system = "accession-number"
+* identifier[2].type = HL7IdType#ACSN "Accession ID"
 * identifier[2].value = "AN12322332"
 * partOf = Reference(ImagingStudy/342)
 * status = #final
@@ -27,10 +30,10 @@ Description: "CT Radiation Dose Summary example 1"
 * device.display = "CT01"
 * hasMember[0] = Reference(Observation/839)
 * hasMember[0].display = "Irradiation Event - 1"
-* hasMember[0].type = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/ct-radiation-dose-summary"
+* hasMember[0].type = "Observation"
 * hasMember[1] = Reference(Observation/393)
 * hasMember[1].display = "Irradiation Event - 2"
-* hasMember[1].type = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/ct-radiation-dose-summary"
+* hasMember[1].type = "Observation"
 * component[0].code.coding = DCM#121058 "Procedure reported"
 * component[0].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 * component[1].code.coding = DCM#113813 "CT Dose Length Product Total"
@@ -42,7 +45,8 @@ InstanceOf: CTIrradiationEventSummary
 Usage: #example
 Description: "CT Irradiation Event Summary instance 1 for example 1"
 * id = "839"
-* identifier[0].system = "irradiation-event-uid"
+* identifier[0].type = DCMIdType#irradiation-event-uid "Irradiation Event UID"
+* identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "1.2.840.121.3.32.0.1.1323423.1"
 * partOf = Reference(ImagingStudy/342)
 * status = #final
@@ -66,7 +70,8 @@ InstanceOf: CTIrradiationEventSummary
 Usage: #example
 Description: "CT Irradiation Event Summary instance 2 for example 1"
 * id = "393"
-* identifier[0].system = "irradiation-event-uid"
+* identifier[0].type = DCMIdType#irradiation-event-uid "Irradiation Event UID"
+* identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "1.2.840.121.3.32.0.1.1323423.2"
 * partOf = Reference(ImagingStudy/342)
 * status = #final
@@ -90,7 +95,7 @@ InstanceOf: Patient
 Usage: #example
 Description: "Patient for example 1"
 * id = "56"
-* identifier[0].system = "ipdauth1"
+* identifier[0].system = "urn:pid:ipdauth1"
 * identifier[0].value = "PAT3421"
 * name[0].family = "Dupony"
 * name[0].given = "Pascale"
@@ -103,7 +108,7 @@ InstanceOf: Practitioner
 Usage: #example
 Description: "Practitioner for example 1"
 * id = "33"
-* identifier[0].system = "practauth1"
+* identifier[0].system = "urn:prid:ipractauth1"
 * identifier[0].value = "pract67"
 * name[0].family = "Moore"
 * name[0].given[0] = "John"
@@ -117,8 +122,7 @@ Description: "ImagingStudy for example 1"
 * identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.1323423" 
 * identifier[1].system = "http://ginormoushospital.org/accession"
-* identifier[1].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[1].type.coding[0].code = #ACSN
+* identifier[1].type = HL7IdType#ACSN "Accession ID"
 * identifier[1].value = "AN12322332"
 * status = #available
 * subject = Reference(Patient/56)
@@ -131,9 +135,9 @@ InstanceOf: ModalityDevice
 Usage: #example
 Description: "ModalityDevice for example 1"
 * id = "539"
-* identifier[0].system = "device-serial-number"
+* identifier[0].type = HL7IdType#SNO "Serial Number"
 * identifier[0].value = "5445A343"
-* identifier[1].system = "application-entity"
+* identifier[1].type = DCMIdType#application-entity "Application Entity"
 * identifier[1].value = "CT01" 
 * manufacturer = "Manufacturer-1"
 * serialNumber = "5445A343"
@@ -202,9 +206,10 @@ InstanceOf: XRayRadiationDoseSummary
 Usage: #example
 Description: "CT Radiation Dose Summary example 2"
 * id = "545"
-* identifier[0].system = "study-instance-uid"
+* identifier[0].type = DCMIdType#study-instance-uid "Study Instance UID"
+* identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "1.2.840.121.3.32.0.1.25"
-* identifier[1].system = "accession-number"
+* identifier[1].type = HL7IdType#ACSN "Accession ID"
 * identifier[1].value = "AN1232234"
 * partOf = Reference(ImagingStudy/344)
 * status = #final
@@ -239,9 +244,7 @@ Description: "ImagingStudy for example 2"
 * id = "344"
 * identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.25" 
-* identifier[1].system = "http://ginormoushospital.org/accession"
-* identifier[1].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[1].type.coding[0].code = #ACSN
+* identifier[1].type = HL7IdType#ACSN "Accession ID"
 * identifier[1].value = "AN1232234"
 * status = #available
 * subject = Reference(Patient/56)
@@ -254,9 +257,9 @@ InstanceOf: ModalityDevice
 Usage: #example
 Description: "ModalityDevice for example 2"
 * id = "12"
-* identifier[0].system = "device-serial-number"
+* identifier[0].type = HL7IdType#SNO "Serial Number"
 * identifier[0].value = "767ER"
-* identifier[1].system = "application-entity"
+* identifier[1].type = DCMIdType#application-entity "Application Entity"
 * identifier[1].value = "XA01" 
 * manufacturer = "Manufacturer-1"
 * serialNumber = "767ER"
@@ -273,9 +276,10 @@ InstanceOf: NMRadiationDoseSummary
 Usage: #example
 Description: "NM Radiation Dose Summary example 3"
 * id = "122"
-* identifier[0].system = "study-instance-uid"
+* identifier[0].type = DCMIdType#study-instance-uid "Study Instance UID"
+* identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "1.2.840.121.3.32.0.1.32"
-* identifier[1].system = "accession-number"
+* identifier[1].type = HL7IdType#ACSN "Accession ID"
 * identifier[1].value = "AN6545"
 * partOf = Reference(ImagingStudy/22)
 * status = #final
@@ -301,9 +305,7 @@ Description: "ImagingStudy for example 3"
 * id = "22"
 * identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.32" 
-* identifier[1].system = "http://ginormoushospital.org/accession"
-* identifier[1].type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[1].type.coding[0].code = #ACSN
+* identifier[1].type = HL7IdType#ACSN "Accession ID"
 * identifier[1].value = "AN6545"
 * status = #available
 * subject = Reference(Patient/56)

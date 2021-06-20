@@ -1,6 +1,8 @@
 Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
 Alias: SCT = http://snomed.info/sct
 Alias: LOINC =  http://loinc.org
+Alias: DCMIdType = http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type
+Alias: HL7IdType = http://terminology.hl7.org/CodeSystem/v2-0203
 
 Profile:        RadiationDoseSummary
 Parent:         Observation
@@ -9,20 +11,23 @@ Title:          "Radiation Dose Summary"
 Description:    "General Structure describing a summary of an irradiation act"
 * insert RDSStructureDefinitionContent
 
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
+* identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Identifiers for the radiation dose"
 
 
 * identifier contains studyInstanceUID 1..1 and radiationSRUID 0..* and accessionNumber 0..1 
-* identifier[studyInstanceUID].system = "study-instance-uid"
+* identifier[studyInstanceUID].type = DCMIdType#study-instance-uid "Study Instance UID"
+* identifier[studyInstanceUID].system = "urn:dicom:uid"
 * identifier[studyInstanceUID].value 1..1
 * identifier[studyInstanceUID] ^short = "Identifier related to Study Instance UID"
-* identifier[radiationSRUID].system = "sr-sop-instance-uid"
+* identifier[radiationSRUID].type = DCMIdType#sop-instance-uid "SOP Instance UID"
+* identifier[radiationSRUID].system = "urn:dicom:uid"
 * identifier[radiationSRUID].value 1..1
 * identifier[radiationSRUID] ^short = "Identifier related to SOP Instance UID if the resources is generated based on an RDSR"
-* identifier[accessionNumber].system = "accession-number"
+* identifier[accessionNumber].type = HL7IdType#ACSN "Accession ID"
 * identifier[accessionNumber].value 1..1
 * identifier[accessionNumber] ^short = "The accession number related to the performed study"
 
@@ -56,8 +61,6 @@ Description:    "General Structure describing a summary of an irradiation act"
 * device ^short = "Irradiating modality"
 
 
-// Pregnancy Observation
-// Indication Observation
 * hasMember ^slicing.discriminator.type = #profile
 * hasMember ^slicing.discriminator.path = "reference"
 * hasMember ^slicing.rules = #open
@@ -98,6 +101,7 @@ ValueSet: ProcedureReportedTypeVS
 Id: procedure-reported-type-rds-vs
 Title: "Procedure Reported Type Value Set"
 Description: "What is the type of procedure reported in the Radiation Dose Summary"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 //* SCT#373205008 "Nuclear medicine imaging procedure"
 * DCM#113502 "Radiopharmaceutical Administration"
@@ -109,6 +113,7 @@ ValueSet: ComponentRadiationDoseSummaryVS
 Id: component-radiation-dose-summary-vs
 Title: "Components' Code for Radiation Dose Summary"
 Description: "Value Set describing the list of minimal dose information related to Procedure and Administration level"
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * DCM#121058 "Procedure reported"
 * DCM#113813 "CT Dose Length Product Total"

@@ -118,6 +118,8 @@ These Value Sets have been defined for this implementation guide.
 1. [Isotopes Value Set](ValueSet-isotope-rds-vs.html)
 2. [Procedure Reported Type Value Set](ValueSet-procedure-reported-type-rds-vs.html)
 3. [Radiopharmaceuticals Value Set](ValueSet-radiopharmaceutical-rds-vs.html)
+4. [Components' Code for Radiation Dose Summary](ValueSet-component-radiation-dose-summary-vs.html)
+5. [Components' Code for Irradiation Event](ValueSet-component-irradiation-event-vs.html)
 
 #### Value Sets Used
 DICOM ValueSet links:
@@ -131,7 +133,8 @@ DICOM ValueSet links:
 8. [CID 4020 PET Radionuclide](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html){:target="_blank"}
 
 #### Code Systems Defined
-There are no code systems defined in this IG.
+One new code system is defined under this IG:
+1. [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html)
 
 #### Code Systems Used
 This implementation guide draws on a number of formal code systems.

@@ -1,4 +1,6 @@
 Alias: DEViCETYPE =  http://hl7.org/fhir/device-nametype
+Alias: DCMIdType = http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type
+Alias: HL7IdType = http://terminology.hl7.org/CodeSystem/v2-0203
 
 Profile:        ModalityDevice
 Parent:         Device
@@ -7,21 +9,26 @@ Title:          "Modality Device"
 Description:    "Modality profiling as a Device resource"
 * insert RDSStructureDefinitionContent
 
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Identifiers for the modality"
+* identifier ^slicing.ordered = false
+* identifier ^slicing.description = "Identifiers for the radiation dose"
 
-* identifier contains deviceSerialNumber 0..1 and aeTitle 1..1 and deviceUID 0..1
-* identifier[deviceSerialNumber].system = "device-serial-number"
+* identifier contains deviceSerialNumber 0..1 and aeTitle 1..1 and deviceUID 0..1 and deviceID 0..1
+* identifier[deviceSerialNumber].type = HL7IdType#SNO "Serial Number"
 * identifier[deviceSerialNumber].value 1..1
 * identifier[deviceSerialNumber] ^short = "Describe the Device Serial Number, related to tag(0018,1000) Device Serial Number" 
-* identifier[aeTitle].system = "application-entity"
+* identifier[aeTitle].type = DCMIdType#application-entity "Application Entity"
 * identifier[aeTitle].value 1..1
 * identifier[aeTitle] ^short = "Describe the AETitle of the modality irradiating the patient"
-* identifier[deviceUID].system = "device-uid"
+* identifier[deviceUID].type = DCMIdType#device-uid "Device UID"
+* identifier[deviceUID].system = "urn:dicom:uid"
 * identifier[deviceUID].value 1..1
 * identifier[deviceUID] ^short = "Describe the Device UID, related to tag(0018,1002) Device UID"
+* identifier[deviceID].type = DCMIdType#device-id "Device ID"
+* identifier[deviceID].value 1..1
+* identifier[deviceID] ^short = "Describe the Device ID, related to tag((0018,1003) Device ID"
 * manufacturer ^short = "The manufacturer of the modality, related to tag(0008,0070) manufacturer"
 * serialNumber ^short = "The serial number of the modality, which is the Device Serial Number"
 * type 1..1

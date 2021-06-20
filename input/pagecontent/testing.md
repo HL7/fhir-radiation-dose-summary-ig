@@ -84,9 +84,9 @@ Here is an example of the Radiation Dose Summary Profile resource related to CT 
 * [ModalityDevice-539](Device-539.html)
 
 A sample of Dose Summary Report profile exists with relationship to Indications profile and Pregnancy Status profile:
-* [RadiationSummaryReport-1](RadiationSummaryReport-1.html)
-* [Indications-1](Indications-1.html)
-* [PregnancyStatus-1](PregnancyStatus-1.html)
+* [RadiationSummaryReport-1](Composition-1.html)
+* [Indications-1](Observation-34.html)
+* [PregnancyStatus-1](Observation-33.html)
 
 ##### X-Ray sample
 Here is an example of the Radiation Dose Summary Profile resource related to XA exam, and its dependencies:
