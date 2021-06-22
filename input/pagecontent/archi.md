@@ -148,6 +148,21 @@ The following table presents the external code systems (and naming conventions) 
 | DCM | DICOM | http://dicom.nema.org/resources/ontology/DCM | Devices, products, radiation information |
 {:.table-striped .table-bordered}
 
+#### Value Sets strength
+The following table summarizes the mapping between defined profiles and Value sets strength : 
+ 
+| Profile | Element path | Value Set | Strength | Strength Justification |
+|---------|--------------|-----------|----------|------------------------|
+| CT Irradiation Event Summary | bodySite | [CID 4030 CT, MR and PET Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html){:target="_blank"} | extensible | Following DICOM TID 10013 |
+| CT Irradiation Event Summary | component:ctdiPhantomType | [CID 4052 Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html){:target="_blank"} | extensible | Following DICOM TID 10013 |
+| Irradiation Event Summary | component.code | [Components' Code for Irradiation Event](ValueSet-component-irradiation-event-vs.html) | extensible | to keep the possibility to extend the list of reported components |
+| Modality Device | type | [CID 33 Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html){:target="_blank"} | required | VS contains the exhaustif list of modalities types |
+| Radiopharmaceutical Radiation Dose Summary | component:radiopharmaceutical | [Radiopharmaceuticals Value Set](ValueSet-radiopharmaceutical-rds-vs.html) | extensible | Following DICOM TID 10022 |
+| Radiopharmaceutical Radiation Dose Summary | component:radioisotope | [Isotopes Value Set](ValueSet-isotope-rds-vs.html) | extensible | Following DICOM TID 10022 |
+| Radiopharmaceutical Radiation Dose Summary | component:routeOfAdministration | [CID 11 Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html){:target="_blank"} | preferred | Following DICOM TID 10022 |
+| Radiation Dose Summary | component.code | [Components' Code for Radiation Dose Summary](ValueSet-component-radiation-dose-summary-vs.html) | extensible |  to keep the possibility to extend the list of reported components |
+| Radiation Dose Summary | component:procedureReported | [Procedure Reported Type Value Set](ValueSet-procedure-reported-type-rds-vs.html) | required | procedure reported component is the distinguisher of irradiation type |
+{:.table-striped .table-bordered}
 
 <a name="sec"></a>
 
