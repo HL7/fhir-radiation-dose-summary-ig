@@ -83,7 +83,7 @@ Here is an example of the Radiation Dose Summary Profile resource related to CT 
 * [Practitioner-33](Practitioner-33.html)
 * [ModalityDevice-539](Device-539.html)
 
-A sample of Dose Summary Report profile exists with relationship to Indications profile and Pregnancy Status profile:
+A sample of Dose Summary Report profile exists with relationship to Indications profile and Pregnancy Status:
 * [RadiationSummaryReport-1](Composition-1.html)
 * [Indications-1](Observation-34.html)
 * [PregnancyStatus-1](Observation-33.html)

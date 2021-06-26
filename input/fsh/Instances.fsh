@@ -185,18 +185,15 @@ Description: "Indication Observation for example 1"
 
 
 Instance: PregnancyStatus-1
-InstanceOf: PregnancyStatus
+InstanceOf: ObservationPregnancyStatusUvIps
 Usage: #example
 Description: "Pregnancy Status for example 1"
 * id = "34"
 * status = #final
-* code.coding = LOINC#82810-3 "Pregnancy status"
 * subject = Reference(Patient/56)
 * effectiveDateTime = "2015-01-01T23:43:30.000Z"
 * subject.display = "Pascale Dupont"
-* valueCodeableConcept = SCT#77386006 "Pregnant (finding)"
-* component[0].code.coding = LOINC#11778-8 "Delivery date Estimated"
-* component[0].valueDateTime = "2015-06-02T00:00:00.000Z"
+* valueCodeableConcept = LOINC#LA26683-5 "Not pregnant"
 
 
 

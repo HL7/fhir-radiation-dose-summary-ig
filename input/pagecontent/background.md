@@ -129,7 +129,7 @@ Contextual Information data:
 | Contextual Information         |      Identifier       | Level |
 |--------------------------------|-----------------------|-------|
 | Irradiation Authorizing Person | [EV (113850, DCM, Irradiation Authorizing)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113850){:target="_blank"} | Procedure |
-| Pregnancy Observation          | [EV (364320009, SCT, Pregnancy observable)](http://snomed.info/id/364320009){:target="_blank"} | Procedure |
+| Pregnancy Observation          | [EV (82810-3, LN, Pregnancy status)](http://snomed.info/id/364320009){:target="_blank"} | Procedure |
 | Indication Observation         | [EV (18785-6, LN, Indications for Procedure)](http://loinc.org/18785-6/){:target="_blank"} | Procedure |
 | Irradiating Device             | [EV (113859, DCM, Irradiating Device)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113859){:target="_blank"} | Procedure |
 | Irradiation Issued Date        | [EV (113809, DCM, Start of X-Ray Irradiation)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113809){:target="_blank"} | Procedure |
@@ -191,6 +191,7 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |IG| Implementation Guide |
 |IHE| Integrating the Healthcare Enterprise |
 |IOD| Information Object Definition |
+|IPS| International Patient Summary |
 |MG| Mammography |
 |MPPS| Modality Performed Procedure Step |
 |NM| Nuclear Medicine |
@@ -238,3 +239,4 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 18. IEC, [IEC 61910-1:2014 - Medical electrical equipment - Radiation dose documentation - Part 1: Radiation dose structured reports for radiography and radioscopy](https://webstore.iec.ch/publication/6091){:target="_blank"}
 19. IHE Radiology (RAD), [Technical Framework Volume 1, Cross-enterprise Document Sharing for Imaging (XDS-I.b)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
 20. IHE Radiology (RAD), [Technical Framework Volume 1, Radiation Exposure Monitoring (REM)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
+21. HL7 International, [International Patient Summary Implementation Guide (IPS)](https://hl7.org/fhir/uv/ips/STU1/)

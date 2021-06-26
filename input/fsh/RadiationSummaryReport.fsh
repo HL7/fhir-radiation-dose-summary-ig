@@ -25,7 +25,7 @@ Description:    "A report document describing the irradiation act"
 * section[radiationDoseSummary] ^short = "Map to the Radiation Dose Summary Observation resource"
 
 * section[pregnancyObservation].code.coding = LOINC#82810-3 "Pregnancy status"
-* section[pregnancyObservation].entry only Reference(PregnancyStatus)
+* section[pregnancyObservation].entry only Reference(ObservationPregnancyStatusUvIps)
 * section[pregnancyObservation] ^short = "Map to the Pregnancy Status Observation resource"
 
 * section[indicationObservation].code.coding = DCM#121109 "Indications for Procedure"
