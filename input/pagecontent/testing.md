@@ -8,7 +8,7 @@ This chapter describes testing data and testing plan, and provide some samples f
 <a name="testplan"></a>
 
 ### Test Plan
-#### Scenario: RDSR summary to FHIR
+#### Scenario 1: RDSR summary to FHIR
 ##### Actors
 
 * Radiation Dose Summary Producer (RDSP) actor
@@ -40,6 +40,30 @@ Here are the different steps that needs to be performed:
 ##### Validation
 
 * The generated Radiation Summary resources shall pass the validation tool testing, using the FHIR [validator](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar){:target="_blank"}
+
+#### Scenario 2: Grouping RDSP and FHIR Server
+##### Actors
+* Radiation Dose Summary Producer (RDSP) actor <i>grouped with</i> FHIR server
+* Radiation Dose Summary Consumer (RDSC) actor
+
+##### Roles
+
+| Actors | Roles |
+|--------------------------|-----------------------|
+| Radiation Dose Summary Producer (RDSP) actor grouped with FHIR server | Produce internally the Radiation Dose Summary resource <br/> Host and Manage the Radiation Dose Summary resource <br/> Manage the contextual resources (Patient, Device, ImagingStudy, etc) |
+|Radiation Dose Summary Consumer (RDSC) actor | Consume Radiation Dose Summary resource |
+{:.table-striped .table-bordered}
+
+##### Steps
+
+Here are the different steps that needs to be performed: 
+![Actors relationship Scenario 2](./seq2.png){: width="900px"}
+
+<br clear="all" />
+* The (RDSP actor, FHIR server) gathers an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR)
+* The (RDSP actor, FHIR server) constructs and exposes the resources related to the Patient, ImagingStudy, Practitioner, Device and Radiation Dose Summary resources.
+* The RDSC actor queries the (RDSP actor, FHIR server) and collects radiation summary information
+
 
 <a name="testdata"></a>
 
