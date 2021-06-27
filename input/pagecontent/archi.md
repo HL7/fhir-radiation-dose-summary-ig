@@ -3,7 +3,8 @@ This chapter describes the different architecture aspects of the resources, prof
 1. [Profiles & Extensions](#profiles) - FHIR Profiles and extensions defined in the IG
 2. [Actors](#actors) - Actors participating in the IG
 3. [Terminology](#terminology) - Value Sets defined
-4. [Sercurity Consideration](#sec) - Security aspects to be taken in consideration
+4. [Resources Identifiers](#identifiers) - A focus on DICOM identifiers types
+5. [Sercurity Consideration](#sec) - Security aspects to be taken in consideration
 
 <a name="profiles"></a>
 
@@ -168,6 +169,65 @@ The following table summarizes the mapping between defined profiles and Value se
 | Radiation Dose Summary | component.code | [Components' Code for Radiation Dose Summary](ValueSet-component-radiation-dose-summary-vs.html) | extensible |  to keep the possibility to extend the list of reported components |
 | Radiation Dose Summary | component:procedureReported | [Procedure Reported Type Value Set](ValueSet-procedure-reported-type-rds-vs.html) | required | procedure reported component is the distinguisher of irradiation type |
 {:.table-striped .table-bordered}
+
+<a name="identifiers"></a>
+
+### Resources Identifiers
+
+Many profiles defined in this IG are using DICOM IDs and UIDs as identifiers for the resources. In this paragraph, we summarize the different IDs and UIDs used, and the way they should be exposed in FHIR resources:
+
+| Profile | Identifier | Identifier.system | Identifier.type.code | Identifier.type.system | Identifier.type.display | DICOM Tag Mapping |
+|---------|------------|-------------------|----------------------|------------------------|-------------------------|---------|
+| [Irradiation Event Summary](StructureDefinition-irradiation-event-summary.html) | identifier:irradiationEventUID | urn:dicom:uid | irradiation-event-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Irradiation Event UID | (0008,3010) Irradiation Event UID |
+| [Modality Device](StructureDefinition-modality-device.html) | identifier:deviceSerialNumber | | SNO | [HL7 IdentifierType](http://terminology.hl7.org/CodeSystem/v2-0203){:target="_blank"} | Serial Number | (0018,1000) Device Serial Number |
+| [Modality Device](StructureDefinition-modality-device.html) | identifier:aeTitle | | application-entity | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Application Entity | N/A |
+| [Modality Device](StructureDefinition-modality-device.html) | identifier:deviceUID | urn:dicom:uid | device-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Device UID | (0018,1002) Device UID |
+| [Modality Device](StructureDefinition-modality-device.html) | identifier:deviceID | | device-id | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Device ID | (0018,1003) Device ID |
+| [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | identifier:studyInstanceUID | urn:dicom:uid | study-instance-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Study Instance UID | (0020,000D) Study Instance UID |
+| [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | identifier:radiationSRUID | urn:dicom:uid | sop-instance-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | SOP Instance UID | (0008,0018) SOP Instance UID |
+| [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | identifier:accessionNumber | | ACSN | [HL7 IdentifierType](http://terminology.hl7.org/CodeSystem/v2-0203){:target="_blank"} | Accession ID | (0008,0050) Accession Number |
+{:.table-striped .table-bordered}
+
+Following the notes within the [ImagingStudy](http://hl7.org/fhir/imagingstudy.html#notes) resource - <i>When encoding a DICOM UID in an Identifier datatype, use the Identifier system of "urn:dicom:uid"</i> - the identifiers related to DICOM tags having the Value Representation (VR) of type UID, shall have the <code>type.system=urn:dicom:uid</code>.
+
+Here some examples :
+* Irradiation Event UID : 
+<pre class="json">
+"identifier": [
+    {
+        "type": {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type",
+                    "code": "irradiation-event-uid",
+                    "display": "Irradiation Event UID"
+                }
+            ]
+        },
+        "system": "urn:dicom:uid",
+        "value": "urn:oid:1.2.840.121.3.32.0.1.1323423.2"
+    }
+]
+</pre>
+
+* Application Entity :
+<pre class="json">
+"identifier": [
+    {
+        "type": {
+            "coding": [
+                {
+                    "system": "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type",
+                    "code": "application-entity",
+                    "display": "Application Entity"
+                }
+            ]
+        },
+        "value": "XA01"
+    }
+]
+</pre>
+
 
 <a name="sec"></a>
 

@@ -210,7 +210,10 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |SSDE| Size Specific Dose Estimation |
 |TID| Template ID |
 |TLS| Transport Layer Security |
+|UID| Unique identifier |
 |URL| Uniform Resource Locator |
+|URN| Uniform Resource Name |
+|VR| Value Representation |
 |XA| X-Ray Angiography |
 |XDS-I.b| Cross-enterprise Document Sharing for Imaging |
 {:.table-striped .table-bordered}
