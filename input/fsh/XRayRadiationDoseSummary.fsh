@@ -62,6 +62,7 @@ Id: dicom-sr
 Title: "DICOM SR"
 Source: XRayRadiationDoseSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XRayRadiationDoseSRIODTemplates.html"
+Description: "The XRayRadiationDoseSummary can be extracted from TID10001 (Projection X-Ray Radiation Dose)"
 * -> "TID10001 (Projection X-Ray Radiation Dose)"
 * identifier[studyInstanceUID] -> "tag(0020,000D) [Study Instance UID]"
 * identifier[radiationSRUID] -> "tag(0008,0018) [SOP Instance UID]"

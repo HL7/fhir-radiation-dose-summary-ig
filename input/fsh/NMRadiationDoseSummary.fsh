@@ -73,6 +73,7 @@ Id: dicom-sr
 Title: "DICOM SR"
 Source: NMRadiationDoseSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_RadiopharmaceuticalRadiationDoseSRIODTemplates.html"
+Description: "The NMRadiationDoseSummary can be extracted from TID10021 (Radiopharmaceutical Radiation Dose)"
 * -> "TID10021 (Radiopharmaceutical Radiation Dose)"
 * identifier[studyInstanceUID] -> "tag(0020,000D) [Study Instance UID]"
 * identifier[radiationSRUID] -> "tag(0008,0018) [SOP Instance UID]"

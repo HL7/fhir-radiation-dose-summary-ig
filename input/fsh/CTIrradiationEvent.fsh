@@ -46,6 +46,7 @@ Id: dicom-sr
 Title: "DICOM SR"
 Source: CTIrradiationEventSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html"
+Description: "The CTIrradiationEventSummary can be extracted from TID 10013 - CT Irradaition Event Data."
 * -> "TID10013(CT Irradiation Event Data)"
 * identifier[irradiationEventUID] -> "TID10013(CT Irradiation Event Data).EV(113769, DCM, Irradiation Event UID)"
 * subject -> "tag(0010,0020) [Patient ID]"

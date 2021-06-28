@@ -53,6 +53,7 @@ Id: dicom-sr
 Title: "DICOM Equipement Module"
 Source: ModalityDevice
 Target: "http://dicom.nema.org/medical/Dicom/2016b/output/chtml/part03/sect_C.7.5.html"
+Description: "The ModalityDevice can be extracted from General Equipment Module."
 * -> "General Equipment Module"
 * identifier[deviceSerialNumber] -> "tag(0018,1000) Device Serial Number"
 * identifier[deviceUID] -> "tag(0018,1002) Device UID"

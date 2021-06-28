@@ -42,6 +42,7 @@ Id: dicom-sr
 Title: "DICOM SR"
 Source: CTRadiationDoseSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html"
+Description: "The CTRadiationDoseSummary can be extracted from TID10011 (CT Radiation Dose)."
 * -> "TID10011 (CT Radiation Dose)"
 * identifier[studyInstanceUID] -> "tag(0020,000D) [Study Instance UID]"
 * identifier[radiationSRUID] -> "tag(0008,0018) [SOP Instance UID]"
