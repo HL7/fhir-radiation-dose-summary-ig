@@ -135,10 +135,6 @@ Description: "Capability Statement needed to be supported by a FHIR Server in or
 
 // Radiation Summary resource support
 * rest[0].resource[4].type = #Observation
-* rest[0].resource[4].profile = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/radiation-dose-summary"
-* rest[0].resource[4].supportedProfile[0] = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/ct-radiation-dose-summary"
-* rest[0].resource[4].supportedProfile[1] = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/xray-radiation-dose-summary"
-* rest[0].resource[4].supportedProfile[2] = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/nm-radiation-dose-summary"
 * rest[0].resource[4].documentation = "Create, Search and read Radiation Summary shall be supported." 
 * rest[0].resource[4].interaction[0].code = #create
 * rest[0].resource[4].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -185,18 +181,6 @@ Description: "Capability Statement needed to be supported by a FHIR Server in or
 * rest[0].resource[4].searchParam[5].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[4].searchParam[5].extension.valueCode = #SHALL
 
-
-// Irradiation Event Summary resource support
-* rest[0].resource[5].type = #Observation
-* rest[0].resource[5].profile = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/irradiation-event-summary"
-* rest[0].resource[5].supportedProfile[0] = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/StructureDefinition/ct-irradiation-event-summary"
-* rest[0].resource[5].documentation = "Create and Read Irradiation Event Summary shall be supported." 
-* rest[0].resource[5].interaction[0].code = #create
-* rest[0].resource[5].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[5].interaction[0].extension.valueCode = #SHALL
-* rest[0].resource[5].interaction[1].code = #read
-* rest[0].resource[5].interaction[1].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[5].interaction[1].extension.valueCode = #SHALL
 
 * document[0].mode = #consumer
 * document[0].documentation = "Documents related to Radiation Summary Report profile."
