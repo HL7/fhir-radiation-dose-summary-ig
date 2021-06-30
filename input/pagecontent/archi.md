@@ -65,6 +65,8 @@ A list of actors are identified within this IG:
 The Radiation Dose Summary Producer (RDSP) actor is responsible on the creation of the Radiation Dose Summary observation, and sharing it with the FHIR Server. The RDSP actor shall consider synchronizing with the FHIR server multiple resources, in order to avoid duplicating resources in the FHIR server. For example, the RDSP actor shall check if the patient already exists in the FHIR server, and if so, only a reference to this patient is created, and the POST bundle from the RDSP actor to the FHIR server shall not contain a Patient resource.
 Generally, this actor can be implemented within a Dose Management System.
 
+The RDSP actor can implement the following CapabilityStatement: [RDSP capability statement](CapabilityStatement-RDSP.html).
+
 #### FHIR Server
 The FHIR Server has two functions:
 1. Provide the diagnostic procedure context to both the Radiation Dose Summary Producer and Consumer actors
@@ -80,12 +82,19 @@ The contextual resources are resources managed by the FHIR server and related to
 
 When these resources are not present in the FHIR server, the Radiation Dose Summary Producer can take the responsibility on alimenting the FHIR server with these resources, by creating them from the RDSRs and images collected from modalities.
 
+The FHIR server can implement the following CapabilityStatements:
+* [RDSP-FHIRServer](CapabilityStatement-RDSP-FHIRServer.html) - Requirements for FHIR server interacting with RDSP actor
+* [RDSC-FHIRServer](CapabilityStatement-RDSC-FHIRServer.html) -  Requirements for FHIR server interacting with RDSC actor
+* [FHIRServer](CapabilityStatement-FHIRServer.html) - Requirements for FHIR server actor
+
 #### Radiation Dose Summary Consumer
 The Radiation Dose Summary Consumer (RDSC) actor is responsible on the collection and interpretation of the Radiation Dose Summary observation. There are many ways to use the Radiation Dose Summary resources, and it depends on the consumer.
 * RIS systems can act as consumer actor, in order to enhance the final radiology report with radiation information. 
 * Clinical Decision Support tools can use these radiation resources to feed their algorithms.
 * Clinical Quality Information tools can use these radiation resources to perform analyzes on radiations information, and provide metrics related to patients cohorts, or devices comparison, or limit values calculations, etc.
 * Other consumers may act as a light Dose registry, by collecting the radiation summary information for a patient or a group of patients in a regional or national infrastructure. Such registries can create valuable data for regulations purpose, or for population radiation estimations.
+
+The RDSC actor can implement the following CapabilityStatement: [RDSC capability statement](CapabilityStatement-RDSC.html).
 
 #### Actors grouping
 The FHIR Server can be grouped with the Radiation Dose Summary Producer actor within the Dose Management System. Thus, the Dose Management System is managing all the resources and references between resources. Another possible grouping is between the FHIR Server and the Radiation Dose Summary Consumer actor. This can happen for example within EMR systems or RIS/EHR systems. In this case, the source of truth for contextual resources are independent from the Dose Management System.

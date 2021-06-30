@@ -181,8 +181,8 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |CT| Computed Tomography |
 |CTDI| Computed Tomography Dose Index |
 |DAP| Dose Area Product |
-|DLP| Dose Length Product |
 |DICOM| Digital Imaging and Communications in Medicine |
+|DLP| Dose Length Product |
 |EHR| Electronic Health Record |
 |EMR| Electronic Medical Record |
 |FHIR| Fast Healthcare Interoperability Resources |

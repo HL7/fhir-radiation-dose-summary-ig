@@ -1,10 +1,10 @@
 @startuml
 class "Radiation Summary Report" as RSR <<Composition>> #ffe6cc ##b86611
-class "Radiation Dose Summary" as DoseSummary <<Observation>> #d5e8d4 ##[dashed]green 
+abstract class "Radiation Dose Summary" as DoseSummary <<Observation>> #d5e8d4 ##[dashed]green 
 class "Pregnancy Status (IPS)" as PregnancyStatus <<Observation>> #fff2cc ##b3880c
 class "Indication Observation" as Indication <<Observation>> #fff2cc ##b3880c
 class "Modality Device" as Modality <<Device>> #34b1eb ##217aa3
-class "Irradiation Event Summary" as IrradiationEvent <<Observation>> #d5e8d4 ##[dashed]green 
+abstract class "Irradiation Event Summary" as IrradiationEvent <<Observation>> #d5e8d4 ##[dashed]green 
 class "CT Irradiation Event Summary" as CTIrradiationEvent <<Observation>> #d5e8d4 ##green
 class "ImagingStudy" as ImagingStudy #a3e7ff ##34b1eb
 class "Patient" as Patient #a3e7ff ##34b1eb

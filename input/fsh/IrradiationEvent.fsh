@@ -6,6 +6,7 @@ Parent:         Observation
 Id:             irradiation-event-summary
 Title:          "Irradiation Event Summary"
 Description:    "General Structure describing a summary of an irradiation event"
+* ^abstract = true
 * insert RDSStructureDefinitionContent
 
 * identifier ^slicing.discriminator.type = #pattern

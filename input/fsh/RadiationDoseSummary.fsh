@@ -9,6 +9,7 @@ Parent:         Observation
 Id:             radiation-dose-summary
 Title:          "Radiation Dose Summary"
 Description:    "General Structure describing a summary of an irradiation act"
+* ^abstract = true
 * insert RDSStructureDefinitionContent
 
 * identifier ^slicing.discriminator.type = #pattern
