@@ -1,4 +1,4 @@
-@startuml
+@startuml actors
 (Radiation Dose Summary Producer - RDSP) as RDSP
 (FHIR Server) as server
 (Radiation Dose Summary Consumer - RDSC) as RDSC

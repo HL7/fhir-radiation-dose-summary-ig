@@ -1,4 +1,4 @@
-@startuml
+@startuml archi
 class "Radiation Summary Report" as RSR <<Composition>> #ffe6cc ##b86611
 abstract class "Radiation Dose Summary" as DoseSummary <<Observation>> #d5e8d4 ##[dashed]green 
 class "Pregnancy Status (IPS)" as PregnancyStatus <<Observation>> #fff2cc ##b3880c

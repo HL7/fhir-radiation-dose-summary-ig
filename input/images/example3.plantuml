@@ -1,4 +1,4 @@
-@startuml
+@startuml example3
 skinparam monochrome true
 
 object  NMRadiationDoseSummary #white { 

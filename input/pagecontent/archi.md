@@ -97,7 +97,7 @@ The Radiation Dose Summary Consumer (RDSC) actor is responsible on the collectio
 The RDSC actor can implement the following CapabilityStatement: [RDSC capability statement](CapabilityStatement-RDSC.html).
 
 #### Actors grouping
-The FHIR Server can be grouped with the Radiation Dose Summary Producer actor within the Dose Management System. Thus, the Dose Management System is managing all the resources and references between resources. Another possible grouping is between the FHIR Server and the Radiation Dose Summary Consumer actor. This can happen for example within EMR systems or RIS/EHR systems. In this case, the source of truth for contextual resources are independent from the Dose Management System.
+The FHIR Server can be grouped with the Radiation Dose Summary Producer actor within the Dose Management System. Thus, the Dose Management System is managing all the resources and references between resources. Another possible grouping is between the FHIR Server and the Radiation Dose Summary Consumer actor. This can happen for example within EMR systems or RIS/EHR systems. In this case, the source of truth for contextual resources are independent from the Radiation Dose Summary Producer.
 
 #### Actors communication
 

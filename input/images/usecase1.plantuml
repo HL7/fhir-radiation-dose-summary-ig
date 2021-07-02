@@ -1,4 +1,4 @@
-@startuml
+@startuml usecase1
 hide footbox
 skinparam sequenceMessageAlign center
 skinparam sequenceGroupBackgroundColor #ffdf96

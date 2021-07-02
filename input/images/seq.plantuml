@@ -1,4 +1,4 @@
-@startuml
+@startuml seq
 hide footbox
 skinparam sequenceMessageAlign center
 skinparam sequence {

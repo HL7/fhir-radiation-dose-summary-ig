@@ -1,4 +1,4 @@
-@startuml
+@startuml example2
 skinparam monochrome true
 
 object  XRayRadiationDoseSummary #white { 
