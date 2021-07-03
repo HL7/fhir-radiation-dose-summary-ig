@@ -28,7 +28,7 @@ There is no special supporting DataType profiles defined by this IG.
 There is no special supporting extensions defined by this IG.
 
 #### Profiles relationship
-![Profiles relationship](./archi.png){: width="100%"}
+![Profiles relationship](./archi.svg){: width="110%"}
 
 <br clear="all" />
 
@@ -57,7 +57,7 @@ A list of actors are identified within this IG:
 * FHIR Server
 * Radiation Dose Summary Consumer
 
-![Actors](./actors.png){: width="100%"}
+![Actors](./actors.svg){: width="100%"}
 
 <br clear="all" />
 
@@ -103,7 +103,7 @@ The FHIR Server can be grouped with the Radiation Dose Summary Producer actor wi
 
 The following sequence diagram describes the typical workflow between the RDSP actor, the FHIR server, and the RDSC actor.
 
-![Actors relationship](./seq-simplified.png){: width="900px"}
+![Actors relationship](./seq-simplified.svg){: width="900px"}
 
 <br clear="all" />
 

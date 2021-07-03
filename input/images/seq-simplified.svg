@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="627px" preserveAspectRatio="none" style="width:1071px;height:627px;background:#FFFFFF;" version="1.1" viewBox="0 0 1071 627" width="1071px" zoomAndPan="magnify"><defs><filter height="300%" id="f1aw2o6r3g8kux" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="87.3984" style="stroke:#000000;stroke-width:1.0;" width="10" x="229.5" y="119.4297"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="487.5" y="148.5625"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="249.1953" style="stroke:#000000;stroke-width:1.0;" width="10" x="487.5" y="206.8281"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="28" style="stroke:#000000;stroke-width:1.0;" width="10" x="492.5" y="347.625"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="266.2266"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="426.8906"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="500.2891"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="573.6875"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="34" x2="34" y1="88.2969" y2="620.8203"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="234" x2="234" y1="88.2969" y2="620.8203"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="492" x2="492" y1="88.2969" y2="620.8203"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="751" x2="751" y1="88.2969" y2="620.8203"/><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1010.5" x2="1010.5" y1="88.2969" y2="620.8203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="5" y="84.9951">Patient</text><ellipse cx="34.5" cy="15" fill="#C9F4FF" filter="url(#f1aw2o6r3g8kux)" rx="8" ry="8" style="stroke:#000000;stroke-width:2.0;"/><path d="M34.5,23 L34.5,50 M21.5,31 L47.5,31 M34.5,50 L21.5,65 M34.5,50 L47.5,65 " fill="none" filter="url(#f1aw2o6r3g8kux)" style="stroke:#000000;stroke-width:2.0;"/><rect fill="#C9F4FF" filter="url(#f1aw2o6r3g8kux)" height="30.2969" style="stroke:#000000;stroke-width:1.5;" width="153" x="156" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="163" y="72.9951">Irradiating Modality</text><rect fill="#C9F4FF" filter="url(#f1aw2o6r3g8kux)" height="30.2969" style="stroke:#000000;stroke-width:1.5;" width="97" x="442" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="449" y="72.9951">RDSP Actor</text><rect fill="#C9F4FF" filter="url(#f1aw2o6r3g8kux)" height="30.2969" style="stroke:#000000;stroke-width:1.5;" width="97" x="701" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="708" y="72.9951">FHIR Server</text><rect fill="#C9F4FF" filter="url(#f1aw2o6r3g8kux)" height="30.2969" style="stroke:#000000;stroke-width:1.5;" width="98" x="959.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="966.5" y="72.9951">RDSC Actor</text><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="87.3984" style="stroke:#000000;stroke-width:1.0;" width="10" x="229.5" y="119.4297"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="487.5" y="148.5625"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="249.1953" style="stroke:#000000;stroke-width:1.0;" width="10" x="487.5" y="206.8281"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="28" style="stroke:#000000;stroke-width:1.0;" width="10" x="492.5" y="347.625"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="266.2266"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="426.8906"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="500.2891"/><rect fill="#B3FFD7" filter="url(#f1aw2o6r3g8kux)" height="29.1328" style="stroke:#000000;stroke-width:1.0;" width="10" x="746.5" y="573.6875"/><polygon fill="#005500" points="217.5,115.4297,227.5,119.4297,217.5,123.4297,221.5,119.4297" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;" x1="34.5" x2="223.5" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="176" x="44" y="114.3638">perform diagnostic imaging</text><polygon fill="#005500" points="475.5,144.5625,485.5,148.5625,475.5,152.5625,479.5,148.5625" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;" x1="239.5" x2="481.5" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="229" x="249" y="143.4966">Share Radiation Information (RDSR)</text><polygon fill="#005500" points="250.5,173.6953,240.5,177.6953,250.5,181.6953,246.5,177.6953" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="244.5" x2="491.5" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="346.5" y="172.6294">return</text><polygon fill="#005500" points="45.5,202.8281,35.5,206.8281,45.5,210.8281,41.5,206.8281" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="39.5" x2="233.5" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="115" y="201.7622">return</text><polygon fill="#005500" points="734.5,262.2266,744.5,266.2266,734.5,270.2266,738.5,266.2266" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;" x1="497.5" x2="740.5" y1="266.2266" y2="266.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115" x="564.5" y="230.895">Search Resources</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="197" x="523.5" y="246.0278">Patient | Device | Practitioner |</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="578" y="261.1606">ImagingStudy</text><polygon fill="#005500" points="508.5,291.3594,498.5,295.3594,508.5,299.3594,504.5,295.3594" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="502.5" x2="750.5" y1="295.3594" y2="295.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="571.5" y="290.2935">return resources</text><line style="stroke:#005500;stroke-width:1.0;" x1="502.5" x2="544.5" y1="339.625" y2="339.625"/><line style="stroke:#005500;stroke-width:1.0;" x1="544.5" x2="544.5" y1="339.625" y2="352.625"/><line style="stroke:#005500;stroke-width:1.0;" x1="503.5" x2="544.5" y1="352.625" y2="352.625"/><polygon fill="#005500" points="513.5,348.625,503.5,352.625,513.5,356.625,509.5,352.625" style="stroke:#005500;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="509.5" y="319.4263">Construct</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="235" x="509.5" y="334.5591">Radiation Dose Summary Resources</text><polygon fill="#005500" points="734.5,422.8906,744.5,426.8906,734.5,430.8906,738.5,426.8906" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;" x1="497.5" x2="740.5" y1="426.8906" y2="426.8906"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="34" x="603" y="406.6919">POST</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="540" y="421.8247">Radiation Dose Summary</text><polygon fill="#005500" points="503.5,452.0234,493.5,456.0234,503.5,460.0234,499.5,456.0234" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="497.5" x2="750.5" y1="456.0234" y2="456.0234"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="602.5" y="450.9575">return</text><polygon fill="#005500" points="767.5,496.2891,757.5,500.2891,767.5,504.2891,763.5,500.2891" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;" x1="761.5" x2="1009.5" y1="500.2891" y2="500.2891"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="102" x="830.5" y="480.0903">Search and GET</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="235" x="766" y="495.2231">Radiation Dose Summary Resources</text><polygon fill="#005500" points="998.5,525.4219,1008.5,529.4219,998.5,533.4219,1002.5,529.4219" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="751.5" x2="1004.5" y1="529.4219" y2="529.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="828" y="524.356">return resources</text><polygon fill="#005500" points="767.5,569.6875,757.5,573.6875,767.5,577.6875,763.5,573.6875" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;" x1="761.5" x2="1009.5" y1="573.6875" y2="573.6875"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="34" x="864.5" y="553.4888">POST</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="174" x="796.5" y="568.6216">Radiation Summary Report</text><polygon fill="#005500" points="998.5,598.8203,1008.5,602.8203,998.5,606.8203,1002.5,602.8203" style="stroke:#005500;stroke-width:1.0;"/><line style="stroke:#005500;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="751.5" x2="1004.5" y1="602.8203" y2="602.8203"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="861.5" y="597.7544">return</text><!--MD5=[cc651d37d38b978ef72022fc3262b587]
+@startuml
+hide footbox
+skinparam sequenceMessageAlign center
+skinparam sequence {
+ArrowColor #005500
+LifeLineBorderColor Black
+ActorFontColor Black
+ActorBorderColor Black
+ParticipantBorderColor Black
+ParticipantBackgroundColor #c9f4ff
+ActorBackgroundColor #c9f4ff
+}
+
+actor Patient
+participant "Irradiating Modality" as IrradiatingModality
+participant "RDSP Actor" as RDSP
+participant "FHIR Server" as server
+participant "RDSC Actor" as RDSC
+
+Patient -> IrradiatingModality : perform diagnostic imaging
+activate IrradiatingModality #b3ffd7
+
+IrradiatingModality -> RDSP : Share Radiation Information (RDSR)
+activate RDSP  #b3ffd7
+RDSP - -> IrradiatingModality : return
+deactivate RDSP
+
+IrradiatingModality - -> Patient: return
+deactivate IrradiatingModality
+
+activate RDSP #b3ffd7
+RDSP -> server : Search Resources\n Patient | Device | Practitioner | \nImagingStudy
+activate server #b3ffd7
+server - -> RDSP : return resources
+deactivate server
+
+RDSP -> RDSP  : Construct \nRadiation Dose Summary Resources
+activate RDSP #b3ffd7
+deactivate RDSP
+
+RDSP -> server : POST \nRadiation Dose Summary
+activate server #b3ffd7
+server - -> RDSP : return
+deactivate server
+deactivate RDSP
+
+RDSC -> server: Search and GET \nRadiation Dose Summary Resources
+activate server #b3ffd7
+server - -> RDSC : return resources
+deactivate server
+
+RDSC -> server: POST \nRadiation Summary Report
+activate server #b3ffd7
+server - -> RDSC : return
+deactivate server
+@enduml
+
+PlantUML version 1.2021.9beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

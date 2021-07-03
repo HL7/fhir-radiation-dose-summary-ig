@@ -27,7 +27,7 @@ This chapter describes testing data and testing plan, and provide some samples f
 ##### Steps
 
 Here are the different steps that needs to be performed: 
-![Actors relationship](./seq.png){: width="900px"}
+![Actors relationship](./seq.svg){: width="900px"}
 
 <br clear="all" />
 * The RDSP actor gathers an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR)
@@ -57,7 +57,7 @@ Here are the different steps that needs to be performed:
 ##### Steps
 
 Here are the different steps that needs to be performed: 
-![Actors relationship Scenario 2](./seq2.png){: width="900px"}
+![Actors relationship Scenario 2](./seq2.svg){: width="900px"}
 
 <br clear="all" />
 * The (RDSP actor, FHIR server) gathers an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR)
@@ -95,7 +95,7 @@ Here are some examples of queries and searching use cases that can be performed 
 ##### CT sample
 Here is an example of the Radiation Dose Summary Profile resource related to CT exam, and its dependencies:
 
-![Example 1](./example1.png){: width="100%"}
+![Example 1](./example1.svg){: width="100%"}
 
 <br clear="all" />
 
@@ -115,7 +115,7 @@ A sample of Dose Summary Report profile exists with relationship to Indications 
 ##### X-Ray sample
 Here is an example of the Radiation Dose Summary Profile resource related to XA exam, and its dependencies:
 
-![Example 2](./example2.png)
+![Example 2](./example2.svg)
 
 <br clear="all" />
 
@@ -128,7 +128,7 @@ Here is an example of the Radiation Dose Summary Profile resource related to XA 
 ##### NM sample
 Here is an example of the Radiation Dose Summary Profile resource related to Radiopharmaceutical administration, and its dependencies:
 
-![Example 3](./example3.png)
+![Example 3](./example3.svg)
 <br clear="all" />
 
 * [NMRadiationDoseSummary-122](Observation-122.html)

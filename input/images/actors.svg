@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="90px" preserveAspectRatio="none" style="width:1217px;height:90px;background:#FFFFFF;" version="1.1" viewBox="0 0 1217 90" width="1217px" zoomAndPan="magnify"><defs><filter height="300%" id="fcrveir3d1h7g" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="170.2325" cy="42.2465" fill="#FEFECE" filter="url(#fcrveir3d1h7g)" rx="164.2325" ry="35.2465" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="300" x="20.2325" y="45.0932">Radiation Dose Summary Producer - RDSP</text><ellipse cx="600.9626" cy="42.1925" fill="#FEFECE" filter="url(#fcrveir3d1h7g)" rx="66.4626" ry="15.6925" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="556.4626" y="45.9401">FHIR Server</text><ellipse cx="1037.0904" cy="42.1181" fill="#FEFECE" filter="url(#fcrveir3d1h7g)" rx="168.5904" ry="36.1181" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="309" x="882.5904" y="44.9648">Radiation Dose Summary Consumer - RDSC</text><!--MD5=[95782f88daa85ff6432fd88a2b784bf0]
+link RDSP to server--><path d="M334.172,42 C401.581,42 476.104,42 529.22,42 " fill="none" id="RDSP-to-server" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="534.292,42,525.292,38,529.292,42,525.292,46,534.292,42" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="352.25" y="20.0669">Radiation Dose Summary</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="48" x="412.25" y="35.1997">Sharing</text><!--MD5=[de762b74d6d9bf1150328dd7b619d9a8]
+reverse link server to RDSC--><path d="M672.761,42 C725.823,42 800.338,42 868.156,42 " fill="none" id="server-backto-RDSC" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="667.694,42,676.694,46,672.694,42,676.694,38,667.694,42" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="164" x="686" y="20.0669">Radiation Dose Summary</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="734" y="35.1997">Consuming</text><!--MD5=[5f5d24b56f249122b6fa7f35366d2e27]
+@startuml
+(Radiation Dose Summary Producer - RDSP) as RDSP
+(FHIR Server) as server
+(Radiation Dose Summary Consumer - RDSC) as RDSC
+RDSP -right-> server : "Radiation Dose Summary\n Sharing"
+RDSC -left-> server : "Radiation Dose Summary\n Consuming"
+@enduml
+
+PlantUML version 1.2021.9beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

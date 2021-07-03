@@ -14,7 +14,7 @@ and describes the use cases supported by this implementation guide.
 
 The IHE Dose Reporter actor from the IHE REM profile gathers Radiation information and dose reports from modalities. However, there is no standardization of the exposure of the gathered data to third parties in a light API based format. 
 
-![Problematic](./problematic.png){: width="800px"}
+![Problematic](./problematic.svg){: width="800px"}
 
 <br clear="all" />
 
@@ -54,7 +54,7 @@ Three use cases were identified.
 
 #### Use case 1: Imaging report construction
 
-![Use case 1: Imaging report construction](./usecase1.png){: width="800px"}
+![Use case 1: Imaging report construction](./usecase1.svg){: width="800px"}
 
 <br clear="all" />
 
@@ -116,9 +116,2257 @@ In this paragraph, we analyze the mapping between the identified minimal dose in
 
 The analysis of the different specifications allowed to obtain the following coverage between the minimal dose information and these specifications/guidelines:
 
-![Minimal Dose Information](./mindose.png){: width="900px"}
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=1213 style='width:910.0pt;border-collapse:unset'>
+    <tr style='height:15.6pt'>
+        <td width=467 rowspan=2 style='width:350.5pt;border:solid windowtext 1.0pt;  background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Dose Information</span>
+                </b>
+            </p>
+        </td>
+        <td width=193 colspan=5 style='width:144.85pt;border:solid windowtext 1.0pt;  border-left:none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Modality</span>
+                </b>
+            </p>
+        </td>
+        <td width=18 style='width:13.85pt;border:solid windowtext 1.0pt;border-left:  none;background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </b>
+            </p>
+        </td>
+        <td width=65 rowspan=2 style='width:48.75pt;border:solid windowtext 1.0pt;  border-left:none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>PS3.20</span>
+                </b>
+            </p>
+        </td>
+        <td width=236 colspan=4 style='width:177.05pt;border:solid windowtext 1.0pt;  border-left:none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>PS3.16</span>
+                </b>
+            </p>
+        </td>
+        <td width=18 style='width:13.85pt;border:solid windowtext 1.0pt;border-left:  none;background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </b>
+            </p>
+        </td>
+        <td width=68 rowspan=2 style='width:50.85pt;border:solid windowtext 1.0pt;  border-left:none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Finland</span>
+                </b>
+            </p>
+        </td>
+        <td width=62 rowspan=2 style='width:46.8pt;border:solid windowtext 1.0pt;  border-left:none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>France</span>
+                </b>
+            </p>
+        </td>
+        <td width=85 rowspan=2 style='width:63.5pt;border:solid windowtext 1.0pt;  border-left:none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+            <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                <b>
+                    <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>USA
+                        <br>California
+                        </span>
+                    </b>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:31.2pt'>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#D9E1F2;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>CT</span>
+                    </b>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>XA</span>
+                    </b>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>RF</span>
+                    </b>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#D9E1F2;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>MG</span>
+                    </b>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>NM</span>
+                    </b>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                    </b>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>CT RDSR</span>
+                    </b>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>X-Ray RDSR</span>
+                    </b>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#D9E1F2;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>RRDSR</span>
+                    </b>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>TID 2008</span>
+                    </b>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:31.2pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                    </b>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Irradiation authorizing Person</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Pregnancy Observation</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Indication Observation</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Device</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Irradiation Issued Date</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Associated Procedure</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Dose measurements - Study level</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Dose (RP) Total</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border:none;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Accumulated Average Glandular Dose</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border:solid windowtext 1.0pt;border-left:  none;background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Dose Area Product Total</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Fluoro Dose Area Product Total</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Acquisition Dose Area Product Total</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Total Fluoro Time</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Total Number of Radiographic Frames</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>CT Dose Length Product Total</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Administered activity</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Radiopharmaceutical Agent</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Radionuclide</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Radiopharmaceutical Volume</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Route of administration</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'>
+                    <b>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>Dose measurements - Irradiation Event level</span>
+                    </b>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#E7E6E6;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Mean CTDIvol</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>DLP</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>Target Region</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+        <tr style='height:15.6pt'>
+            <td width=467 style='width:350.5pt;border:solid windowtext 1.0pt;border-top:  none;background:#D9E1F2;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=right style='margin-bottom:0cm;text-align:right;  line-height:normal'>
+                    <i>
+                        <span style='font-size:12.0pt;font-family:"Times New Roman",serif;  color:black'>CTDIw Phantom Type</span>
+                    </i>
+                </p>
+            </td>
+            <td width=37 style='width:27.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=38 style='width:28.15pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=36 style='width:26.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=42 style='width:31.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#F8CBAD;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=41 style='width:30.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#F8CBAD;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=65 style='width:48.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=58 style='width:43.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#C6E0B4;vertical-align:middle;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+            <td width=67 style='width:50.55pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=60 style='width:45.2pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=50 style='width:37.75pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=18 style='width:13.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  background:#E7E6E6;padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=68 style='width:50.85pt;border-top:none;border-left:none;  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=62 style='width:46.8pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;  height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>&nbsp;</span>
+                </p>
+            </td>
+            <td width=85 style='width:63.5pt;border-top:none;border-left:none;border-bottom:  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#C6E0B4;vertical-align:middle;  padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+                <p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;  line-height:normal'>
+                    <span style='font-size:10.0pt;font-family:"Times New Roman",serif;  color:black'>Y</span>
+                </p>
+            </td>
+        </tr>
+    </table>
 
-<br clear="all" />
+
+
 
 #### Concepts mapping
 
