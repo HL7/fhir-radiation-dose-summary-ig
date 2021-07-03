@@ -38,7 +38,7 @@ Description:    "General Structure describing a summary of an irradiation event"
 
 ValueSet: ComponentIrradiationEventVS
 Id: component-irradiation-event-vs
-Title: "Components' Code for Irradiation Event"
+Title: "Irradiation Event component type"
 Description: "Value Set describing the list of minimal dose information related to irradiation event level"
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * DCM#113838 "DLP" // "Dose Length Product (DLP)"

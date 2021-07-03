@@ -112,7 +112,7 @@ Description: "What is the type of procedure reported in the Radiation Dose Summa
 
 ValueSet: ComponentRadiationDoseSummaryVS
 Id: component-radiation-dose-summary-vs
-Title: "Components' Code for Radiation Dose Summary"
+Title: "Radiation Dose Summary component type"
 Description: "Value Set describing the list of minimal dose information related to Procedure and Administration level"
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001

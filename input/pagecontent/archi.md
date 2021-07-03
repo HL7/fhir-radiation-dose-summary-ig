@@ -133,8 +133,8 @@ These Value Sets have been defined for this implementation guide.
 1. [Isotopes Value Set](ValueSet-isotope-rds-vs.html)
 2. [Procedure Reported Type Value Set](ValueSet-procedure-reported-type-rds-vs.html)
 3. [Radiopharmaceuticals Value Set](ValueSet-radiopharmaceutical-rds-vs.html)
-4. [Components' Code for Radiation Dose Summary](ValueSet-component-radiation-dose-summary-vs.html)
-5. [Components' Code for Irradiation Event](ValueSet-component-irradiation-event-vs.html)
+4. [Radiation Dose Summary component type](ValueSet-component-radiation-dose-summary-vs.html)
+5. [Irradiation Event component type](ValueSet-component-irradiation-event-vs.html)
 
 #### Value Sets Used
 DICOM ValueSet links:
