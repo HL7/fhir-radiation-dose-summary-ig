@@ -1,9 +1,9 @@
-Instance: RDSP-FHIRServer
+Instance: FHIRServer-RDSP
 InstanceOf: CapabilityStatement
 Usage: #definition
 Description: "Minimal Capability Statement needed to be supported by a FHIR Server in order to integrate resources from RDSP Actor"
 
-* name = "RDSP_FHIRServer"
+* name = "FHIRServer_RDSP"
 * title = "FHIR Server supporting FHIR operations in order to interact with RDSP Actor"
 * date = "2021-06-28"
 * kind = #requirements

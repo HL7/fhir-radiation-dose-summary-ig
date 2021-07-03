@@ -83,8 +83,8 @@ The contextual resources are resources managed by the FHIR server and related to
 When these resources are not present in the FHIR server, the Radiation Dose Summary Producer can take the responsibility on alimenting the FHIR server with these resources, by creating them from the RDSRs and images collected from modalities.
 
 The FHIR server can implement the following CapabilityStatements:
-* [RDSP-FHIRServer](CapabilityStatement-RDSP-FHIRServer.html) - Requirements for FHIR server interacting with RDSP actor
-* [RDSC-FHIRServer](CapabilityStatement-RDSC-FHIRServer.html) -  Requirements for FHIR server interacting with RDSC actor
+* [FHIRServer-RDSP](CapabilityStatement-FHIRServer-RDSP.html) - Requirements for FHIR server interacting with RDSP actor
+* [FHIRServer-RDSC](CapabilityStatement-FHIRServer-RDSC.html) -  Requirements for FHIR server interacting with RDSC actor
 * [FHIRServer](CapabilityStatement-FHIRServer.html) - Requirements for FHIR server actor
 
 #### Radiation Dose Summary Consumer

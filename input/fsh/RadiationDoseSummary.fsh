@@ -58,7 +58,7 @@ Description:    "General Structure describing a summary of an irradiation act"
 
 // Performing irradiation device
 * device 0..1
-* device only Reference(Device)
+* device only Reference(ModalityDevice)
 * device ^short = "Irradiating modality"
 
 
