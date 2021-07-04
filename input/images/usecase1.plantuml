@@ -1,0 +1,59 @@
+@startuml usecase1
+hide footbox
+skinparam sequenceMessageAlign center
+skinparam sequenceGroupBackgroundColor #ffdf96
+skinparam sequenceGroupBorderColor #fcb819
+
+skinparam sequence {
+ArrowColor Black
+LifeLineBorderColor Black
+ActorFontColor Black
+ActorBorderColor Black
+ParticipantBorderColor Black
+ParticipantBackgroundColor #c9f4ff
+ActorBackgroundColor #c9f4ff
+}
+
+actor Patient
+actor Radiologist
+participant "Modality" as Modality
+participant "Dose Management System \n(DMS)" as DMS
+participant "Radiology Information System \n(RIS)" as RIS
+participant "Electronic Health Record \n(EHR)" as EHR
+
+group REM 
+  Patient -> Modality : perform exam
+  activate Modality #c9f4ff
+
+  Modality -> DMS : Share Radiation Information
+  activate DMS  #c9f4ff
+  DMS --> Modality : return
+  deactivate DMS
+  Modality --> Patient: return
+  deactivate Modality
+end
+
+
+Radiologist -> RIS: share notes
+activate RIS #c9f4ff
+RIS --> Radiologist: return
+
+
+RIS -[#005500]> DMS : <font color=green>GET FHIR\n<font color=green>Dose Summary 
+activate DMS #green
+DMS --[#005500]> RIS : <font color=green>return
+deactivate DMS
+
+RIS -> RIS : consolidate the report
+activate RIS #c9f4ff
+deactivate RIS
+
+group XDS-I.b
+   RIS -> EHR : share imaging report
+   activate EHR #c9f4ff
+   EHR --> RIS : return 
+   deactivate EHR
+end
+
+deactivate RIS
+@enduml

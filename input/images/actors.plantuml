@@ -1,0 +1,7 @@
+@startuml actors
+(Radiation Dose Summary Producer - RDSP) as RDSP
+(FHIR Server) as server
+(Radiation Dose Summary Consumer - RDSC) as RDSC
+RDSP -right-> server : "Radiation Dose Summary\n Sharing"
+RDSC -left-> server : "Radiation Dose Summary\n Consuming"
+@enduml

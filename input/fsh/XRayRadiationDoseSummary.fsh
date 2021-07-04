@@ -7,12 +7,15 @@ Parent:         RadiationDoseSummary
 Id:             xray-radiation-dose-summary
 Title:          "X-Ray Radiation Dose Summary"
 Description:    "Defines the Minimal Dose Information related to X-Ray procedures"
+* insert RDSStructureDefinitionContent
 
 * obeys xray-procedure-reported
 
-* component ^slicing.discriminator.type = #value
-* component ^slicing.discriminator.path = "code.coding"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
+* component ^slicing.ordered = false
+* component ^slicing.description = "Slice on component.code"
 
 * device 1..1
 
@@ -20,31 +23,31 @@ Description:    "Defines the Minimal Dose Information related to X-Ray procedure
 * component contains doseRPTotal 0..1 and accumulatedAverageGlandularDose 0..1 and doseAreaProductTotal 0..1 
 * component contains fluoroDoseAreaProductTotal 0..1 and acquisitionDoseAreaProductTotal 0..1 and totalFluoroTime 0..1 
 * component contains totalNumberOfRadiographicFrames 0..1
-* component[doseRPTotal].code.coding = DCM#113725 "Dose (RP) Total"
+* component[doseRPTotal].code = DCM#113725 "Dose (RP) Total"
 * component[doseRPTotal].value[x] only Quantity
 * component[doseRPTotal].valueQuantity 1..1
 * component[doseRPTotal].valueQuantity.unit = "mGy"
-* component[accumulatedAverageGlandularDose].code.coding = DCM#111637 "Accumulated Average Glandular Dose"
+* component[accumulatedAverageGlandularDose].code = DCM#111637 "Accumulated Average Glandular Dose"
 * component[accumulatedAverageGlandularDose].value[x] only Quantity
 * component[accumulatedAverageGlandularDose].valueQuantity 1..1
 * component[accumulatedAverageGlandularDose].valueQuantity.unit = "mGy"
-* component[doseAreaProductTotal].code.coding = DCM#113722 "Dose Area Product Total"
+* component[doseAreaProductTotal].code = DCM#113722 "Dose Area Product Total"
 * component[doseAreaProductTotal].value[x] only Quantity
 * component[doseAreaProductTotal].valueQuantity 1..1
 * component[doseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
-* component[fluoroDoseAreaProductTotal].code.coding = DCM#113726 "Fluoro Dose Area Product Total"
+* component[fluoroDoseAreaProductTotal].code = DCM#113726 "Fluoro Dose Area Product Total"
 * component[fluoroDoseAreaProductTotal].value[x] only Quantity
 * component[fluoroDoseAreaProductTotal].valueQuantity 1..1
 * component[fluoroDoseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
-* component[acquisitionDoseAreaProductTotal].code.coding = DCM#113727 "Acquisition Dose Area Product Total"
+* component[acquisitionDoseAreaProductTotal].code = DCM#113727 "Acquisition Dose Area Product Total"
 * component[acquisitionDoseAreaProductTotal].value[x] only Quantity
 * component[acquisitionDoseAreaProductTotal].valueQuantity 1..1
 * component[acquisitionDoseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
-* component[totalFluoroTime].code.coding = DCM#113730 "Total Fluoro Time"
+* component[totalFluoroTime].code = DCM#113730 "Total Fluoro Time"
 * component[totalFluoroTime].value[x] only Quantity
 * component[totalFluoroTime].valueQuantity 1..1
 * component[totalFluoroTime].valueQuantity.unit = "s"
-* component[totalNumberOfRadiographicFrames].code.coding = DCM#113731 "Total Number of Radiographic Frames"
+* component[totalNumberOfRadiographicFrames].code = DCM#113731 "Total Number of Radiographic Frames"
 * component[totalNumberOfRadiographicFrames].value[x] only integer
 * component[totalNumberOfRadiographicFrames].valueInteger 1..1
 
@@ -59,6 +62,7 @@ Id: dicom-sr
 Title: "DICOM SR"
 Source: XRayRadiationDoseSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XRayRadiationDoseSRIODTemplates.html"
+Description: "The XRayRadiationDoseSummary can be extracted from TID10001 (Projection X-Ray Radiation Dose)"
 * -> "TID10001 (Projection X-Ray Radiation Dose)"
 * identifier[studyInstanceUID] -> "tag(0020,000D) [Study Instance UID]"
 * identifier[radiationSRUID] -> "tag(0008,0018) [SOP Instance UID]"

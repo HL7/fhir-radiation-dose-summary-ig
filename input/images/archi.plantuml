@@ -1,0 +1,44 @@
+@startuml archi
+class "Radiation Summary Report" as RSR <<Composition>> #ffe6cc ##b86611
+abstract class "Radiation Dose Summary" as DoseSummary <<Observation>> #d5e8d4 ##[dashed]green 
+class "Pregnancy Status (IPS)" as PregnancyStatus <<Observation>> #fff2cc ##b3880c
+class "Indication Observation" as Indication <<Observation>> #fff2cc ##b3880c
+class "Modality Device" as Modality <<Device>> #34b1eb ##217aa3
+abstract class "Irradiation Event Summary" as IrradiationEvent <<Observation>> #d5e8d4 ##[dashed]green 
+class "CT Irradiation Event Summary" as CTIrradiationEvent <<Observation>> #d5e8d4 ##green
+class "ImagingStudy" as ImagingStudy #a3e7ff ##34b1eb
+class "Patient" as Patient #a3e7ff ##34b1eb
+class "Practitioner" as Practitioner #a3e7ff ##34b1eb
+namespace dose.summary #EEEEEE { 
+   class "CT Radiation Dose Summary" as CTDoseSummary <<Observation>> #d5e8d4 ##green
+   class "X-Ray Radiation Dose Summary"  as XRayDoseSummary <<Observation>> #d5e8d4 ##green
+   class "Radiopharmaceutical Radiation Dose Summary"  as NMDoseSummary <<Observation>> #d5e8d4 ##green
+   .DoseSummary <|-- CTDoseSummary
+   .DoseSummary <|-- XRayDoseSummary
+   .DoseSummary <|-- NMDoseSummary
+   CTDoseSummary  -[hidden]down-> .Modality
+   CTDoseSummary  -[hidden]down-> .ImagingStudy
+   CTDoseSummary  -[hidden]down-> .Practitioner
+   CTDoseSummary  -[hidden]down-> .Patient
+   CTDoseSummary  -[hidden]down-> XRayDoseSummary
+   XRayDoseSummary -[hidden]down-> NMDoseSummary
+   CTDoseSummary -[hidden]down-> .DoseSummary
+   NMDoseSummary -[hidden]down-> .DoseSummary
+   XRayDoseSummary-[hidden]down-> .DoseSummary
+}
+
+IrradiationEvent <|-- CTIrradiationEvent
+DoseSummary   -down-> Patient : subject[1..1]
+DoseSummary   -down-> Practitioner : performer[1..1]
+DoseSummary   -down-> ImagingStudy : partOf[0..1]
+DoseSummary   -down-> IrradiationEvent : hasMember[0..*]
+DoseSummary   -down-> Modality : device[0..1]
+IrradiationEvent  -down-> Patient : subject[1..1]
+PregnancyStatus  -down-> Patient : subject[1..1]
+Indication  -down-> Patient : subject[1..1]
+RSR -down-> Patient : subject[1..1]
+RSR  -down-> DoseSummary  : section.entry[1..1]
+RSR  -[hidden]left-> dose.summary.CTDoseSummary
+RSR  -down-> PregnancyStatus : section.entry[0..1]
+RSR  -down-> Indication : section.entry[0..1]
+@enduml

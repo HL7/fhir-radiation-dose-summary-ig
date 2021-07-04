@@ -7,14 +7,21 @@ Parent:         RadiationDoseSummary
 Id:             ct-radiation-dose-summary
 Title:          "CT Radiation Dose Summary"
 Description:    "Defines the Minimal Dose Information related to CT irradiation events"
+* insert RDSStructureDefinitionContent
 
-* component ^slicing.discriminator.type = #value
-* component ^slicing.discriminator.path = "code.coding"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
+* component ^slicing.ordered = false
+* component ^slicing.description = "Slice on component.code"
 
 * device 1..1
 * device ^short = "The irradiating device"
 
+* hasMember ^slicing.discriminator.type = #profile
+* hasMember ^slicing.discriminator.path = "reference"
+* hasMember ^slicing.rules = #open
+* hasMember ^slicing.description = "Description of the related related observation"
 * hasMember[irradiationEvent] only Reference(CTIrradiationEventSummary)
 
 // Dose measurements - Study Level
@@ -22,7 +29,7 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 
 * component[procedureReported].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 
-* component[cTDoseLengthProductTotal].code.coding = DCM#113813 "CT Dose Length Product Total"
+* component[cTDoseLengthProductTotal].code = DCM#113813 "CT Dose Length Product Total"
 * component[cTDoseLengthProductTotal].value[x] only Quantity
 * component[cTDoseLengthProductTotal].valueQuantity 1..1
 * component[cTDoseLengthProductTotal].valueQuantity.unit = "mGy.cm"
@@ -35,6 +42,7 @@ Id: dicom-sr
 Title: "DICOM SR"
 Source: CTRadiationDoseSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html"
+Description: "The CTRadiationDoseSummary can be extracted from TID10011 (CT Radiation Dose)."
 * -> "TID10011 (CT Radiation Dose)"
 * identifier[studyInstanceUID] -> "tag(0020,000D) [Study Instance UID]"
 * identifier[radiationSRUID] -> "tag(0008,0018) [SOP Instance UID]"

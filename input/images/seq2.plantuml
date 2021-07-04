@@ -1,0 +1,39 @@
+@startuml seq2
+hide footbox
+skinparam sequenceMessageAlign center
+skinparam sequence {
+ArrowColor #005500
+LifeLineBorderColor Black
+ActorFontColor Black
+ActorBorderColor Black
+ParticipantBorderColor Black
+ParticipantBackgroundColor #c9f4ff
+ActorBackgroundColor #c9f4ff
+}
+
+actor Patient
+participant "Irradiating Modality" as IrradiatingModality
+participant "RDSP Actor \n&& \nFHIR Server" as RDSP
+participant "RDSC Actor" as RDSC
+
+Patient -> IrradiatingModality : perform diagnostic imaging
+activate IrradiatingModality #b3ffd7
+
+IrradiatingModality -> RDSP : Share Radiation Information (RDSR)
+activate RDSP  #b3ffd7
+RDSP --> IrradiatingModality : return
+
+IrradiatingModality --> Patient: return
+deactivate IrradiatingModality
+
+RDSP -> RDSP  : Construct && Expose\nRadiation Dose Summary resources && \nContextual resources (Patient, Practitioner, etc.)
+activate RDSP #b3ffd7
+deactivate RDSP
+
+deactivate RDSP
+
+RDSC -> RDSP: Search and GET \nRadiation Dose Summary Resources
+activate RDSP #b3ffd7
+RDSP--> RDSC: return resources
+deactivate RDSP
+@enduml

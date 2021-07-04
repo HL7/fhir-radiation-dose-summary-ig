@@ -1,0 +1,39 @@
+@startuml example2
+skinparam monochrome true
+
+object  XRayRadiationDoseSummary #white { 
+  id = 545
+  study-instance-uid = 1.2.840.121.3.32.0.1.25
+}
+
+object  Patient #white { 
+  id = 56
+  identifier = PAT3421|pidauth1
+  name = Pascal Dupont
+}
+
+object  ImagingStudy #white { 
+  id = 344
+  study-instance-uid = 1.2.840.121.3.32.0.1.25
+  accession-number = AN1232234
+}
+
+object  Practitioner #white { 
+  id = 33
+  identifier = pract67 | practauth1
+  name = John Moore
+}
+
+object  ModalityDevice #white { 
+  id = 12
+  device-serial-number = 767ER
+  application-entity = XA01
+}
+
+
+XRayRadiationDoseSummary -d-> Patient : "subject"
+XRayRadiationDoseSummary -d-> ImagingStudy : "partOf"
+XRayRadiationDoseSummary -d-> Practitioner : "performer"
+XRayRadiationDoseSummary -d-> ModalityDevice : "device"
+ImagingStudy -> Patient : "subject"
+@enduml
