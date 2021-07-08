@@ -1,6 +1,6 @@
 {
-  "package-id": "fhir-radiation-dose-summary-ig",
-  "canonical": "http://hl7.org/fhir/fhir-radiation-dose-summary-ig",
+  "package-id": "hl7.fhir.uv.radiation-dose-summary",
+  "canonical": "http://hl7.org/fhir/uv/radiation-dose-summary",
   "title": "Radiation Dose Summary for Diagnostic Procedures on FHIR",
   "introduction": "Radiation Dose Summary for Diagnostic Procedures on FHIR",
   "list": [

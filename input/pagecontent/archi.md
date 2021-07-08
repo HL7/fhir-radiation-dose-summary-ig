@@ -207,7 +207,7 @@ Here some examples :
         "type": {
             "coding": [
                 {
-                    "system": "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type",
+                    "system": "http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type",
                     "code": "irradiation-event-uid",
                     "display": "Irradiation Event UID"
                 }
@@ -226,7 +226,7 @@ Here some examples :
         "type": {
             "coding": [
                 {
-                    "system": "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type",
+                    "system": "http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type",
                     "code": "application-entity",
                     "display": "Application Entity"
                 }

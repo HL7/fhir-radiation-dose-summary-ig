@@ -13,7 +13,7 @@ Description: "Minimal Capability Statement needed to be supported by a FHIR Serv
 * fhirVersion = #4.0.1
 * status = #draft 
 
-* implementationGuide = "http://hl7.org/fhir/fhir-radiation-dose-summary-ig/ImplementationGuide/hl7.fhir.uv.fhir-radiation-dose-summary-ig"
+* implementationGuide = "http://hl7.org/fhir/uv/radiation-dose-summary/ImplementationGuide/hl7.fhir.uv.radiation-dose-summary"
 
 * rest[0].mode = #server
 * rest[0].documentation = "Description of the needed resources to be supported by the FHIR server, and the different possible interactions."
