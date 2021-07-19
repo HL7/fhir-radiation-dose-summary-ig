@@ -30,10 +30,10 @@ Description: "CT Radiation Dose Summary example 1"
 * device.display = "CT01"
 * hasMember[0] = Reference(Observation/839)
 * hasMember[0].display = "Irradiation Event - 1"
-* hasMember[0].type = #Observation
+//* hasMember[0].type = #Observation
 * hasMember[1] = Reference(Observation/393)
 * hasMember[1].display = "Irradiation Event - 2"
-* hasMember[1].type = #Observation
+//* hasMember[1].type = #Observation
 * component[0].code.coding = DCM#121058 "Procedure reported"
 * component[0].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 * component[1].code.coding = DCM#113813 "CT Dose Length Product Total"

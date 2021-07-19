@@ -61,11 +61,8 @@ Description:    "General Structure describing a summary of an irradiation act"
 * device only Reference(ModalityDevice)
 * device ^short = "Irradiating modality"
 
-
-* hasMember ^slicing.discriminator.type = #profile
-* hasMember ^slicing.discriminator.path = "reference"
 * hasMember ^slicing.rules = #open
-* hasMember ^slicing.description = "Description of the related related observation"
+* hasMember ^slicing.description = "Description of the related observation"
 * hasMember contains irradiationEvent 0..*
 * hasMember[irradiationEvent] only Reference(IrradiationEventSummary)
 * hasMember[irradiationEvent] ^short = "Related irradiation events."
