@@ -23,7 +23,27 @@ This IG is organized into three main sections:
     * [Download](testing.html#download) - Resources available for download
 
 ### Copyrights and acknowledgments
-TODO
+
+This document is licensed under Creative Commons "No Rights Reserved" (CC0).
+
+#### Value Sets
+Value Sets in this guide include:
+
+* Vocabulary Content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO) and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement
+* Vocabulary Content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at LOINC/license. 
+* Vocabulary Content from DICOM, which is copyright NEMA, and distributed by agreement between NEMA/DICOM and HL7. Implementer use of DICOM is not covered by this agreement.
+
+#### Trademarks
+LOINC® is a registered United States trademark of Regenstrief Institute, Inc.
+
+SNOMED® and "SNOMED CT" are registered trademarks of the IHTSDO.
+
+HL7®, HEALTH LEVEL SEVEN®, FHIR® and the FHIR® Logo are trademarks owned by Health Level Seven International, registered with the United States Patent and Trademark Office.
+
+DICOM® is a registered trademark of the National Electrical Manufacturers Association for its standards publications relating to digital communications of medical information.
+
+IHE® is a registered trademark of the Healthcare Information Management Systems Society in the United States and trademarks of IHE Europe in the European Community.
+
 
 ### Sponsors Working Groups
 * [Imaging Integration Work Group](http://www.hl7.org/Special/committees/imagemgt/index.cfm){:target="_blank"}
@@ -33,7 +53,7 @@ TODO
 
 | Name        |      Organization       |  Role |
 |--------------------------|-----------------------|--------------|
-| Abderrazek Boufahja | GE Healthcare | Project Lead |
+| Abderrazek Boufahja | GE Healthcare |Author |
 | Jonathan Whitby | Canon Group Company | Contributor |
 | Christopher Lindop | GE Healthcare | Contributor |
 {:.table-striped .table-bordered}
