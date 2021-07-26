@@ -1,0 +1,340 @@
+<TestScript xmlns="http://hl7.org/fhir">
+    <id value="RDSC-Simulator"/>
+    <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/TestScript-RDSC-Simulator.json"/>
+    <name value="TestScript_RDSC_Simulator"/>
+    <status value="active"/>
+    <date value="2021-07-17"/>
+    <publisher value="HL7 Imaging Integration Workgroup"/>
+    <contact>
+        <name value="HL7 Imaging Integration Workgroup"/>
+        <telecom>
+            <system value="url"/>
+            <value value="http://www.hl7.org/Special/committees/imagemgt/index.cfm"/>
+        </telecom>
+    </contact>
+    <contact>
+        <name value="Abderrazek Boufahja"/>
+        <telecom>
+            <system value="email"/>
+            <value value="abderrazek.boufahja@ge.com"/>
+        </telecom>
+    </contact>
+    <description value="TestScript to validate the FHIR Server searching capabilities."/>
+    <copyright value="HL7 2021"/>
+    <origin>
+        <index value="1"/>
+        <profile>
+            <system value="http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"/>
+            <code value="FHIR-Client"/>
+            <display value="FHIR Client"/>
+        </profile>
+    </origin>
+    <destination>
+        <index value="1"/>
+        <profile>
+            <system value="http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"/>
+            <code value="FHIR-Server"/>
+            <display value="FHIR Server"/>
+        </profile>
+    </destination>
+    <metadata>
+        <link>
+            <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/"/>
+            <description value="This IG standardizes the sharing of minimal radiation information following a performed exam."/>
+        </link>
+        <capability>
+            <required value="true"/>
+            <validated value="false"/>
+            <description value="The Capability requirements for the RDSC actor"/>
+            <origin value="1"/>
+            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-RDSC.html"/>
+            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/RDSC"/>
+        </capability>
+        <capability>
+            <required value="true"/>
+            <validated value="false"/>
+            <description value="The Capability requirements for the FHIR Server actor"/>
+            <destination value="1"/>
+            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-FHIRServer-RDSC.html"/>
+            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/FHIRServer-RDSC"/>
+        </capability>
+    </metadata>
+    <variable>
+        <name value="rdsResourceId"/>
+        <description value="Enter the resource ID of the Observation describing a Radiation Dose Summary, registered in your server."/>
+    </variable>
+    <variable>
+        <name value="patientResourceId"/>
+        <path value="substring(Observation/subject/reference/@value, 8)"/>
+        <sourceId value="rds-read-response"/>
+    </variable>
+    <variable>
+        <name value="deviceResourceId"/>
+        <path value="substring(Observation/device/reference/@value, 7)"/>
+        <sourceId value="rds-read-response"/>
+    </variable>
+    <variable>
+        <name value="practitionerResourceId"/>
+        <path value="substring(Observation/performer[0]/reference/@value, 12)"/>
+        <sourceId value="rds-read-response"/>
+    </variable>
+    <variable>
+        <name value="imagingStudyResourceId"/>
+        <path value="substring(Observation/partOf[0]/reference/@value, 13)"/>
+        <sourceId value="rds-read-response"/>
+    </variable>
+    <variable>
+        <name value="date"/>
+        <path value="Observation/effectiveDateTime/@value"/>
+        <sourceId value="rds-read-response"/>
+    </variable>
+    <variable>
+        <name value="identifier"/>
+        <path value="Observation/identifier[type/coding/code/@value='study-instance-uid']/value/@value"/>
+        <sourceId value="rds-read-response"/>
+    </variable>
+    <test>
+        <name value="RDSC-Simulator"/>
+        <description value="This is a Test to validate the FHIR server capabilities according to Radiation Dose Summary searching possibilities."/>
+        <!-- Read the RDS resource, initialize the search parameters -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="read"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Read the Radiation Dose Summary observation ${rdsResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${rdsResourceId}"/>
+                <responseId value="rds-read-response"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Observation is not empty."/>  
+                <direction value="response"/>  
+                <operator value="notEmpty"/>  
+                <path value="Observation/id"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Validation search on PatientId -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="search"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Search Radiation Dose Summary using the patientId ${patientResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="?code=73569-6&amp;patient=${patientResourceId}"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Bundle is not empty."/>  
+                <direction value="response"/>  
+                <operator value="equals"/>  
+                <path value="Bundle/total"/>  
+                <value value="0"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Validation search on deviceId -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="search"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Search Radiation Dose Summary using the deviceId ${deviceResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="?code=73569-6&amp;device=${deviceResourceId}"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Bundle is not empty."/>  
+                <direction value="response"/>  
+                <operator value="equals"/>  
+                <path value="Bundle/total"/>  
+                <value value="0"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Validation search on ImagingStudyId -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="search"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Search Radiation Dose Summary using the ImagingStudy ID ${imagingStudyResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="?code=73569-6&amp;part-of=${imagingStudyResourceId}"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Bundle is not empty."/>  
+                <direction value="response"/>  
+                <operator value="equals"/>  
+                <path value="Bundle/total"/>  
+                <value value="0"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Validation search on identifier -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="search"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Search Radiation Dose Summary using the identifier of the Observation ${identifier}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="?code=73569-6&amp;identifier=${identifier}"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Bundle is not empty."/>  
+                <direction value="response"/>  
+                <operator value="equals"/>  
+                <path value="Bundle/total"/>  
+                <value value="0"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Validation search on date -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="search"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Search Radiation Dose Summary using the date of the Observation ${date}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="?code=73569-6&amp;date=${date}"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Bundle is not empty."/>  
+                <direction value="response"/>  
+                <operator value="equals"/>  
+                <path value="Bundle/total"/>  
+                <value value="0"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Read Patient resource -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="read"/>
+                </type>
+                <resource value="Patient"/>
+                <description value="Read the Patient ${patientResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${patientResourceId}"/>
+                <responseId value="patient-read-response"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Patient is not empty."/>  
+                <direction value="response"/>  
+                <operator value="notEmpty"/>  
+                <path value="Patient/id"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Read Device resource -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="read"/>
+                </type>
+                <resource value="Device"/>
+                <description value="Read the Device ${deviceResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${deviceResourceId}"/>
+                <responseId value="device-read-response"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Device is not empty."/>  
+                <direction value="response"/>  
+                <operator value="notEmpty"/>  
+                <path value="Device/id"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Read Practitioner resource -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="read"/>
+                </type>
+                <resource value="Practitioner"/>
+                <description value="Read the Practitioner ${practitionerResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${practitionerResourceId}"/>
+                <responseId value="practitioner-read-response"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned Practitioner is not empty."/>  
+                <direction value="response"/>  
+                <operator value="notEmpty"/>  
+                <path value="Practitioner/id"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+        <!-- Read ImagingStudy resource -->
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="read"/>
+                </type>
+                <resource value="ImagingStudy"/>
+                <description value="Read the ImagingStudy ${imagingStudyResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${imagingStudyResourceId}"/>
+                <responseId value="imagingstudy-read-response"/>
+            </operation>
+        </action>
+        <action>
+            <assert> 
+                <description value="Confirm that the returned ImagingStudy is not empty."/>  
+                <direction value="response"/>  
+                <operator value="notEmpty"/>  
+                <path value="ImagingStudy/id"/>  
+                <warningOnly value="false"/> 
+            </assert> 
+        </action>
+    </test>
+</TestScript>

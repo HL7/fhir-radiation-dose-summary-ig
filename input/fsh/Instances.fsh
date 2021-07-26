@@ -1,7 +1,7 @@
 Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
 Alias: SCT = http://snomed.info/sct
 Alias: LOINC =  http://loinc.org
-Alias: DCMIdType = http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type
+Alias: DCMIdType = http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type
 Alias: HL7IdType = http://terminology.hl7.org/CodeSystem/v2-0203
 
 // Example 1 //
@@ -30,10 +30,10 @@ Description: "CT Radiation Dose Summary example 1"
 * device.display = "CT01"
 * hasMember[0] = Reference(Observation/839)
 * hasMember[0].display = "Irradiation Event - 1"
-* hasMember[0].type = #Observation
+//* hasMember[0].type = #Observation
 * hasMember[1] = Reference(Observation/393)
 * hasMember[1].display = "Irradiation Event - 2"
-* hasMember[1].type = #Observation
+//* hasMember[1].type = #Observation
 * component[0].code.coding = DCM#121058 "Procedure reported"
 * component[0].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 * component[1].code.coding = DCM#113813 "CT Dose Length Product Total"

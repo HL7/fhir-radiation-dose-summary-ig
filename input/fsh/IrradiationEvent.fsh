@@ -1,5 +1,5 @@
 Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
-Alias: DCMIdType = http://hl7.org/fhir/fhir-radiation-dose-summary-ig/CodeSystem/dicom-identifier-type
+Alias: DCMIdType = http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type
 
 Profile:        IrradiationEventSummary
 Parent:         Observation
