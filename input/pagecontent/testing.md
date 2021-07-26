@@ -41,8 +41,8 @@ Here are the different steps that needs to be performed:
 
 * The generated Radiation Summary resources shall pass the validation tool testing, using the FHIR [validator](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar){:target="_blank"}
 * The sharing of the Radiation Dose Summary resources from the RDSP actor to the FHIR server can be validated through the test script [TestScript_RDS_Sharing_Verification](TestScript-RDS-sharing-verification.html)
-* The accessibility of the FHIR server through searching capabilities can be validated with the test script [TestScript_RDSC_Simulator](TestScript-RDSC_Simulator.html)
-* The capacity of the FHIR server to accept transactions with the Bundle of resources of Radiation Dose Summary can be tested with the test script [TestScript_RDSP_Simulator](TestScript-RDSP_Simulator.html)
+* The accessibility of the FHIR server through searching capabilities can be validated with the test script [TestScript_RDSC_Simulator](TestScript-RDSC-Simulator.html)
+* The capacity of the FHIR server to accept transactions with the Bundle of resources of Radiation Dose Summary can be tested with the test script [TestScript_RDSP_Simulator](TestScript-RDSP-Simulator.html)
 
 #### Scenario 2: Grouping RDSP and FHIR Server
 ##### Actors
@@ -70,7 +70,7 @@ Here are the different steps that needs to be performed:
 ##### Validation
 
 * The generated Radiation Summary resources shall pass the validation tool testing, using the FHIR [validator](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar){:target="_blank"}
-* The accessibility of the FHIR server through searching capabilities can be validated with the test script [TestScript_RDSC_Simulator](TestScript-RDSC_Simulator.html)
+* The accessibility of the FHIR server through searching capabilities can be validated with the test script [TestScript_RDSC_Simulator](TestScript-RDSC-Simulator.html)
 
 
 <a name="testdata"></a>

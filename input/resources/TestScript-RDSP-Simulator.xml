@@ -63,7 +63,7 @@
         <autocreate value="false"/>  
         <autodelete value="false"/>  
         <resource> 
-            <reference value="bundle-sample.json"/> 
+            <reference value="Bundle/Bundle-RDS-resources"/> 
         </resource> 
     </fixture>
     <test>

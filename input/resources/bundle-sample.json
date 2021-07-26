@@ -1,0 +1,295 @@
+{
+    "resourceType": "Bundle",
+    "id": "Bundle-RDS-resources",
+    "type": "transaction",
+    "entry": [ {
+      "fullUrl": "Observation/545",
+      "resource": {
+        "resourceType" : "Observation",
+        "id" : "545",
+        "meta" : {
+          "profile" : [
+            "http://hl7.org/fhir/uv/radiation-dose-summary/StructureDefinition/xray-radiation-dose-summary"
+          ]
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type",
+                  "code" : "study-instance-uid",
+                  "display" : "Study Instance UID"
+                }
+              ]
+            },
+            "system" : "urn:dicom:uid",
+            "value" : "urn:oid:1.2.840.121.3.32.0.1.25"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "ACSN",
+                  "display" : "Accession ID"
+                }
+              ]
+            },
+            "value" : "AN1232234"
+          }
+        ],
+        "partOf" : [
+          {
+            "reference" : "ImagingStudy/344"
+          }
+        ],
+        "status" : "final",
+        "code" : {
+          "coding" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "73569-6",
+              "display" : "Radiation exposure and protection information [Description] Document Diagnostic imaging"
+            }
+          ]
+        },
+        "subject" : {
+          "reference" : "Patient/56",
+          "display" : "Pascale Dupont"
+        },
+        "effectiveDateTime" : "2019-01-23T12:00:30.000Z",
+        "performer" : [
+          {
+            "reference" : "Practitioner/33",
+            "display" : "John Moore"
+          }
+        ],
+        "device" : {
+          "reference" : "Device/12",
+          "display" : "XA01"
+        },
+        "component" : [
+          {
+            "code" : {
+              "coding" : [
+                {
+                  "system" : "http://dicom.nema.org/resources/ontology/DCM",
+                  "code" : "121058",
+                  "display" : "Procedure reported"
+                }
+              ]
+            },
+            "valueCodeableConcept" : {
+              "coding" : [
+                {
+                  "system" : "http://dicom.nema.org/resources/ontology/DCM",
+                  "code" : "113704",
+                  "display" : "Projection X-Ray"
+                }
+              ]
+            }
+          },
+          {
+            "code" : {
+              "coding" : [
+                {
+                  "system" : "http://dicom.nema.org/resources/ontology/DCM",
+                  "code" : "113725",
+                  "display" : "Dose (RP) Total"
+                }
+              ]
+            },
+            "valueQuantity" : {
+              "value" : 212,
+              "unit" : "mGy"
+            }
+          },
+          {
+            "code" : {
+              "coding" : [
+                {
+                  "system" : "http://dicom.nema.org/resources/ontology/DCM",
+                  "code" : "113722",
+                  "display" : "Dose Area Product Total"
+                }
+              ]
+            },
+            "valueQuantity" : {
+              "value" : 13639,
+              "unit" : "mGy.cm2"
+            }
+          },
+          {
+            "code" : {
+              "coding" : [
+                {
+                  "system" : "http://dicom.nema.org/resources/ontology/DCM",
+                  "code" : "113730",
+                  "display" : "Total Fluoro Time"
+                }
+              ]
+            },
+            "valueQuantity" : {
+              "value" : 450,
+              "unit" : "s"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation"
+      }
+    }, {
+      "fullUrl": "Patient/56",
+      "resource": {
+        "resourceType" : "Patient",
+        "id" : "56",
+        "identifier" : [
+          {
+            "system" : "urn:pid:ipdauth1",
+            "value" : "PAT3421"
+          }
+        ],
+        "name" : [
+          {
+            "family" : "Dupony",
+            "given" : [
+              "Pascale"
+            ]
+          }
+        ],
+        "gender" : "female",
+        "birthDate" : "1990-03-18"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient"
+      }
+    }, {
+      "fullUrl": "Practitioner/33",
+      "resource": {
+        "resourceType" : "Practitioner",
+        "id" : "33",
+        "identifier" : [
+          {
+            "system" : "urn:prid:ipractauth1",
+            "value" : "pract67"
+          }
+        ],
+        "name" : [
+          {
+            "family" : "Moore",
+            "given" : [
+              "John"
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner"
+      }
+    }, {
+      "fullUrl": "Device/12",
+      "resource": {
+        "resourceType" : "Device",
+        "id" : "12",
+        "meta" : {
+          "profile" : [
+            "http://hl7.org/fhir/uv/radiation-dose-summary/StructureDefinition/modality-device"
+          ]
+        },
+        "identifier" : [
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "SNO",
+                  "display" : "Serial Number"
+                }
+              ]
+            },
+            "value" : "767ER"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type",
+                  "code" : "application-entity",
+                  "display" : "Application Entity"
+                }
+              ]
+            },
+            "value" : "XA01"
+          }
+        ],
+        "manufacturer" : "Manufacturer-1",
+        "serialNumber" : "767ER",
+        "deviceName" : [
+          {
+            "name" : "Manufacturer-1",
+            "type" : "manufacturer-name"
+          },
+          {
+            "name" : "Manufacturer-ModelName-1",
+            "type" : "model-name"
+          }
+        ],
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://dicom.nema.org/resources/ontology/DCM",
+              "code" : "XA",
+              "display" : "X-Ray Angiography"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Device"
+      }
+    }, {
+      "fullUrl": "ImagingStudy/344",
+      "resource": {
+        "resourceType" : "ImagingStudy",
+        "id" : "344",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: urn:oid:1.2.840.121.3.32.0.1.25, Accession ID: AN1232234</p><p><b>status</b>: available</p><p><b>subject</b>: <a href=\"Patient-56.html\">Pascale Dupont. Generated Summary: id: PAT3421; Pascale Dupony ; gender: female; birthDate: 1990-03-18</a></p><p><b>started</b>: Jan 23, 2019, 11:45:30 AM</p></div>"
+        },
+        "identifier" : [
+          {
+            "system" : "urn:dicom:uid",
+            "value" : "urn:oid:1.2.840.121.3.32.0.1.25"
+          },
+          {
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "ACSN",
+                  "display" : "Accession ID"
+                }
+              ]
+            },
+            "value" : "AN1232234"
+          }
+        ],
+        "status" : "available",
+        "subject" : {
+          "reference" : "Patient/56",
+          "display" : "Pascale Dupont"
+        },
+        "started" : "2019-01-23T11:45:30.000Z"
+      },
+      "request": {
+        "method": "POST",
+        "url": "ImagingStudy"
+      }
+    } ]
+  }
