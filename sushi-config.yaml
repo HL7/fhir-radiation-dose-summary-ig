@@ -63,7 +63,7 @@ resources:
     description: TestScript to validate the FHIR Server capabilities against an RDSP actor.
   Bundle/Bundle-RDS-resources:
     name: Bundle_RDS_resources
-    description: Bundle resource sample used by RCSP-Simumator script.
+    description: Bundle resource sample used by RCSP-Simuator script.
 
 #groups:
 #  TestScripts:

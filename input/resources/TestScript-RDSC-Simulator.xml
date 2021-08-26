@@ -64,23 +64,23 @@
         <description value="Enter the resource ID of the Observation describing a Radiation Dose Summary, registered in your server."/>
     </variable>
     <variable>
-        <name value="patientResourceId"/>
-        <path value="substring(Observation/subject/reference/@value, 8)"/>
+        <name value="patientLink"/>
+        <path value="Observation/subject/reference"/>
         <sourceId value="rds-read-response"/>
     </variable>
     <variable>
-        <name value="deviceResourceId"/>
-        <path value="substring(Observation/device/reference/@value, 7)"/>
+        <name value="deviceLink"/>
+        <path value="Observation/device/reference"/>
         <sourceId value="rds-read-response"/>
     </variable>
     <variable>
-        <name value="practitionerResourceId"/>
-        <path value="substring(Observation/performer[0]/reference/@value, 12)"/>
+        <name value="practitionerLink"/>
+        <path value="Observation/performer/reference"/>
         <sourceId value="rds-read-response"/>
     </variable>
     <variable>
-        <name value="imagingStudyResourceId"/>
-        <path value="substring(Observation/partOf[0]/reference/@value, 13)"/>
+        <name value="imagingStudyLink"/>
+        <path value="Observation/partOf/reference"/>
         <sourceId value="rds-read-response"/>
     </variable>
     <variable>
@@ -88,14 +88,15 @@
         <path value="Observation/effectiveDateTime/@value"/>
         <sourceId value="rds-read-response"/>
     </variable>
+    <!-- TODO improve identifier collection by system -->
     <variable>
         <name value="identifier"/>
-        <path value="Observation/identifier[type/coding/code/@value='study-instance-uid']/value/@value"/>
+        <path value="Observation/identifier/value"/>
         <sourceId value="rds-read-response"/>
     </variable>
     <test>
-        <name value="RDSC-Simulator"/>
-        <description value="This is a Test to validate the FHIR server capabilities according to Radiation Dose Summary searching possibilities."/>
+        <name value="Observation_read"/>
+        <description value="Read provided Observation - the radiation dose summary"/>
         <!-- Read the RDS resource, initialize the search parameters -->
         <action>
             <operation>
@@ -112,14 +113,29 @@
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Observation is not empty."/>  
-                <direction value="response"/>  
-                <operator value="notEmpty"/>  
-                <path value="Observation/id"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the returned HTTP status is 200(OK)."/>
+                <direction value="response"/>
+                <operator value="in"/>
+                <responseCode value="200"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+        <action>
+            <assert>
+                <description value="Confirm that the returned Observation is not empty."/>
+                <direction value="response"/>
+                <operator value="notEmpty"/>
+                <path value="Observation/id"/>
+                <warningOnly value="false"/>
+            </assert>
+        </action>
+    </test>
+    <test>
+        <name value="Observation_search_patient"/>
+        <description value="Search radiation dose summary by patient"/>
+
+
         <!-- Validation search on PatientId -->
         <action>
             <operation>
@@ -128,22 +144,23 @@
                     <code value="search"/>
                 </type>
                 <resource value="Observation"/>
-                <description value="Search Radiation Dose Summary using the patientId ${patientResourceId}"/>
+                <description value="Search Radiation Dose Summary using the patientId ${patientLink}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="?code=73569-6&amp;patient=${patientResourceId}"/>
+                <params value="?code=73569-6&amp;patient=${patientLink}"/>
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Bundle is not empty."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="0"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="Observation_search_device"/>
+        <description value="Search radiation dose summary by device"/>
         <!-- Validation search on deviceId -->
         <action>
             <operation>
@@ -152,22 +169,23 @@
                     <code value="search"/>
                 </type>
                 <resource value="Observation"/>
-                <description value="Search Radiation Dose Summary using the deviceId ${deviceResourceId}"/>
+                <description value="Search Radiation Dose Summary using the deviceId ${deviceLink}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="?code=73569-6&amp;device=${deviceResourceId}"/>
+                <params value="?code=73569-6&amp;device=${deviceLink}"/>
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Bundle is not empty."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="0"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="Observation_search_partof"/>
+        <description value="Search radiation dose summary by part-of"/>
         <!-- Validation search on ImagingStudyId -->
         <action>
             <operation>
@@ -176,22 +194,23 @@
                     <code value="search"/>
                 </type>
                 <resource value="Observation"/>
-                <description value="Search Radiation Dose Summary using the ImagingStudy ID ${imagingStudyResourceId}"/>
+                <description value="Search Radiation Dose Summary using the ImagingStudy ID ${imagingStudyLink}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="?code=73569-6&amp;part-of=${imagingStudyResourceId}"/>
+                <params value="?code=73569-6&amp;part-of=${imagingStudyLink}"/>
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Bundle is not empty."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="0"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="Observation_search_identifier"/>
+        <description value="Search radiation dose summary by identifier"/>
         <!-- Validation search on identifier -->
         <action>
             <operation>
@@ -207,15 +226,16 @@
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Bundle is not empty."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="0"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="Observation_search_date"/>
+        <description value="Search radiation dose summary by date"/>
         <!-- Validation search on date -->
         <action>
             <operation>
@@ -231,15 +251,16 @@
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Bundle is not empty."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="0"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="Observation_read_patient"/>
+        <description value="Read patient resource"/>
         <!-- Read Patient resource -->
         <action>
             <operation>
@@ -247,23 +268,35 @@
                     <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
                     <code value="read"/>
                 </type>
-                <resource value="Patient"/>
-                <description value="Read the Patient ${patientResourceId}"/>
+                <description value="Read the Patient ${patientLink}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="/${patientResourceId}"/>
                 <responseId value="patient-read-response"/>
+                <url value="${patientLink}"/>
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Patient is not empty."/>  
-                <direction value="response"/>  
-                <operator value="notEmpty"/>  
-                <path value="Patient/id"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the returned HTTP status is 200(OK)."/>
+                <direction value="response"/>
+                <operator value="in"/>
+                <responseCode value="200"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+        <action>
+            <assert>
+                <description value="Confirm that the returned Patient is not empty."/>
+                <direction value="response"/>
+                <operator value="notEmpty"/>
+                <path value="id"/>
+                <warningOnly value="false"/>
+            </assert>
+        </action>
+    </test>
+    <test>
+        <name value="Observation_read_device"/>
+        <description value="Read device resource"/>
         <!-- Read Device resource -->
         <action>
             <operation>
@@ -271,23 +304,35 @@
                     <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
                     <code value="read"/>
                 </type>
-                <resource value="Device"/>
-                <description value="Read the Device ${deviceResourceId}"/>
+                <description value="Read the Device ${deviceLink}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="/${deviceResourceId}"/>
                 <responseId value="device-read-response"/>
+                <url value="${deviceLink}"/>
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Device is not empty."/>  
-                <direction value="response"/>  
-                <operator value="notEmpty"/>  
-                <path value="Device/id"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the returned HTTP status is 200(OK)."/>
+                <direction value="response"/>
+                <operator value="in"/>
+                <responseCode value="200"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+        <action>
+            <assert>
+                <description value="Confirm that the returned Device is not empty."/>
+                <direction value="response"/>
+                <operator value="notEmpty"/>
+                <path value="id"/>
+                <warningOnly value="false"/>
+            </assert>
+        </action>
+    </test>
+    <test>
+        <name value="Observation_read_practitioner"/>
+        <description value="Read practitioner resource"/>
         <!-- Read Practitioner resource -->
         <action>
             <operation>
@@ -295,23 +340,35 @@
                     <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
                     <code value="read"/>
                 </type>
-                <resource value="Practitioner"/>
-                <description value="Read the Practitioner ${practitionerResourceId}"/>
+                <description value="Read the Practitioner ${practitionerLink}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="/${practitionerResourceId}"/>
                 <responseId value="practitioner-read-response"/>
+                <url value="${practitionerLink}"/>
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned Practitioner is not empty."/>  
-                <direction value="response"/>  
-                <operator value="notEmpty"/>  
-                <path value="Practitioner/id"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the returned HTTP status is 200(OK)."/>
+                <direction value="response"/>
+                <operator value="in"/>
+                <responseCode value="200"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+        <action>
+            <assert>
+                <description value="Confirm that the returned Practitioner is not empty."/>
+                <direction value="response"/>
+                <operator value="notEmpty"/>
+                <path value="id"/>
+                <warningOnly value="false"/>
+            </assert>
+        </action>
+    </test>
+    <test>
+        <name value="Observation_read_imagingstudy"/>
+        <description value="Read imagingstudy resource"/>
         <!-- Read ImagingStudy resource -->
         <action>
             <operation>
@@ -319,22 +376,30 @@
                     <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
                     <code value="read"/>
                 </type>
-                <resource value="ImagingStudy"/>
-                <description value="Read the ImagingStudy ${imagingStudyResourceId}"/>
+                <description value="Read the ImagingStudy ${imagingStudyLink}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="/${imagingStudyResourceId}"/>
                 <responseId value="imagingstudy-read-response"/>
+                <url value="${imagingStudyLink}"/>
             </operation>
         </action>
         <action>
-            <assert> 
-                <description value="Confirm that the returned ImagingStudy is not empty."/>  
-                <direction value="response"/>  
-                <operator value="notEmpty"/>  
-                <path value="ImagingStudy/id"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+            <assert>
+                <description value="Confirm that the returned HTTP status is 200(OK)."/>
+                <direction value="response"/>
+                <operator value="in"/>
+                <responseCode value="200"/>
+                <warningOnly value="false"/>
+            </assert>
+        </action>
+        <action>
+            <assert>
+                <description value="Confirm that the returned ImagingStudy is not empty."/>
+                <direction value="response"/>
+                <operator value="notEmpty"/>
+                <path value="id"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
     </test>
 </TestScript>
