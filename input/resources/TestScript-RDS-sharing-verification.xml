@@ -21,14 +21,6 @@
     </contact>
     <description value="TestScript to validate the sharing data between RDSP actor and a FHIR Server."/>
     <copyright value="HL7 2021"/>
-    <origin>
-        <index value="1"/>
-        <profile>
-            <system value="http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"/>
-            <code value="FHIR-Client"/>
-            <display value="FHIR Client"/>
-        </profile>
-    </origin>
     <destination>
         <index value="1"/>
         <profile>
@@ -37,62 +29,44 @@
             <display value="FHIR Server"/>
         </profile>
     </destination>
-    <metadata>
-        <link>
-            <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig"/>
-            <description value="This IG standardizes the sharing of minimal radiation information following a performed exam."/>
-        </link>
-        <capability>
-            <required value="true"/>
-            <validated value="false"/>
-            <description value="The Capability requirements for the RDSP actor"/>
-            <origin value="1"/>
-            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-RDSP.html"/>
-            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/RDSP"/>
-        </capability>
-        <capability>
-            <required value="true"/>
-            <validated value="false"/>
-            <description value="The Capability requirements for the FHIR Server actor"/>
-            <destination value="1"/>
-            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-FHIRServer.html"/>
-            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/FHIRServer"/>
-        </capability>
-    </metadata>
     <variable>
         <name value="patientIdentifier"/>
+                <defaultValue value="PAT3421"/>
         <description value="Enter the patient identifier as used in the RDSR: tag(0010,0020) Patient ID"/>
     </variable>
     <variable>
-        <name value="deviceIdentifier"/>
+        <name value="deviceIdentifier"/> 
+               <defaultValue value="767ER"/>
         <description value="Enter the Device identifier as used in the RDSR: tag(0018,1000) Device Serial Number"/>
     </variable>
     <variable>
         <name value="practitionerIdentifier"/>
+        <defaultValue value="pract67"/>
         <description value="Enter the Practitioner identifier as used in the RDSR: TID 1020(Person Participant).EV (113871, DCM, Person ID)"/>
     </variable>
     <variable>
         <name value="studyInstanceUID"/>
+        <defaultValue value="1.2.840.121.3.32.0.1.25"/>
         <description value="Enter the Study Instance UID identifying the image study: tag(0020,000D) Study Instance UID"/>
     </variable>
     <variable>
         <name value="patientResourceId"/>
-        <expression value="Bundle.entry.resource.id"/>
+        <path value="Bundle/entry/resource/Patient/id"/>
         <sourceId value="patient-search-response"/>
     </variable>
     <variable>
         <name value="deviceResourceId"/>
-        <expression value="Bundle.entry.resource.id"/>
+        <path value="Bundle/entry/resource/Device/id"/>
         <sourceId value="device-search-response"/>
     </variable>
     <variable>
         <name value="practitionerResourceId"/>
-        <expression value="Bundle.entry.resource.id"/>
+        <path value="Bundle/entry/resource/Practitioner/id"/>
         <sourceId value="practitioner-search-response"/>
     </variable>
     <variable>
         <name value="imagingStudyResourceId"/>
-        <expression value="Bundle.entry.resource.id"/>
+        <path value="Bundle/entry/resource/ImagingStudy/id"/>
         <sourceId value="imagingstudy-search-response"/>
     </variable>
     <test>
@@ -112,16 +86,17 @@
                 <responseId value="patient-search-response"/>
             </operation>
         </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that the returned Patients Bundle contains one 1 entry."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="0"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+        <action>
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="search_device"/>
+        <description value="Search by device identifier"/>
         <action>
             <operation>
                 <type>
@@ -136,16 +111,17 @@
                 <responseId value="device-search-response"/>
             </operation>
         </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that the returned Devices Bundle contains one 1 entry."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="1"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+        <action>
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="search_practitioner"/>
+        <description value="Search by practitioner identifier"/>
         <action>
             <operation>
                 <type>
@@ -160,16 +136,17 @@
                 <responseId value="practitioner-search-response"/>
             </operation>
         </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that the returned Practitioners Bundle contains one 1 entry."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="1"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+        <action>
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="search_ImagingStudy"/>
+        <description value="Search by ImagingStudy identifier"/>
         <action>
             <operation>
                 <type>
@@ -184,16 +161,17 @@
                 <responseId value="imagingstudy-search-response"/>
             </operation>
         </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that the returned ImagingStudies Bundle contains one 1 entry."/>  
-                <direction value="response"/>  
-                <operator value="equals"/>  
-                <path value="Bundle/total"/>  
-                <value value="1"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+        <action>
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
+    </test>
+    <test>
+        <name value="search_rds"/>
+        <description value="Search Radiation Dose Summary resource by patient, device and part-of parameters"/>
         <action>
             <operation>
                 <type>
@@ -208,24 +186,12 @@
                 <responseId value="rds-search-response"/>
             </operation>
         </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that the returned Observation Bundle contains at least one 1 entry."/>  
-                <direction value="response"/>  
-                <operator value="greaterThan"/>  
-                <path value="Bundle/total"/>  
-                <value value="0"/>  
-                <warningOnly value="false"/> 
-            </assert> 
-        </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that there is at least one Observation with the practitioner id = ${practitionerResourceId}."/>  
-                <direction value="response"/>  
-                <operator value="notEmpty"/>  
-                <path value="Bundle/Observation/performer/reference[@value='Practitioner/${practitionerResourceId}']"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+        <action>
+            <assert>
+                <description value="Confirm that the total number of response is greater than 1."/>
+                <expression value="Bundle.total.toInteger() &gt;= 1"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
     </test>
 </TestScript>

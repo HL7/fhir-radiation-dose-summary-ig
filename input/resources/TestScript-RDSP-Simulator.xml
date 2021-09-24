@@ -21,14 +21,6 @@
     </contact>
     <description value="TestScript to validate the FHIR Server capabilities against an RDSP actor."/>
     <copyright value="HL7 2021"/>
-    <origin>
-        <index value="1"/>
-        <profile>
-            <system value="http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"/>
-            <code value="FHIR-Client"/>
-            <display value="FHIR Client"/>
-        </profile>
-    </origin>
     <destination>
         <index value="1"/>
         <profile>
@@ -37,70 +29,154 @@
             <display value="FHIR Server"/>
         </profile>
     </destination>
-    <metadata>
-        <link>
-            <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/"/>
-            <description value="This IG standardizes the sharing of minimal radiation information following a performed exam."/>
-        </link>
-        <capability>
-            <required value="true"/>
-            <validated value="false"/>
-            <description value="The Capability requirements for the RDSP actor"/>
-            <origin value="1"/>
-            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-RDSP.html"/>
-            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/RDSP"/>
-        </capability>
-        <capability>
-            <required value="true"/>
-            <validated value="false"/>
-            <description value="The Capability requirements for the FHIR Server actor"/>
-            <destination value="1"/>
-            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-FHIRServer-RDSP.html"/>
-            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/FHIRServer-RDSP"/>
-        </capability>
-    </metadata>
-    <fixture id="rds-post-json"> 
-        <autocreate value="false"/>  
-        <autodelete value="false"/>  
-        <resource> 
-            <reference value="Bundle/Bundle-RDS-resources"/> 
-        </resource> 
+    <fixture id="rds-post-json">
+        <autocreate value="false"/>
+        <autodelete value="false"/>
+        <resource>
+            <reference value="Bundle/Bundle-RDS-resources"/>
+        </resource>
     </fixture>
+    <variable>
+        <name value="rdsResourceId"/>
+        <path value="Bundle/entry/resource/Observation/id"/>
+        <sourceId value="bundle-post-response"/>
+    </variable>
+    <variable>
+        <name value="patientResourceId"/>
+        <path value="Bundle/entry/resource/Patient/id"/>
+        <sourceId value="bundle-post-response"/>
+    </variable>
+    <variable>
+        <name value="deviceResourceId"/>
+        <path value="Bundle/entry/resource/Device/id"/>
+        <sourceId value="bundle-post-response"/>
+    </variable>
+    <variable>
+        <name value="practitionerResourceId"/>
+        <path value="Bundle/entry/resource/Practitioner/id"/>
+        <sourceId value="bundle-post-response"/>
+    </variable>
+    <variable>
+        <name value="imagingStudyResourceId"/>
+        <path value="Bundle/entry/resource/ImagingStudy/id"/>
+        <sourceId value="bundle-post-response"/>
+    </variable>
     <test>
-        <name value="RDS-Queries-verification"/>
+        <name value="RDS-Queries-verification-POST"/>
         <description value="This is a Test to validate the FHIR server capabilities according to Radiation Dose Summary searching possibilities."/>
         <!-- Submit the RDS resource and the contextual resources -->
-        <action> 
-            <operation> 
-                <type> 
-                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>  
-                    <code value="transaction"/> 
-                </type>  
-                <description value="Submit a bundle of resources creating the radiation dose summary"/>  
-                <accept value="json"/>  
-                <contentType value="json"/>  
-                <destination value="1"/>  
-                <encodeRequestUrl value="true"/> 
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="transaction"/>
+                </type>
+                <description value="Submit a bundle of resources creating the radiation dose summary"/>
+                <accept value="json"/>
+                <contentType value="json"/>
+                <destination value="1"/>
+                <encodeRequestUrl value="true"/>
                 <responseId value="bundle-post-response"/>
                 <sourceId value="rds-post-json"/>
-            </operation> 
+            </operation>
         </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that the returned HTTP status is 200(OK)."/>  
-                <direction value="response"/>  
-                <operator value="in"/>  
-                <responseCode value="200"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+        <action>
+            <assert>
+                <description value="Confirm that the returned HTTP status is 200(OK) or 201(Created)."/>
+                <direction value="response"/>
+                <operator value="in"/>
+                <responseCode value="200,201"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
-        <action> 
-            <assert> 
-                <description value="Confirm that the response body contains a Bundle"/>  
-                <direction value="response"/>  
-                <resource value="Bundle"/>  
-                <warningOnly value="false"/> 
-            </assert> 
+        <action>
+            <assert>
+                <description value="Confirm that the response body contains a Bundle"/>
+                <direction value="response"/>
+                <resource value="Bundle"/>
+                <warningOnly value="false"/>
+            </assert>
         </action>
     </test>
+    <test>
+        <name value="RDS-Queries-verification-read"/>
+        <description value="Read the posted Observation as a Radiation Dose Summary resource"/>
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="read"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Read the Observation ${rdsResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${rdsResourceId}"/>
+                <responseId value="rds-read-response"/>
+            </operation>
+        </action>
+        <action>
+            <assert>
+                <description value="Confirm that the returned HTTP status is 200(OK) or 201(Created)."/>
+                <direction value="response"/>
+                <operator value="in"/>
+                <responseCode value="200,201"/>
+                <warningOnly value="false"/>
+            </assert>
+        </action>
+    </test>
+    <teardown>
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="delete"/>
+                </type>
+                <resource value="Observation"/>
+                <description value="Relete the Observation ${rdsResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${rdsResourceId}"/>
+            </operation>
+        </action>
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="delete"/>
+                </type>
+                <resource value="ImagingStudy"/>
+                <description value="Relete the ImagingStudy ${imagingStudyResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${imagingStudyResourceId}"/>
+            </operation>
+        </action>
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="delete"/>
+                </type>
+                <resource value="Patient"/>
+                <description value="Relete the Patient ${patientResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${patientResourceId}"/>
+            </operation>
+        </action>
+        <action>
+            <operation>
+                <type>
+                    <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+                    <code value="delete"/>
+                </type>
+                <resource value="Practitioner"/>
+                <description value="Relete the Practitioner ${practitionerResourceId}"/>
+                <accept value="json"/>
+                <encodeRequestUrl value="true"/>
+                <params value="/${practitionerResourceId}"/>
+            </operation>
+        </action>
+    </teardown>
 </TestScript>
