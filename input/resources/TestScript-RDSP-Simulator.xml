@@ -21,14 +21,6 @@
     </contact>
     <description value="TestScript to validate the FHIR Server capabilities against an RDSP actor."/>
     <copyright value="HL7 2021"/>
-    <origin>
-        <index value="1"/>
-        <profile>
-            <system value="http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"/>
-            <code value="FHIR-Client"/>
-            <display value="FHIR Client"/>
-        </profile>
-    </origin>
     <destination>
         <index value="1"/>
         <profile>
@@ -37,28 +29,6 @@
             <display value="FHIR Server"/>
         </profile>
     </destination>
-    <metadata>
-        <link>
-            <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/"/>
-            <description value="This IG standardizes the sharing of minimal radiation information following a performed exam."/>
-        </link>
-        <capability>
-            <required value="true"/>
-            <validated value="false"/>
-            <description value="The Capability requirements for the RDSP actor"/>
-            <origin value="1"/>
-            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-RDSP.html"/>
-            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/RDSP"/>
-        </capability>
-        <capability>
-            <required value="true"/>
-            <validated value="false"/>
-            <description value="The Capability requirements for the FHIR Server actor"/>
-            <destination value="1"/>
-            <link value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/CapabilityStatement-FHIRServer-RDSP.html"/>
-            <capabilities value="http://hl7.org/fhir/uv/radiation-dose-summary/CapabilityStatement/FHIRServer-RDSP"/>
-        </capability>
-    </metadata>
     <fixture id="rds-post-json">
         <autocreate value="false"/>
         <autodelete value="false"/>
@@ -112,10 +82,10 @@
         </action>
         <action>
             <assert>
-                <description value="Confirm that the returned HTTP status is 200(OK)."/>
+                <description value="Confirm that the returned HTTP status is 200(OK) or 201(Created)."/>
                 <direction value="response"/>
                 <operator value="in"/>
-                <responseCode value="201"/>
+                <responseCode value="200,201"/>
                 <warningOnly value="false"/>
             </assert>
         </action>
@@ -147,10 +117,10 @@
         </action>
         <action>
             <assert>
-                <description value="Confirm that the returned HTTP status is 200(OK)."/>
+                <description value="Confirm that the returned HTTP status is 200(OK) or 201(Created)."/>
                 <direction value="response"/>
                 <operator value="in"/>
-                <responseCode value="200"/>
+                <responseCode value="200,201"/>
                 <warningOnly value="false"/>
             </assert>
         </action>
