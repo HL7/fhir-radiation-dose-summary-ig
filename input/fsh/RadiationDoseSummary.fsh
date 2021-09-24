@@ -19,18 +19,11 @@ Description:    "General Structure describing a summary of an irradiation act"
 * identifier ^slicing.description = "Identifiers for the radiation dose"
 
 
-* identifier contains studyInstanceUID 1..1 and radiationSRUID 0..* and accessionNumber 0..1 
-* identifier[studyInstanceUID].type = DCMIdType#study-instance-uid "Study Instance UID"
-* identifier[studyInstanceUID].system = "urn:dicom:uid"
-* identifier[studyInstanceUID].value 1..1
-* identifier[studyInstanceUID] ^short = "Identifier related to Study Instance UID"
+* identifier contains radiationSRUID 0..*
 * identifier[radiationSRUID].type = DCMIdType#sop-instance-uid "SOP Instance UID"
 * identifier[radiationSRUID].system = "urn:dicom:uid"
 * identifier[radiationSRUID].value 1..1
 * identifier[radiationSRUID] ^short = "Identifier related to SOP Instance UID if the resources is generated based on an RDSR"
-* identifier[accessionNumber].type = HL7IdType#ACSN "Accession ID"
-* identifier[accessionNumber].value 1..1
-* identifier[accessionNumber] ^short = "The accession number related to the performed study"
 
 
 // Associated Procedure/Exam
@@ -42,6 +35,25 @@ Description:    "General Structure describing a summary of an irradiation act"
 * partOf contains imagingStudyRef 1..1
 * partOf[imagingStudyRef] only Reference(ImagingStudy)
 * partOf[imagingStudyRef] ^short = "Related ImagingStudy"
+* partOf[imagingStudyRef].identifier.type 1..1
+* partOf[imagingStudyRef].identifier.type = DCMIdType#study-instance-uid "Study Instance UID"
+* partOf[imagingStudyRef].identifier.system = "urn:dicom:uid"
+* partOf[imagingStudyRef].identifier.value 1..1
+* partOf[imagingStudyRef].identifier ^short = "Identifier related to Study Instance UID"
+
+// Associated ServiceRequest
+* basedOn ^slicing.discriminator.type = #type
+* basedOn ^slicing.discriminator.path = "reference"
+* basedOn ^slicing.rules = #open
+* basedOn ^slicing.description = "Description of the related ServiceRequest"
+
+* basedOn contains serviceRequestRef 0..1
+* basedOn[serviceRequestRef] only Reference(ServiceRequest)
+* basedOn[serviceRequestRef] ^short = "Description of the related ServiceRequest"
+* basedOn[serviceRequestRef].identifier.type 1..1
+* basedOn[serviceRequestRef].identifier.type = HL7IdType#ACSN "Accession ID"
+* basedOn[serviceRequestRef].identifier.value 1..1
+* basedOn[serviceRequestRef].identifier ^short = "The accession number related to the performed study"
 
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject only Reference(Patient)

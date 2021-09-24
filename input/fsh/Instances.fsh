@@ -10,15 +10,13 @@ InstanceOf: CTRadiationDoseSummary
 Usage: #example
 Description: "CT Radiation Dose Summary example 1"
 * id = "139"
-* identifier[0].type = DCMIdType#study-instance-uid "Study Instance UID"
+* identifier[0].type = DCMIdType#sop-instance-uid "SOP Instance UID"
 * identifier[0].system = "urn:dicom:uid"
-* identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.1323423"
-* identifier[1].type = DCMIdType#sop-instance-uid "SOP Instance UID"
-* identifier[1].system = "urn:dicom:uid"
-* identifier[1].value = "urn:oid:1.2.840.121.3.32.0.1.1323423.122"
-* identifier[2].type = HL7IdType#ACSN "Accession ID"
-* identifier[2].value = "AN12322332"
+* identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.1323423.122"
 * partOf = Reference(ImagingStudy/342)
+* partOf.identifier.type = DCMIdType#study-instance-uid "Study Instance UID"
+* partOf.identifier.system = "urn:dicom:uid"
+* partOf.identifier.value = "urn:oid:1.2.840.121.3.32.0.1.1323423"
 * status = #final
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject = Reference(Patient/56)
@@ -121,9 +119,6 @@ Description: "ImagingStudy for example 1"
 * id = "342"
 * identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.1323423" 
-* identifier[1].system = "http://ginormoushospital.org/accession"
-* identifier[1].type = HL7IdType#ACSN "Accession ID"
-* identifier[1].value = "AN12322332"
 * status = #available
 * subject = Reference(Patient/56)
 * subject.display = "Pascale Dupont"
@@ -203,12 +198,10 @@ InstanceOf: XRayRadiationDoseSummary
 Usage: #example
 Description: "CT Radiation Dose Summary example 2"
 * id = "545"
-* identifier[0].type = DCMIdType#study-instance-uid "Study Instance UID"
-* identifier[0].system = "urn:dicom:uid"
-* identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.25"
-* identifier[1].type = HL7IdType#ACSN "Accession ID"
-* identifier[1].value = "AN1232234"
 * partOf = Reference(ImagingStudy/344)
+* partOf.identifier.type = DCMIdType#study-instance-uid "Study Instance UID"
+* partOf.identifier.system = "urn:dicom:uid"
+* partOf.identifier.value = "urn:oid:1.2.840.121.3.32.0.1.25"
 * status = #final
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject = Reference(Patient/56)
@@ -241,8 +234,6 @@ Description: "ImagingStudy for example 2"
 * id = "344"
 * identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.25" 
-* identifier[1].type = HL7IdType#ACSN "Accession ID"
-* identifier[1].value = "AN1232234"
 * status = #available
 * subject = Reference(Patient/56)
 * subject.display = "Pascale Dupont"
@@ -273,12 +264,10 @@ InstanceOf: NMRadiationDoseSummary
 Usage: #example
 Description: "NM Radiation Dose Summary example 3"
 * id = "122"
-* identifier[0].type = DCMIdType#study-instance-uid "Study Instance UID"
-* identifier[0].system = "urn:dicom:uid"
-* identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.32"
-* identifier[1].type = HL7IdType#ACSN "Accession ID"
-* identifier[1].value = "AN6545"
 * partOf = Reference(ImagingStudy/22)
+* partOf.identifier.type = DCMIdType#study-instance-uid "Study Instance UID"
+* partOf.identifier.system = "urn:dicom:uid"
+* partOf.identifier.value = "urn:oid:1.2.840.121.3.32.0.1.32"
 * status = #final
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject = Reference(Patient/56)
@@ -302,8 +291,6 @@ Description: "ImagingStudy for example 3"
 * id = "22"
 * identifier[0].system = "urn:dicom:uid"
 * identifier[0].value = "urn:oid:1.2.840.121.3.32.0.1.32" 
-* identifier[1].type = HL7IdType#ACSN "Accession ID"
-* identifier[1].value = "AN6545"
 * status = #available
 * subject = Reference(Patient/56)
 * subject.display = "Pascale Dupont"
