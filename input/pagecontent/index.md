@@ -56,5 +56,6 @@ IHE® is a registered trademark of the Healthcare Information Management Systems
 | Abderrazek Boufahja | GE Healthcare |Author |
 | Jonathan Whitby | Canon Group Company | Contributor |
 | Christopher Lindop | GE Healthcare | Contributor |
+| Steven Nichols | GE Healthcare | Contributor |
 {:.table-striped .table-bordered}
 

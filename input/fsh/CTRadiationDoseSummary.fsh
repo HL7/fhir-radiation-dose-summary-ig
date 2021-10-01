@@ -15,7 +15,7 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 * component ^slicing.ordered = false
 * component ^slicing.description = "Slice on component.code"
 
-* device 1..1
+* device 1..1 MS
 * device ^short = "The irradiating device"
 
 * hasMember ^slicing.rules = #open
@@ -23,7 +23,7 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 * hasMember[irradiationEvent] only Reference(CTIrradiationEventSummary)
 
 // Dose measurements - Study Level
-* component contains cTDoseLengthProductTotal 1..1
+* component contains cTDoseLengthProductTotal 1..1 MS
 
 * component[procedureReported].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 

@@ -16,23 +16,24 @@ Description:    "General Structure describing a summary of an irradiation event"
 * identifier ^slicing.description = "Slice on identifier.type"
 
 
-* identifier contains irradiationEventUID 1..1
+* identifier contains irradiationEventUID 1..1 MS
 * identifier[irradiationEventUID].type = DCMIdType#irradiation-event-uid "Irradiation Event UID"
 * identifier[irradiationEventUID].system = "urn:dicom:uid"
 * identifier[irradiationEventUID].value 1..1
 
 * identifier[irradiationEventUID] ^short = "Identifier describing the Irradiation Event UID"
 
+* code MS
 * code.coding = DCM#113852 "Irradiation Event"
 * subject only Reference(Patient)
-* subject 1..1
+* subject 1..1 MS
 
 * effective[x] only dateTime
-* effective[x] 1..1
+* effective[x] 1..1 MS
 * effective[x] ^short = "Irradiation event start date time"
 
 // Dose measurements - Irradiation Event Level
-* component 1..*
+* component 1..* MS
 * component.code from ComponentIrradiationEventVS (extensible)
 
 

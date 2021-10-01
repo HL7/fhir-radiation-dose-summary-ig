@@ -16,8 +16,8 @@ Description:    "Defines the Minimal Dose Information related to NM procedures"
 * component ^slicing.description = "Slice on component.code"
 
 // Dose measurements - Study Level
-* component contains administeredActivity 1..1 and radiopharmaceutical 1..1 and radioisotope 0..1 
-* component contains radiopharmaceuticalVolume 0..1 and routeOfAdministration 0..1
+* component contains administeredActivity 1..1 MS and radiopharmaceutical 1..1 MS and radioisotope 0..1 MS
+* component contains radiopharmaceuticalVolume 0..1 MS and routeOfAdministration 0..1 MS
 * component[procedureReported].valueCodeableConcept.coding = DCM#113502 "Radiopharmaceutical Administration"
 * component[procedureReported] ^short = "Procedure reported related to Radiopharmaceutical administration"
 * component[administeredActivity].code = DCM#113507 "Administered activity"

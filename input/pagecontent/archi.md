@@ -4,6 +4,7 @@ This chapter describes the different architecture aspects of the resources, prof
 2. [Actors](#actors) - Actors participating in the IG
 3. [Terminology](#terminology) - Value Sets defined
 4. [Resources Identifiers](#identifiers) - A focus on DICOM identifiers types
+5. [Must Support](#must-support) - A focus on Must Support usage in this IG
 5. [Sercurity Consideration](#sec) - Security aspects to be taken in consideration
 
 <a name="profiles"></a>
@@ -237,6 +238,16 @@ Here some examples :
 ]
 </pre>
 
+
+<a name="must-support"></a>
+
+### Must Support
+In the context of this IG, mustSupport on any data element SHALL be interpreted as follows:
+
+* When creating Radiation Dose Summary content, implementers SHALL be capable of including mustSupport data elements.
+* When receiving Radiation Dose Summary content, implementers:
+    * SHALL be capable of processing resource instances containing mustSupport data elements without generating an error or causing the application to fail.
+    * SHOULD be capable of displaying mustSupport data elements for human use, or processing (e.g. storing) them for other purposes.
 
 <a name="sec"></a>
 

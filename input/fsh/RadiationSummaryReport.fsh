@@ -9,16 +9,17 @@ Title:          "Radiation Summary Report"
 Description:    "A report document describing the irradiation act"
 * insert RDSStructureDefinitionContent
 
+* type MS
 * type.coding = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject only Reference(Patient)
-* subject 1..1
+* subject 1..1 MS
 * subject ^short = "Related patient"
 
 * section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "code.coding"
 * section ^slicing.rules = #open
 
-* section contains radiationDoseSummary 1..1 and pregnancyObservation 0..1 and indicationObservation 0..1
+* section contains radiationDoseSummary 1..1 MS and pregnancyObservation 0..1 MS and indicationObservation 0..1 MS
 
 * section[radiationDoseSummary].code.coding = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * section[radiationDoseSummary].entry only Reference(RadiationDoseSummary)

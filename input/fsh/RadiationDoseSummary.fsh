@@ -19,7 +19,7 @@ Description:    "General Structure describing a summary of an irradiation act"
 * identifier ^slicing.description = "Identifiers for the radiation dose"
 
 
-* identifier contains radiationSRUID 0..*
+* identifier contains radiationSRUID 0..* MS
 * identifier[radiationSRUID].type = DCMIdType#sop-instance-uid "SOP Instance UID"
 * identifier[radiationSRUID].system = "urn:dicom:uid"
 * identifier[radiationSRUID].value 1..1
@@ -32,7 +32,7 @@ Description:    "General Structure describing a summary of an irradiation act"
 * partOf ^slicing.rules = #open
 * partOf ^slicing.description = "Description of the related ImagingStudy" 
 
-* partOf contains imagingStudyRef 1..1
+* partOf contains imagingStudyRef 1..1 MS
 * partOf[imagingStudyRef] only Reference(ImagingStudy)
 * partOf[imagingStudyRef] ^short = "Related ImagingStudy"
 * partOf[imagingStudyRef].identifier.type 1..1
@@ -47,7 +47,7 @@ Description:    "General Structure describing a summary of an irradiation act"
 * basedOn ^slicing.rules = #open
 * basedOn ^slicing.description = "Description of the related ServiceRequest"
 
-* basedOn contains serviceRequestRef 0..1
+* basedOn contains serviceRequestRef 0..1 MS
 * basedOn[serviceRequestRef] only Reference(ServiceRequest)
 * basedOn[serviceRequestRef] ^short = "Description of the related ServiceRequest"
 * basedOn[serviceRequestRef].identifier.type 1..1
@@ -55,27 +55,28 @@ Description:    "General Structure describing a summary of an irradiation act"
 * basedOn[serviceRequestRef].identifier.value 1..1
 * basedOn[serviceRequestRef].identifier ^short = "The accession number related to the performed study"
 
+* code MS
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
 * subject only Reference(Patient)
-* subject 1..1
+* subject 1..1 MS
 * subject ^short = "Irradiated patient"
 
 // Irradiation Issued Date
 * effective[x] only dateTime
-* effective[x] 1..1
+* effective[x] 1..1 MS
 * effective[x] ^short = "Irradiation Start Date Time"
 * value[x] 0..0
 * dataAbsentReason 0..0
 * specimen 0..0
 
 // Performing irradiation device
-* device 0..1
+* device 0..1 MS
 * device only Reference(ModalityDevice)
 * device ^short = "Irradiating modality"
 
 * hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = "Description of the related observation"
-* hasMember contains irradiationEvent 0..*
+* hasMember contains irradiationEvent 0..* MS
 * hasMember[irradiationEvent] only Reference(IrradiationEventSummary)
 * hasMember[irradiationEvent] ^short = "Related irradiation events."
 
@@ -85,9 +86,9 @@ Description:    "General Structure describing a summary of an irradiation act"
 * performer ^slicing.rules = #closed
 * performer ^slicing.description = "Description of the related performer" 
 
-* performer contains irradiationAutorizingPerson 1..1
+* performer contains irradiationAutorizingPerson 1..1 MS
 * performer[irradiationAutorizingPerson] only Reference(Practitioner)
-* performer 1..1
+* performer 1..1 MS
 * performer[irradiationAutorizingPerson] ^short = "Related irradiation authorizing person"
 
 * component ^slicing.discriminator.type = #pattern
@@ -97,9 +98,9 @@ Description:    "General Structure describing a summary of an irradiation act"
 * component ^slicing.description = "Slice on component.code"
 
 // Dose measurements - Procedure Level
-* component 1..*
+* component 1..* MS
 * component.code from ComponentRadiationDoseSummaryVS (extensible)
-* component contains procedureReported 1..1
+* component contains procedureReported 1..1 MS
 * component[procedureReported].code = DCM#121058 "Procedure reported"
 * component[procedureReported].value[x] only CodeableConcept
 * component[procedureReported].valueCodeableConcept from ProcedureReportedTypeVS (required)
