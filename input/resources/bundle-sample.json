@@ -12,36 +12,22 @@
             "http://hl7.org/fhir/uv/radiation-dose-summary/StructureDefinition/xray-radiation-dose-summary"
           ]
         },
-        "identifier": [
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type",
-                  "code": "study-instance-uid",
-                  "display": "Study Instance UID"
-                }
-              ]
-            },
-            "system": "urn:dicom:uid",
-            "value": "urn:oid:1.2.840.121.3.32.0.1.25"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "ACSN",
-                  "display": "Accession ID"
-                }
-              ]
-            },
-            "value": "AN1232234"
-          }
-        ],
         "partOf": [
           {
-            "reference": "urn:uuid:f1738bb1-6f51-4d6b-ad7a-d8c933cf0cf1"
+            "reference": "urn:uuid:f1738bb1-6f51-4d6b-ad7a-d8c933cf0cf1",
+            "identifier" : {
+              "type" : {
+                "coding" : [
+                  {
+                    "system" : "http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type",
+                    "code" : "study-instance-uid",
+                    "display" : "Study Instance UID"
+                  }
+                ]
+              },
+              "system" : "urn:dicom:uid",
+              "value" : "urn:oid:1.2.840.121.3.32.0.1.25"
+            }
           }
         ],
         "status": "final",
