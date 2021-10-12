@@ -19,8 +19,7 @@
       "version": "current",
       "desc": "Continuous Integration Build (latest in version control)",
       "path": "http://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig",
-      "status": "ci-build",
-      "current": false
+      "status": "ci-build"
     }
   ]
 }

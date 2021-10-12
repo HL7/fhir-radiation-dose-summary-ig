@@ -11,12 +11,12 @@ title: Radiation Dose Summary for Diagnostic Procedures on FHIR
 status: draft
 publisher: 
   - name: HL7 Imaging Integration Working Group
-  - url: http://www.hl7.org/Special/committees/imagemgt/index.cfm
+  - url: http://www.hl7.org/Special/committees/imagemgt
 contact:
   - name: HL7 Imaging Integration Workgroup
     telecom:
       - system: url
-        value: http://www.hl7.org/Special/committees/imagemgt/index.cfm
+        value: http://www.hl7.org/Special/committees/imagemgt
   - name: Abderrazek Boufahja
     telecom:
       - system: email
