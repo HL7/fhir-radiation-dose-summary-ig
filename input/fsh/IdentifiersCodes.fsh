@@ -3,6 +3,9 @@ Id: dicom-identifier-type
 Title: "DICOM Identifier Type"
 Description: "Identifier types related to DICOM UIDs"
 
+* ^caseSensitive = true
+* ^content = #complete
+* ^hierarchyMeaning = #is-a
 * #irradiation-event-uid "Irradiation Event UID" "Unique identification of the irradiation event"
 * #device-serial-number "Device Serial Number" "Manufacturer's serial number of the device"
 * #application-entity "Application Entity" "Title of a DICOM Application Entity"
