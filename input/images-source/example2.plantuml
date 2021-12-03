@@ -1,4 +1,4 @@
-@startuml example2
+@startuml
 skinparam monochrome true
 
 object  XRayRadiationDoseSummary #white { 
@@ -15,7 +15,6 @@ object  Patient #white {
 object  ImagingStudy #white { 
   id = 344
   study-instance-uid = 1.2.840.121.3.32.0.1.25
-  accession-number = AN1232234
 }
 
 object  Practitioner #white { 

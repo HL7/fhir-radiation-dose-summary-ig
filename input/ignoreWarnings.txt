@@ -1,18 +1,1 @@
 == suppressed messages ==
-
-# Value sets from DICOM
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html not found by validator
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html not found by validator
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html not found by validator
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html not found by validator
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html on element Observation.component.valueCodeableConcept could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html on element Device.type could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html on element Observation.component.value[x] could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html on element Observation.bodySite could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html on element Observation.component.valueCodeableConcept could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html on element Observation.bodySite could not be resolved
-The value set import http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html could not be found so cannot be checked
-The value set import http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html could not be found so cannot be checked
-The value set import http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html could not be found so cannot be checked
-The value set import http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4021.html could not be found so cannot be checked
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html on element Observation.component.value[x] could not be resolved

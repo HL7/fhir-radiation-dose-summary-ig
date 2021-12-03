@@ -17,12 +17,12 @@ Description:    "Defines the Minimal Dose Information related to X-Ray procedure
 * component ^slicing.ordered = false
 * component ^slicing.description = "Slice on component.code"
 
-* device 1..1
+* device 1..1 MS
 
 // Dose measurements - Study Level
-* component contains doseRPTotal 0..1 and accumulatedAverageGlandularDose 0..1 and doseAreaProductTotal 0..1 
-* component contains fluoroDoseAreaProductTotal 0..1 and acquisitionDoseAreaProductTotal 0..1 and totalFluoroTime 0..1 
-* component contains totalNumberOfRadiographicFrames 0..1
+* component contains doseRPTotal 0..1 MS and accumulatedAverageGlandularDose 0..1 MS and doseAreaProductTotal 0..1 MS
+* component contains fluoroDoseAreaProductTotal 0..1 MS and acquisitionDoseAreaProductTotal 0..1 MS and totalFluoroTime 0..1 MS
+* component contains totalNumberOfRadiographicFrames 0..1 MS
 * component[doseRPTotal].code = DCM#113725 "Dose (RP) Total"
 * component[doseRPTotal].value[x] only Quantity
 * component[doseRPTotal].valueQuantity 1..1
@@ -64,9 +64,8 @@ Source: XRayRadiationDoseSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XRayRadiationDoseSRIODTemplates.html"
 Description: "The XRayRadiationDoseSummary can be extracted from TID10001 (Projection X-Ray Radiation Dose)"
 * -> "TID10001 (Projection X-Ray Radiation Dose)"
-* identifier[studyInstanceUID] -> "tag(0020,000D) [Study Instance UID]"
 * identifier[radiationSRUID] -> "tag(0008,0018) [SOP Instance UID]"
-* identifier[accessionNumber] -> "tag(0008,0050) [Accession Number]"
+* basedOn[serviceRequestRef] -> "tag(0008,0050) [Accession Number]"
 * partOf[imagingStudyRef] -> "tag(0020,000D) [Study Instance UID]"
 * subject -> "tag(0010,0020) [Patient ID]"
 * effective[x] -> "tag(0008,0021) [Series Date] + tag(0008,0031) [Series Time]"

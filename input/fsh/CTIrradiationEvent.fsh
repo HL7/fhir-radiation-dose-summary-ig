@@ -9,7 +9,7 @@ Description:    "Defines the Minimal Dose Information related to CT procedures"
 
 * value[x] 0..0
 
-* bodySite 1..1
+* bodySite 1..1 MS
 * bodySite from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html (extensible)
 * bodySite ^short = "The bodySite describes the related target region irradiated by this irradiation event"
 * bodySite ^comment = "The related target region is described by EV (123014, DCM, Target Region)"
@@ -20,7 +20,7 @@ Description:    "Defines the Minimal Dose Information related to CT procedures"
 * component ^slicing.ordered = false
 * component ^slicing.description = "Slice on component.code"
 
-* component contains meanCTDIvol 0..1 and dlp 0..1 and ctdiPhantomType 0..1
+* component contains meanCTDIvol 0..1 MS and dlp 0..1 MS and ctdiPhantomType 0..1 MS
 
 * component[dlp].code = DCM#113838 "DLP"
 * component[dlp].value[x] only Quantity

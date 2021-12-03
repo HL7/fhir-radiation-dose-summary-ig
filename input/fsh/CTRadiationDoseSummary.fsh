@@ -15,15 +15,17 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 * component ^slicing.ordered = false
 * component ^slicing.description = "Slice on component.code"
 
-* device 1..1
+* device 1..1 MS
 * device ^short = "The irradiating device"
 
+* hasMember ^slicing.discriminator.type = #profile
+* hasMember ^slicing.discriminator.path = "$this.resolve()"
 * hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = "Description of the related related observation"
 * hasMember[irradiationEvent] only Reference(CTIrradiationEventSummary)
 
 // Dose measurements - Study Level
-* component contains cTDoseLengthProductTotal 1..1
+* component contains cTDoseLengthProductTotal 1..1 MS
 
 * component[procedureReported].valueCodeableConcept.coding = SCT#77477000 "Computerized tomography"
 
@@ -42,9 +44,8 @@ Source: CTRadiationDoseSummary
 Target: "http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html"
 Description: "The CTRadiationDoseSummary can be extracted from TID10011 (CT Radiation Dose)."
 * -> "TID10011 (CT Radiation Dose)"
-* identifier[studyInstanceUID] -> "tag(0020,000D) [Study Instance UID]"
 * identifier[radiationSRUID] -> "tag(0008,0018) [SOP Instance UID]"
-* identifier[accessionNumber] -> "tag(0008,0050) [Accession Number]"
+* basedOn[serviceRequestRef] -> "tag(0008,0050) [Accession Number]"
 * partOf[imagingStudyRef] -> "tag(0020,000D) [Study Instance UID]"
 * subject -> "tag(0010,0020) [Patient ID]"
 * effective[x] -> "TID10011 (CT Radiation Dose).EV (113809, DCM, Start of X-Ray Irradiation)"

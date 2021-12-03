@@ -7,13 +7,14 @@ Title:          "Indication Observation"
 Description:    "Indication observation related to the radiation administration"
 * insert RDSStructureDefinitionContent
 
+* code MS
 * code.coding = DCM#121109 "Indications for Procedure"
 
 * subject only Reference(Patient)
-* subject 1..1
+* subject 1..1 MS
 * subject ^short = "Related Patient"
 
-* value[x] 1..1
+* value[x] 1..1 MS
 * value[x] only CodeableConcept or string
 * value[x] ^short = "Indications description"
 

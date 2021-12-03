@@ -4,6 +4,7 @@ This chapter describes the different architecture aspects of the resources, prof
 2. [Actors](#actors) - Actors participating in the IG
 3. [Terminology](#terminology) - Value Sets defined
 4. [Resources Identifiers](#identifiers) - A focus on DICOM identifiers types
+5. [Must Support](#must-support) - A focus on Must Support usage in this IG
 5. [Sercurity Consideration](#sec) - Security aspects to be taken in consideration
 
 <a name="profiles"></a>
@@ -192,9 +193,9 @@ Many profiles defined in this IG are using DICOM IDs and UIDs as identifiers for
 | [Modality Device](StructureDefinition-modality-device.html) | identifier:aeTitle | | application-entity | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Application Entity | N/A |
 | [Modality Device](StructureDefinition-modality-device.html) | identifier:deviceUID | urn:dicom:uid | device-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Device UID | (0018,1002) Device UID |
 | [Modality Device](StructureDefinition-modality-device.html) | identifier:deviceID | | device-id | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Device ID | (0018,1003) Device ID |
-| [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | identifier:studyInstanceUID | urn:dicom:uid | study-instance-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Study Instance UID | (0020,000D) Study Instance UID |
 | [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | identifier:radiationSRUID | urn:dicom:uid | sop-instance-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | SOP Instance UID | (0008,0018) SOP Instance UID |
-| [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | identifier:accessionNumber | | ACSN | [HL7 IdentifierType](http://terminology.hl7.org/CodeSystem/v2-0203){:target="_blank"} | Accession ID | (0008,0050) Accession Number |
+| [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | partOf.identifier | urn:dicom:uid | study-instance-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Study Instance UID | (0020,000D) Study Instance UID |
+| [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | basedOn.identifier | | ACSN | [HL7 IdentifierType](http://terminology.hl7.org/CodeSystem/v2-0203){:target="_blank"} | Accession ID | (0008,0050) Accession Number |
 {:.table-striped .table-bordered}
 
 Following the notes within the [ImagingStudy](http://hl7.org/fhir/imagingstudy.html#notes) resource - <i>When encoding a DICOM UID in an Identifier datatype, use the Identifier system of "urn:dicom:uid"</i> - the identifiers related to DICOM tags having the Value Representation (VR) of type UID, shall have the <code>type.system=urn:dicom:uid</code>.
@@ -237,6 +238,16 @@ Here some examples :
 ]
 </pre>
 
+
+<a name="must-support"></a>
+
+### Must Support
+In the context of this IG, mustSupport on any data element SHALL be interpreted as follows:
+
+* When creating Radiation Dose Summary content, implementers SHALL be capable of including mustSupport data elements.
+* When receiving Radiation Dose Summary content, implementers:
+    * SHALL be capable of processing resource instances containing mustSupport data elements without generating an error or causing the application to fail.
+    * SHOULD be capable of displaying mustSupport data elements for human use, or processing (e.g. storing) them for other purposes.
 
 <a name="sec"></a>
 
