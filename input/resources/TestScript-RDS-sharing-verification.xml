@@ -31,18 +31,23 @@
     </destination>
     <variable>
         <name value="patientIdentifier"/>
-                <defaultValue value="PAT3421"/>
+        <defaultValue value="PAT3421"/>
         <description value="Enter the patient identifier as used in the RDSR: tag(0010,0020) Patient ID"/>
     </variable>
     <variable>
-        <name value="deviceIdentifier"/> 
-               <defaultValue value="767ER"/>
+        <name value="deviceIdentifier"/>
+        <defaultValue value="767ER"/>
         <description value="Enter the Device identifier as used in the RDSR: tag(0018,1000) Device Serial Number"/>
     </variable>
     <variable>
-        <name value="practitionerIdentifier"/>
-        <defaultValue value="pract67"/>
-        <description value="Enter the Practitioner identifier as used in the RDSR: TID 1020(Person Participant).EV (113871, DCM, Person ID)"/>
+        <name value="practitionerFamily"/>
+        <defaultValue value="Moore"/>
+        <description value="Enter the Practitioner family name as used in the RDSR: TID 1020(Person Participant).EV (113871, DCM, Person ID)"/>
+    </variable>
+    <variable>
+        <name value="practitionerGiven"/>
+        <defaultValue value="John"/>
+        <description value="Enter the Practitioner given name as used in the RDSR: TID 1020(Person Participant).EV (113871, DCM, Person ID)"/>
     </variable>
     <variable>
         <name value="studyInstanceUID"/>
@@ -121,7 +126,7 @@
     </test>
     <test>
         <name value="search_practitioner"/>
-        <description value="Search by practitioner identifier"/>
+        <description value="Search by practitioner name"/>
         <action>
             <operation>
                 <type>
@@ -129,10 +134,10 @@
                     <code value="search"/>
                 </type>
                 <resource value="Practitioner"/>
-                <description value="Search for matching Practitioner related to the identifier ${practitionerIdentifier}"/>
+                <description value="Search for matching Practitioner related to the family name ${practitionerFamily} and the given name ${practitionerGiven}"/>
                 <accept value="json"/>
                 <encodeRequestUrl value="true"/>
-                <params value="?identifier=${practitionerIdentifier}"/>
+                <params value="?family=${practitionerFamily}&amp;given=${practitionerGiven}"/>
                 <responseId value="practitioner-search-response"/>
             </operation>
         </action>
