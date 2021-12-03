@@ -19,8 +19,8 @@ This chapter describes testing data and testing plan, and provide some samples f
 
 | Actors | Roles |
 |--------------------------|-----------------------|
-| Radiation Dose Summary Producer (RDSP) actor| Produce the Radiation Dose Summary resource <br/> (O) Produce occasionally contextual resources  (Patient, Device, ImagingStudy, etc) |
-| FHIR server | Host and Manage the Radiation Dose Summary resource <br/> Manage the contextual resources (Patient, Device, ImagingStudy, etc)|
+| Radiation Dose Summary Producer (RDSP) actor| Produce the Radiation Dose Summary resource <br/> (O) Produce occasionally contextual resources  (Patient, Device, ImagingStudy, etc.) |
+| FHIR server | Host and Manage the Radiation Dose Summary resource <br/> Manage the contextual resources (Patient, Device, ImagingStudy, etc.)|
 |Radiation Dose Summary Consumer (RDSC) actor | Consume Radiation Dose Summary resource <br/> (O) Produce Radiation Summary Report |
 {:.table-striped .table-bordered}
 
@@ -53,7 +53,7 @@ Here are the different steps that needs to be performed:
 
 | Actors | Roles |
 |--------------------------|-----------------------|
-| Radiation Dose Summary Producer (RDSP) actor grouped with FHIR server | Produce internally the Radiation Dose Summary resource <br/> Host and Manage the Radiation Dose Summary resource <br/> Manage the contextual resources (Patient, Device, ImagingStudy, etc) |
+| Radiation Dose Summary Producer (RDSP) actor grouped with FHIR server | Produce internally the Radiation Dose Summary resource <br/> Host and Manage the Radiation Dose Summary resource <br/> Manage the contextual resources (Patient, Device, ImagingStudy, etc.) |
 |Radiation Dose Summary Consumer (RDSC) actor | Consume Radiation Dose Summary resource |
 {:.table-striped .table-bordered}
 
