@@ -16,7 +16,7 @@
     {
       "version": "0.1.0",
       "date": "2022-01-13",
-      "desc": "January 2022 ballot",
+      "desc": "January 2022 Ballot",
       "path": "http://hl7.org/fhir/uv/radiation-dose-summary/2022Jan",
       "sequence": "STU 1",
       "fhirversion": "4.0.1",

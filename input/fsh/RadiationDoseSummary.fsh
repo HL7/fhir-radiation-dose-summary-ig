@@ -23,7 +23,7 @@ Description:    "General Structure describing a summary of an irradiation act"
 * identifier[radiationSRUID].type = DCMIdType#sop-instance-uid "SOP Instance UID"
 * identifier[radiationSRUID].system = "urn:dicom:uid"
 * identifier[radiationSRUID].value 1..1
-* identifier[radiationSRUID] ^short = "Identifier related to SOP Instance UID if the resources is generated based on an RDSR"
+* identifier[radiationSRUID] ^short = "Identifier related to SOP Instance UID if the resource is generated based on an RDSR"
 
 
 // Associated Procedure/Exam
