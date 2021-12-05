@@ -130,7 +130,7 @@ Description: "Minimal Capability Statement needed to be supported by RDSP Actor"
 
 // Radiation Summary resource support
 * rest[0].resource[4].type = #Observation
-* rest[0].resource[4].documentation = "Create of Radiation Summary shall be supported." 
+* rest[0].resource[4].documentation = "Create of Radiation Summary observations shall be supported." 
 * rest[0].resource[4].interaction[0].code = #create
 * rest[0].resource[4].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[4].interaction[0].extension.valueCode = #SHALL

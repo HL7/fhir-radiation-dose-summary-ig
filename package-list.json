@@ -14,22 +14,14 @@
       "current": true
     },
     {
-      "version": "1.0.0",
-      "date": "2022-03-01",
-      "desc": "STU 1",
-      "path": "http://hl7.org/fhir/uv/radiation-dose-summary",
-      "sequence": "STU 1",
-      "fhirversion": "4.0.1",
-      "status": "trial-use"
-    },
-    {
       "version": "0.1.0",
-      "date": "2021-10-13",
-      "desc": "September 2021 - draft for comment",
-      "path": "http://hl7.org/fhir/uv/radiation-dose-summary/2021Sep",
+      "date": "2022-01-13",
+      "desc": "January 2022 Ballot",
+      "path": "http://hl7.org/fhir/uv/radiation-dose-summary/2022Jan",
       "sequence": "STU 1",
       "fhirversion": "4.0.1",
-      "status": "draft"
+      "status": "ballot",
+      "current": true
     }
   ]
 }

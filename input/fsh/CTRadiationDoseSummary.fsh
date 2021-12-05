@@ -21,7 +21,7 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 * hasMember ^slicing.discriminator.type = #profile
 * hasMember ^slicing.discriminator.path = "$this.resolve()"
 * hasMember ^slicing.rules = #open
-* hasMember ^slicing.description = "Description of the related related observation"
+* hasMember ^slicing.description = "Description of the related observations"
 * hasMember[irradiationEvent] only Reference(CTIrradiationEventSummary)
 
 // Dose measurements - Study Level
@@ -35,7 +35,7 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 * component[cTDoseLengthProductTotal].valueQuantity.unit = "mGy.cm"
 
 * effective[x] ^short = "Coming from EV (113809, DCM, Start of X-Ray Irradiation) from TID-10011"
-* component[cTDoseLengthProductTotal] ^short = "Describe the EV(113813, DCM, CT Dose Length Product Total) element from TID-10012"
+* component[cTDoseLengthProductTotal] ^short = "Describes the EV(113813, DCM, CT Dose Length Product Total) element from TID-10012"
 
 Mapping: dicom-sr-for-CTRadiationDoseSummary
 Id: dicom-sr

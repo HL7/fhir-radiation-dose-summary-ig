@@ -5,7 +5,7 @@ This chapter describes the different architecture aspects of the resources, prof
 3. [Terminology](#terminology) - Value Sets defined
 4. [Resources Identifiers](#identifiers) - A focus on DICOM identifiers types
 5. [Must Support](#must-support) - A focus on Must Support usage in this IG
-5. [Sercurity Consideration](#sec) - Security aspects to be taken in consideration
+5. [Security Consideration](#sec) - Security aspects to be taken in consideration
 
 <a name="profiles"></a>
 
@@ -109,7 +109,7 @@ The following sequence diagram describes the typical workflow between the RDSP a
 <br clear="all" />
 
 During this workflow, a patient arrives to the hospital and performs an exam within an irradiating modality, or including a nuclear medicine administration. The detailed radiation information is shared with the Radiation Dose Summary Producer actor, which may generally be a Dose Management System. 
-During the process of creating the Radiation Dose Summary resources, the RDSP actor performs a list of query to the FHIR server, in order to collect the right IDs to be referred in the newly created resources. For instance, the RDSP actor shall collect the corresponding IDs for the Patient, the Practitioner, the Modality, and the ImagingStudy resources. Most of these resources can be identified from the DICOM RDSR shared from the modality. Some unique identifiers within the RDSR can be used to query the FHIR server. Here is a mapping between the FHIR resources and the identifiers from DICOM:
+During the process of creating the Radiation Dose Summary resources, the RDSP actor performs a list of queries to the FHIR server, in order to collect the right IDs to be referred in the newly created resources. For instance, the RDSP actor shall collect the corresponding IDs for the Patient, the Practitioner, the Modality, and the ImagingStudy resources. Most of these resources can be identified from the DICOM RDSR shared from the modality. Some unique identifiers within the RDSR can be used to query the FHIR server. Here is a mapping between the FHIR resources and the identifiers from DICOM:
 
 | FHIR Resource        |      Identifier from DICOM       |
 |--------------------------|-----------------------|
@@ -172,7 +172,7 @@ The following table summarizes the mapping between defined profiles and Value se
 | CT Irradiation Event Summary | bodySite | [CID 4030 CT, MR and PET Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html){:target="_blank"} | extensible | Following DICOM [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} |
 | CT Irradiation Event Summary | component:ctdiPhantomType | [CID 4052 Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html){:target="_blank"} | extensible | Following DICOM [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} |
 | Irradiation Event Summary | component.code | [Components' Code for Irradiation Event](ValueSet-component-irradiation-event-vs.html) | extensible | to keep the possibility to extend the list of reported components |
-| Modality Device | type | [CID 33 Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html){:target="_blank"} | required | VS contains the exhaustif list of modalities types |
+| Modality Device | type | [CID 33 Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html){:target="_blank"} | required | VS contains the exhaustive list of modality types |
 | Radiopharmaceutical Radiation Dose Summary | component:radiopharmaceutical | [Radiopharmaceuticals Value Set](ValueSet-radiopharmaceutical-rds-vs.html) | extensible | Following DICOM [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} |
 | Radiopharmaceutical Radiation Dose Summary | component:radioisotope | [Isotopes Value Set](ValueSet-isotope-rds-vs.html) | extensible | Following DICOM [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} |
 | Radiopharmaceutical Radiation Dose Summary | component:routeOfAdministration | [CID 11 Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html){:target="_blank"} | preferred | Following DICOM [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} |
@@ -247,7 +247,7 @@ In the context of this IG, mustSupport on any data element SHALL be interpreted 
 * When creating Radiation Dose Summary content, implementers SHALL be capable of including mustSupport data elements.
 * When receiving Radiation Dose Summary content, implementers:
     * SHALL be capable of processing resource instances containing mustSupport data elements without generating an error or causing the application to fail.
-    * SHOULD be capable of displaying mustSupport data elements for human use, or processing (e.g. storing) them for other purposes.
+    * SHOULD be capable of displaying mustSupport data elements for human use, or processing (e.g., storing) them for other purposes.
 
 <a name="sec"></a>
 

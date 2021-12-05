@@ -7,7 +7,7 @@ Description: "Minimal Capability Statement needed to be supported by a FHIR Serv
 * title = "FHIR Server supporting FHIR operations in order to interact with RDSP Actor"
 * date = "2021-06-28"
 * kind = #requirements
-* description = "Defines the operation requirement for FHIR server interacting with RDSP actor"
+* description = "Defines the operations requirement for FHIR server interacting with RDSP actor"
 * format[0] = #xml
 * format[1] = #json
 * fhirVersion = #4.0.1
@@ -23,7 +23,7 @@ Description: "Minimal Capability Statement needed to be supported by a FHIR Serv
 
 // Patient resource support
 * rest[0].resource[0].type = #Patient
-* rest[0].resource[0].documentation = "Search on patient need to be available on FHIR server, and patient create can be activated based on the use case covered."
+* rest[0].resource[0].documentation = "Search on patients needs to be available on FHIR server, and patient create can be activated based on the covered use case."
 * rest[0].resource[0].interaction[0].code = #create
 * rest[0].resource[0].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[0].interaction[0].extension.valueCode = #MAY
@@ -130,7 +130,7 @@ Description: "Minimal Capability Statement needed to be supported by a FHIR Serv
 
 // Radiation Summary resource support
 * rest[0].resource[4].type = #Observation
-* rest[0].resource[4].documentation = "Create of Radiation Summary shall be supported." 
+* rest[0].resource[4].documentation = "Create of Radiation Summary observations shall be supported." 
 * rest[0].resource[4].interaction[0].code = #create
 * rest[0].resource[4].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[4].interaction[0].extension.valueCode = #SHALL
