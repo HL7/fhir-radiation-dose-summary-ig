@@ -3,7 +3,6 @@ This chapter describes testing data and testing plan, and provide some samples f
 1. [Test Plan](#testplan) - Test plans for different actors 
 2. [Test Data](#testdata) - Test data that can be used
 3. [Resources Samples](#samples) - Samples of resources profiled following this IG
-4. [Download](#download) - Resources available for download
 
 <a name="testplan"></a>
 
@@ -143,17 +142,4 @@ Here is an example of the Radiation Dose Summary Profile resource related to Rad
 * [ImagingStudy-22](ImagingStudy-22.html)
 * [Patient-56](Patient-56.html)
 * [Practitioner-33](Practitioner-33.html)
-
-
-<a name="download"></a>
-
-### Download
-
-This implementation guide is web-based and is intended to be browsed online. However, for the convenience of implementers, both this implementation guide, various sub-packages of it and some of the source specifications are available for download. The following links allow you to download various parts of this implementation guide and other referenced implementation guides for local use.
-
-*   This [full IG](full-ig.zip)
-*   The [resource definitions](definitions.json.zip) from this IG for use with the FHIR validator (see below)
-*   The full FHIR [R4](http://hl7.org/fhir/R4/fhir-spec.zip){:target="_blank"} specifications
-*   A [validator](https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar){:target="_blank"} that can be used to check FHIR resource instance validity.
-
 
