@@ -54,6 +54,9 @@ pages:
   testing.md:
     title: Testing and Conformance
     generation: markdown
+  downloads.md:
+    title: Downloads
+    generation: markdown
 
 resources:
   TestScript/RDS-sharing-verification: 
@@ -88,3 +91,4 @@ menu:
   Architecture &amp; Implementation: archi.html
   Testing &amp; Conformance: testing.html
   Artifact Index: artifacts.html
+  Downloads: downloads.html

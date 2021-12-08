@@ -20,7 +20,6 @@ This IG is organized into three main sections:
     * [Test Plan](testing.html#testplan) - Test plans for the different actors 
     * [Test Data](testing.html#testdata) - Test data that can be used
     * [Resources Samples](testing.html#samples) - Samples of resources profiled following this IG
-    * [Download](testing.html#download) - Resources available for download
 
 ### Copyrights and acknowledgments
 
