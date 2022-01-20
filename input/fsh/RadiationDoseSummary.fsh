@@ -105,6 +105,7 @@ Description:    "General Structure describing a summary of an irradiation act"
 * component contains procedureReported 1..1 MS
 * component[procedureReported].code = DCM#121058 "Procedure reported"
 * component[procedureReported].value[x] only CodeableConcept
+* component[procedureReported].valueCodeableConcept 1..1
 * component[procedureReported].valueCodeableConcept from ProcedureReportedTypeVS (required)
 * component[procedureReported] ^short = "Related Reported Procedure."
 
