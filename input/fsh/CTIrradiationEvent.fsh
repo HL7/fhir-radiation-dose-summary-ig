@@ -36,8 +36,11 @@ Description:    "Defines the Minimal Dose Information related to CT procedures"
 * component[ctdiPhantomType].valueCodeableConcept from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html (extensible)
 
 * component[meanCTDIvol] ^short = "Describes the EV(113830, DCM, Mean CTDIvol) element from TID-10013"
+* component[meanCTDIvol] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[dlp] ^short = "Describes the EV(113838, DCM, DLP) element from  TID-10013"
+* component[dlp] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[ctdiPhantomType] ^short = "Describes the EV(113835, DCM, CTDIw Phantom Type) element from TID-10013"
+* component[ctdiPhantomType] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * effective[x] ^short = "Describes the EV(111526, DCM, DateTime Started) element from TID-10013"
 
 

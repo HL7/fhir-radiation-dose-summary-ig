@@ -36,6 +36,7 @@ Description:    "Defines the Minimal Dose Information related to CT irradiation 
 
 * effective[x] ^short = "Coming from EV (113809, DCM, Start of X-Ray Irradiation) from TID-10011"
 * component[cTDoseLengthProductTotal] ^short = "Describes the EV(113813, DCM, CT Dose Length Product Total) element from TID-10012"
+* component[cTDoseLengthProductTotal] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 
 Mapping: dicom-sr-for-CTRadiationDoseSummary
 Id: dicom-sr

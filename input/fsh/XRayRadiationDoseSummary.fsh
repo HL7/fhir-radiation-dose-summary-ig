@@ -27,29 +27,36 @@ Description:    "Defines the Minimal Dose Information related to X-Ray procedure
 * component[doseRPTotal].value[x] only Quantity
 * component[doseRPTotal].valueQuantity 1..1
 * component[doseRPTotal].valueQuantity.unit = "mGy"
+* component[doseRPTotal] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[accumulatedAverageGlandularDose].code = DCM#111637 "Accumulated Average Glandular Dose"
 * component[accumulatedAverageGlandularDose].value[x] only Quantity
 * component[accumulatedAverageGlandularDose].valueQuantity 1..1
 * component[accumulatedAverageGlandularDose].valueQuantity.unit = "mGy"
+* component[accumulatedAverageGlandularDose] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[doseAreaProductTotal].code = DCM#113722 "Dose Area Product Total"
 * component[doseAreaProductTotal].value[x] only Quantity
 * component[doseAreaProductTotal].valueQuantity 1..1
 * component[doseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
+* component[doseAreaProductTotal] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[fluoroDoseAreaProductTotal].code = DCM#113726 "Fluoro Dose Area Product Total"
 * component[fluoroDoseAreaProductTotal].value[x] only Quantity
 * component[fluoroDoseAreaProductTotal].valueQuantity 1..1
 * component[fluoroDoseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
+* component[fluoroDoseAreaProductTotal] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[acquisitionDoseAreaProductTotal].code = DCM#113727 "Acquisition Dose Area Product Total"
 * component[acquisitionDoseAreaProductTotal].value[x] only Quantity
 * component[acquisitionDoseAreaProductTotal].valueQuantity 1..1
 * component[acquisitionDoseAreaProductTotal].valueQuantity.unit = "mGy.cm2"
+* component[acquisitionDoseAreaProductTotal] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[totalFluoroTime].code = DCM#113730 "Total Fluoro Time"
 * component[totalFluoroTime].value[x] only Quantity
 * component[totalFluoroTime].valueQuantity 1..1
 * component[totalFluoroTime].valueQuantity.unit = "s"
+* component[totalFluoroTime] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[totalNumberOfRadiographicFrames].code = DCM#113731 "Total Number of Radiographic Frames"
 * component[totalNumberOfRadiographicFrames].value[x] only integer
 * component[totalNumberOfRadiographicFrames].valueInteger 1..1
+* component[totalNumberOfRadiographicFrames] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 
 Invariant: xray-procedure-reported
 Description: "Procedure Reported shall be (113704, DCM, Projection X-Ray) or (71651007, SCT, Mammography)"

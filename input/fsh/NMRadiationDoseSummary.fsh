@@ -26,29 +26,34 @@ Description:    "Defines the Minimal Dose Information related to NM procedures"
 * component[administeredActivity].valueQuantity.unit = "MBq"
 * component[administeredActivity] ^short = "The administered activity to the patient"
 * component[administeredActivity] ^comment = "Related to EV (113507, DCM, Administered activity) from TID-10022"
+* component[administeredActivity] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[radiopharmaceutical].code = SCT#349358000 "Radiopharmaceuticals"
 * component[radiopharmaceutical].value[x] only CodeableConcept or string
 * component[radiopharmaceutical].valueCodeableConcept 1..1
 * component[radiopharmaceutical].valueCodeableConcept from RadiopharmaceuticalAgentVS (extensible)
 * component[radiopharmaceutical] ^short = "The radiopharmaceutical agent used"
 * component[radiopharmaceutical] ^comment = "Related to EV (349358000, SCT, Radiopharmaceutical agent) from TID 10022"
+* component[radiopharmaceutical] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[radioisotope].code = SCT#89457008 "Radioisotope"
 * component[radioisotope].value[x] only CodeableConcept or string
 * component[radioisotope].valueCodeableConcept 1..1
 * component[radioisotope].valueCodeableConcept from IsotopesVS (extensible)
 * component[radioisotope] ^short = "The radioisotope used during the administration"
 * component[radioisotope] ^comment = "Related to EV (89457008, SCT, Radionuclide) from TID 10022"
+* component[radioisotope] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[radiopharmaceuticalVolume].code = DCM#123005 "Radiopharmaceutical Volume"
 * component[radiopharmaceuticalVolume].value[x] only Quantity
 * component[radiopharmaceuticalVolume].valueQuantity 1..1
 * component[radiopharmaceuticalVolume].valueQuantity.unit = "cm3"
 * component[radiopharmaceuticalVolume] ^short = "The volume of the radiopharmaceutical agent administered to the patient"
 * component[radiopharmaceuticalVolume] ^comment = "Related to EV (123005, DCM, Radiopharmaceutical Volume) from TID 10022"
+* component[radiopharmaceuticalVolume] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 * component[routeOfAdministration].code = SCT#410675002 "Route of administration"
 * component[routeOfAdministration].value[x] only CodeableConcept
 * component[routeOfAdministration].valueCodeableConcept 1..1
 * component[routeOfAdministration].valueCodeableConcept from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html (preferred)
 * component[routeOfAdministration] ^short = "The route of administration of the radiopharmaceutical agent"
+* component[routeOfAdministration] ^requirements = "component element is used following the description in [architecture and implementation](archi.html#components)."
 
 * effective[x] ^short = "The administration start date time"
 
