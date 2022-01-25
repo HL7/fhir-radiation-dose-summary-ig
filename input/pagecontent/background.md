@@ -5,8 +5,9 @@ and describes the use cases supported by this implementation guide.
 2. [Scope](#scope) - Scope of the IG
 3. [Use cases](#usecases) - Key use cases covered by the IG
 4. [Minimal Radiation Information](#mindose) - Description of data shared through this IG
-5. [Glossary](#glossary) - Glossary of terms used in this IG
-5. [References](#references) - Useful references
+5. [Underlying specifications](#underlying-specs) - Description of the underlying specifications and resources.
+6. [Glossary](#glossary) - Glossary of terms used in this IG
+7. [References](#references) - Useful references
 
 <a name="problematic"></a>
 
@@ -108,9 +109,9 @@ In this paragraph, we analyze the mapping between the identified minimal dose in
     * French Minister of Health and Solidarity, [Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation](https://www.legifrance.gouv.fr/eli/arrete/2006/9/22/SANY0623888A/jo/texte){:target="_blank"}, (Order - 2006)
 * Finnish Imaging Report specification, [KanTa Imaging CDA R2 document structures](http://www.hl7.fi/hl7-rajapintakartta/kanta-%E2%80%93-kuvantamisen-cda-r2-rakenne/){:target="_blank"} (2013)
 * US, California State
-    * AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
+    * AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
     * [Senate Bill No. 1237, CHAPTER 521](http://www.leginfo.ca.gov/pub/09-10/bill/sen/sb_1201-1250/sb_1237_bill_20100929_chaptered.pdf){:target="_blank"}
-    * AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
+    * AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
     * [Radiologist Compliance With California CT Dose Reporting Requirements: A Single-Center Review of Pediatric Chest CT](https://www.ajronline.org/doi/pdf/10.2214/AJR.14.13693){:target="_blank"}
     * University of California Dose Optimization and Standardization Endeavor (UC-DOSE). [Recommendations for compliance with California Senate Bill 1237 and related pending legislation.](http://files.ctctcdn.com/da9de144201/b78c37fa-a36b-4888-a418-fa21a314393e.pdf){:target="_blank"}
 
@@ -2415,6 +2416,48 @@ Dose measurements data:
 * The calibration factors are not reported as part of the minimal dose information. The generator of the Radiation Dose Summary resources shall take in consideration these calibration factors.
 * Based on the analyzes performed, there is no minimal dose information related to the level Irradiation Event and part of the modalities XA/RF/MG. 
 
+<a name="underlying-specs"></a>
+
+### Underlying specifications
+
+this IG is based on [HL7 FHIR](http://hl7.org/fhir/R4/index.html){:target="_blank"} standard, as well as [DICOM](https://www.dicomstandard.org/current){:target="_blank"} standard, and its packaged value sets [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"}. This IG uses also a profile from the specification [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}. Implementers of this specification must understand some basic information about the underlying specifications listed above.
+
+#### FHIR
+This IG uses terminology, notations and design principles that are specific to the HL7 FHIR standard. Before reading the page [architecture and implementation](archi.html), it is important to be familiar with the basic principles of FHIR and how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to review the following prior to reading the rest of this implementation guide.
+
+* [FHIR overview](http://hl7.org/fhir/R4/overview.html){:target="_blank"}
+* [Developer's introduction](http://hl7.org/fhir/R4/overview-dev.html){:target="_blank"} (or [Clinical introduction](http://hl7.org/fhir/R4/overview-clinical.html){:target="_blank"})
+* [FHIR data types](http://hl7.org/fhir/R4/datatypes.html){:target="_blank"}
+* [Using codes](http://hl7.org/fhir/R4/terminologies.html){:target="_blank"}
+* [References between resources](http://hl7.org/fhir/R4/references.html){:target="_blank"}
+* [How to read resource & profile definitions](http://hl7.org/fhir/R4/formats.html){:target="_blank"}
+* [Base resource](http://hl7.org/fhir/R4/resource.html){:target="_blank"}
+
+This implementation guide supports the recently published [FHIR R4](http://hl7.org/fhir/R4/index.html){:target="_blank"} version of the FHIR standard to ensure alignment with the current direction of the FHIR standard.
+
+#### FHIR resources used
+The table below identifies the specific FHIR Resources and their purposes that will be used in this IG. Implementers should familiarize themselves with these FHIR resources and their purposes.
+
+|FHIR Resource|Purpose|
+|-----|-----------------|
+|[Observation](http://hl7.org/fhir/R4/observation.html){:target="_blank"}| Used to describe the radiation dose summary and the collected minimal dose information|
+|[Patient](http://hl7.org/fhir/R4/patient.html){:target="_blank"}| Used to reference the irradiated person|
+|[Practitioner](http://hl7.org/fhir/R4/practitioner.html){:target="_blank"}| Used to reference the related irradiation authorizing person|
+|[Device](http://hl7.org/fhir/R4/device.html){:target="_blank"}| Used to describe the irradiating modality|
+|[ImagingStudy](http://hl7.org/fhir/R4/imagingstudy.html){:target="_blank"}| Used to reference the performed exam|
+|[Composition](http://hl7.org/fhir/R4/composition.html){:target="_blank"}| Used to create the irradiation report|
+{:.table-striped .table-bordered}
+
+#### DICOM® Standard
+DICOM® is used as reference standard, as it provides a complete definition of the dose information that can be present in a radiation report. The DICOM® version used in this IG is the [2021d](https://dicom.nema.org/medical/dicom/2021d/output/){:target="_blank"} release. The packaged value sets coming from DICOM within [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"} are referenced many times in the different profiles of this IG.
+
+[DICOM®](https://www.dicomstandard.org/current){:target="_blank"}
+
+#### International Patient Summary IG (IPS)
+Pregnancy Status Profile from [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"} is used within our IG ion order to report possible pregnancy of irradiated person.
+
+[International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}
+
 <a name="glossary"></a>
 
 ### Glossary
@@ -2444,11 +2487,13 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |MPPS| Modality Performed Procedure Step |
 |NM| Nuclear Medicine |
 |OCR| Optical Character Recognition |
+|PHI| Personal Health Information |
 |RDSC| Radiation Dose Summary Consumer |
 |RDSP| Radiation Dose Summary Producer |
 |RDSR| Radiation Dose Structured Report |
 |REM| Radiation Exposure Monitoring|
 |REM-NM| Radiation Exposure Monitoring for Nuclear Medicine |
+|REST| Representational State Transfer |
 |RF| Radio Fluoroscopy |
 |RIS| Radiology Information System |
 |RP|  Reference Point |
@@ -2470,21 +2515,21 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 
 ### References
 
-1. DICOM, [DICOM PS3.20: Imaging Reports using HL7 Clinical Document Architecture](http://dicom.nema.org/medical/dicom/current/output/html/part20.html){:target="_blank"}
-2. DICOM, [DICOM PS3.16: Content Mapping Resource](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/PS3.16.html){:target="_blank"}
-3. DICOM, [X-Ray Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XRayRadiationDoseSRIODTemplates.html){:target="_blank"}
-4. DICOM, [CT Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html){:target="_blank"}
-5. DICOM, [Radiopharmaceutical Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_RadiopharmaceuticalRadiationDoseSRIODTemplates.html){:target="_blank"}
-6. DICOM, [TID 2008\. Radiation Exposure and Protection Information](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_A.html#sect_TID_2008){:target="_blank"}
+1. DICOM, [DICOM PS3.20: Imaging Reports using HL7 Clinical Document Architecture](http://dicom.nema.org/medical/dicom/current/output/html/part20.html){:target="_blank"}
+2. DICOM, [DICOM PS3.16: Content Mapping Resource](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/PS3.16.html){:target="_blank"}
+3. DICOM, [X-Ray Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XRayRadiationDoseSRIODTemplates.html){:target="_blank"}
+4. DICOM, [CT Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html){:target="_blank"}
+5. DICOM, [Radiopharmaceutical Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_RadiopharmaceuticalRadiationDoseSRIODTemplates.html){:target="_blank"}
+6. DICOM, [TID 2008\. Radiation Exposure and Protection Information](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_A.html#sect_TID_2008){:target="_blank"}
 7. French Society of Radiology - SFR,  [Practical Guide for Interventional Radiology](http://gri.radiologie.fr/){:target="_blank"}  (Guideline - 2013)
 8. French High Authority of Health - HAS,  [Patient radiation protection and analysis of CPD practices and certification of healthcare establishments](https://www.has-sante.fr/upload/docs/application/pdf/2013-07/radioprotection_du_patient_et_analyse_des_pratiques_dpc_et_certification_des_etablissements_de_sante_format2clics.pdf){:target="_blank"}  (Guideline - 2012)
-9. French nuclear safety authority, [Presentation of the main radiation protection regulatory provisions applicable in medical and dental radiology](https://www.cd2-conseils.com/wp-content/uploads/2016/11/rp_asn_presentation-principales-dispositions-reglementaires_2016.pdf){:target="_blank"}  (Guideline: 2016)
+9. French nuclear safety authority, [Presentation of the main radiation protection regulatory provisions applicable in medical and dental radiology](https://www.cd2-conseils.com/wp-content/uploads/2016/11/rp_asn_presentation-principales-dispositions-reglementaires_2016.pdf){:target="_blank"}  (Guideline: 2016)
 10. French Minister of Health and Solidarity,  [Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation](https://www.legifrance.gouv.fr/eli/arrete/2006/9/22/SANY0623888A/jo/texte){:target="_blank"}, (Order - 2006)
 11. Finnish Imaging Report specification,  [KanTa Imaging CDA R2 document structures](http://www.hl7.fi/hl7-rajapintakartta/kanta-%E2%80%93-kuvantamisen-cda-r2-rakenne/){:target="_blank"}  (2013)
-12. Finnish Radiation and Nuclear Safety Authority, [Röntgentutkimuksesta potilaalle aiheutuvan säteilyaltistuksen määrittäminen](https://www.julkari.fi/bitstream/handle/10024/125145/rontgensateily.pdf){:target="_blank"} (X-ray examination of the patient radiation exposure determination)
-13. AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
+12. Finnish Radiation and Nuclear Safety Authority, [Röntgentutkimuksesta potilaalle aiheutuvan säteilyaltistuksen määrittäminen](https://www.julkari.fi/bitstream/handle/10024/125145/rontgensateily.pdf){:target="_blank"} (X-ray examination of the patient radiation exposure determination)
+13. AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
 14. [Senate Bill No. 1237, CHAPTER 521](http://www.leginfo.ca.gov/pub/09-10/bill/sen/sb_1201-1250/sb_1237_bill_20100929_chaptered.pdf){:target="_blank"}
-15. AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
+15. AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
 16. [Radiologist Compliance With California CT Dose Reporting Requirements: A Single-Center Review of Pediatric Chest CT](https://www.ajronline.org/doi/pdf/10.2214/AJR.14.13693){:target="_blank"}
 17. University of California Dose Optimization and Standardization Endeavor (UC-DOSE). [Recommendations for compliance with California Senate Bill 1237 and related pending legislation](http://files.ctctcdn.com/da9de144201/b78c37fa-a36b-4888-a418-fa21a314393e.pdf){:target="_blank"}
 18. IEC, [IEC 61910-1:2014 - Medical electrical equipment - Radiation dose documentation - Part 1: Radiation dose structured reports for radiography and radioscopy](https://webstore.iec.ch/publication/6091){:target="_blank"}

@@ -9,12 +9,14 @@ This IG is organized into three main sections:
     * [Scope](background.html#scope) - Scope of the IG
     * [Use cases](background.html#usecases) - Key use cases covered by the IG
     * [Minimal Radiation Information](background.html#mindose) - Description of data shared through this IG
+    * [Underlying specifications](#underlying-specs) - Description of the underlying specifications and resources.
     * [Glossary](background.html#glossary) - Glossary
     * [References](background.html#references) - References
 * [Chapter II](archi.html): Architecture & Implementation
     * [Profiles & Extensions](archi.html#profiles) - FHIR Profiles and extensions defined in the IG
     * [Actors](archi.html#actors) - Actors participating in the IG
     * [Terminology](archi.html#terminology) - Value Sets defined and used
+    * [Conformance](#conformance) - A focus on the conformance with this IG
     * [Security Consideration](archi.html#sec) - Security aspects to be taken in consideration
 * [Chapter III](testing.html): Testing & Conformance
     * [Test Plan](testing.html#testplan) - Test plans for the different actors 

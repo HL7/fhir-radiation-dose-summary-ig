@@ -4,8 +4,8 @@ This chapter describes the different architecture aspects of the resources, prof
 2. [Actors](#actors) - Actors participating in the IG
 3. [Terminology](#terminology) - Value Sets defined
 4. [Resources Identifiers](#identifiers) - A focus on DICOM identifiers types
-5. [Must Support](#must-support) - A focus on Must Support usage in this IG
-5. [Security Consideration](#sec) - Security aspects to be taken in consideration
+5. [Conformance](#conformance) - A focus on the conformance with this IG
+6. [Security Consideration](#sec) - Security aspects to be taken in consideration
 
 <a name="profiles"></a>
 
@@ -68,6 +68,8 @@ Generally, this actor can be implemented within a Dose Management System.
 
 The RDSP actor can implement the following CapabilityStatement: [RDSP capability statement](CapabilityStatement-RDSP.html).
 
+The RDSP actor SHALL follow the different security considerations mentionned in [security](archi.html#security-consideration) section. Sharing PHI SHALL follow the security regulations followed by the deploying facility.
+
 #### FHIR Server
 The FHIR Server has two functions:
 1. Provide the diagnostic procedure context to both the Radiation Dose Summary Producer and Consumer actors
@@ -88,6 +90,8 @@ The FHIR server can implement the following CapabilityStatements:
 * [FHIRServer-RDSC](CapabilityStatement-FHIRServer-RDSC.html) -  Requirements for FHIR server interacting with RDSC actor
 * [FHIRServer](CapabilityStatement-FHIRServer.html) - Requirements for FHIR server actor
 
+The FHIR server SHALL follow the different security considerations mentionned in [security](archi.html#security-consideration) section.
+
 #### Radiation Dose Summary Consumer
 The Radiation Dose Summary Consumer (RDSC) actor is responsible on the collection and interpretation of the Radiation Dose Summary observation. There are many ways to use the Radiation Dose Summary resources, and it depends on the consumer.
 * RIS systems can act as consumer actor, in order to enhance the final radiology report with radiation information. 
@@ -96,6 +100,8 @@ The Radiation Dose Summary Consumer (RDSC) actor is responsible on the collectio
 * Other consumers may act as a light Dose registry, by collecting the radiation summary information for a patient or a group of patients in a regional or national infrastructure. Such registries can create valuable data for regulations purpose, or for population radiation estimations.
 
 The RDSC actor can implement the following CapabilityStatement: [RDSC capability statement](CapabilityStatement-RDSC.html).
+
+The RDSC actor SHALL follow the different security considerations mentionned in [security](archi.html#security-consideration) section. Collection of Data from the FHIR Server SHALL follow consent requirements used within the deploying facility, as described in [security](archi.html#security-consideration) section.
 
 #### Actors grouping
 The FHIR Server can be grouped with the Radiation Dose Summary Producer actor within the Dose Management System. Thus, the Dose Management System is managing all the resources and references between resources. Another possible grouping is between the FHIR Server and the Radiation Dose Summary Consumer actor. This can happen for example within EMR systems or RIS/EHR systems. In this case, the source of truth for contextual resources are independent from the Radiation Dose Summary Producer.
@@ -238,10 +244,23 @@ Here some examples :
 ]
 </pre>
 
+<a name="conformance"></a>
 
-<a name="must-support"></a>
+### Conformance
 
-### Must Support
+#### Conventions
+This implementation guide uses specific terminology to flag statements that have relevance for the evaluation of conformance with the guide:
+
+* <b>SHALL</b> indicates requirements that must be met to be conformant with the specification.
+* <b>SHOULD</b> indicates behaviors that are strongly recommended (and which may result in interoperability issues or sub-optimal behavior if not adhered to), but which do not, for this version of the specification, affect the determination of specification conformance.
+* <b>MAY</b> describes optional behaviors that are free to consider but where the is no recommendation for or against adoption.
+
+
+#### Claiming Conformance
+
+Actors and Systems asserting conformance to this implementation guide have to implement the requirements outlined in the corresponding capability statements. The following definition of MUST SUPPORT is to be used in the implementation of the requirements.
+
+#### Must Support
 In the context of this IG, mustSupport on any data element SHALL be interpreted as follows:
 
 * When creating Radiation Dose Summary content, implementers SHALL be capable of including mustSupport data elements.
