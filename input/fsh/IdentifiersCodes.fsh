@@ -13,5 +13,4 @@ Description: "Identifier types related to DICOM UIDs"
 * #device-id "Device ID" "User-supplied identifier for the device"
 * #study-instance-uid "Study Instance UID" "Unique identifier for the Study"
 * #sop-instance-uid "SOP Instance UID" "Uniquely identifies the SOP Instance"
-* #accession-number "Accession Number" "A RIS generated number that identifies the order for the Study"
 
