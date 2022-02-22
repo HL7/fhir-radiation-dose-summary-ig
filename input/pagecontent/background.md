@@ -40,9 +40,12 @@ Scope:
 Out Of Scope:
 * Share details of the radiation administration
 * Share enhanced data (SSDE, Organ Dose, etc.) to third applications
+* Cumulative calculation of radiation over time, and through multiple procedures or equipments
 * Irradiations received by the practitioner
 
 Dealing with sharing details of radiation procedures, like the X-Ray parameters, the modality configuration, etc., is out of scope. Also, sharing the details of enhanced dose data, like the size specific dose estimation, is also out of scope. Other means exist to share this detailed information, mainly the DICOM Radiation Structured Reports (RDSRs).
+
+The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contains multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations.
 
 Radiotherapy procedures are not covered by the scope of this work, only diagnostic imaging radiations is covered by this work. 
 

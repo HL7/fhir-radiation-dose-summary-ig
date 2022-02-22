@@ -6,7 +6,7 @@ Profile:        XRayRadiationDoseSummary
 Parent:         RadiationDoseSummary
 Id:             xray-radiation-dose-summary
 Title:          "X-Ray Radiation Dose Summary"
-Description:    "Defines the Minimal Dose Information related to X-Ray procedures"
+Description:    "Defines the Minimal Dose Information related to an X-Ray procedure"
 * insert RDSStructureDefinitionContent
 
 * obeys xray-procedure-reported
