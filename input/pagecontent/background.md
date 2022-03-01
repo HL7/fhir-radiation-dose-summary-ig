@@ -20,7 +20,7 @@ The IHE Dose Reporter actor from the IHE REM profile gathers Radiation informati
 
  Dose Management systems need to share information related to the exam to multiple third parties:
 
-* Mobile Applications: like patients related mobile applications, where a patient may want to centralize the reports of received radiations.
+* Mobile Applications: like patients related mobile applications, where a patient may want to centralize the reports of received radiation doses.
 * RIS/EHR: many RIS/EHR systems do not have capabilities to read DICOM SR documents and prefer to contact the hospital dose management system in order to gather a summary of the dose report; and in order to include the radiation summary under the final imaging report.
 * Third backend systems: some third backend applications may want to gather a summary of the exam’s radiations for some proprietary usage; gathering the complete RDSR is useless for most of the non Dose Management systems.
 
