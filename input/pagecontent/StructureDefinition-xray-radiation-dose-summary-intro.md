@@ -1,0 +1,3 @@
+X-Ray Radiation Dose Summary profile defines an overview of an X-Ray procedure, and provides values accumulations over the different X-Ray irradiation events within the same procedure and equipment. The procedures related to this profile are <i>Projection X-Ray</i> and <i>Mammography</i>. This profile extends [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) profile, and thus, follows all its requirements and definitions.
+
+This profile can be mapped to the SR template [TID-10002 - Accumulated X-Ray Dose](https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10002.html){:target="_blank"} from DICOM standard.

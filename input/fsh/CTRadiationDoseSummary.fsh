@@ -6,7 +6,7 @@ Profile:        CTRadiationDoseSummary
 Parent:         RadiationDoseSummary
 Id:             ct-radiation-dose-summary
 Title:          "CT Radiation Dose Summary"
-Description:    "Defines the Minimal Dose Information related to CT irradiation events"
+Description:    "Defines the Minimal Dose Information related to a CT procedure"
 * insert RDSStructureDefinitionContent
 
 * component ^slicing.discriminator.type = #pattern
