@@ -1,7 +1,7 @@
 This chapter describes the scope of this guide, provides background information about the radiation dose summary IG, key concepts,
 and describes the use cases supported by this implementation guide.
 
-1. [Problematic](#problematic) - Description of the problematic
+1. [Problem](#problem) - Description of the problem
 2. [Scope](#scope) - Scope of the IG
 3. [Use cases](#usecases) - Key use cases covered by the IG
 4. [Minimal Radiation Information](#mindose) - Description of data shared through this IG
@@ -9,19 +9,19 @@ and describes the use cases supported by this implementation guide.
 6. [Glossary](#glossary) - Glossary of terms used in this IG
 7. [References](#references) - Useful references
 
-<a name="problematic"></a>
+<a name="problem"></a>
 
-### Problematic
+### Problem
 
 The IHE Dose Reporter actor from the IHE REM profile gathers Radiation information and dose reports from modalities. However, there is no standardization of the exposure of the gathered data to third parties in a light API based format. 
 
-![Problematic](./problematic.svg){: width="800px"}
+![Problem](./problem.svg){: width="800px"}
 
 <br clear="all" />
 
  Dose Management systems need to share information related to the exam to multiple third parties:
 
-* Mobile Applications: like patients related mobile applications, where a patient may want to centralize the report of doses injected to him
+* Mobile Applications: like patients related mobile applications, where a patient may want to centralize the reports of received radiation doses.
 * RIS/EHR: many RIS/EHR systems do not have capabilities to read DICOM SR documents and prefer to contact the hospital dose management system in order to gather a summary of the dose report; and in order to include the radiation summary under the final imaging report.
 * Third backend systems: some third backend applications may want to gather a summary of the exam’s radiations for some proprietary usage; gathering the complete RDSR is useless for most of the non Dose Management systems.
 

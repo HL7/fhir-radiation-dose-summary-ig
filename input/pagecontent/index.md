@@ -5,7 +5,7 @@ This IG standardizes the sharing of minimal radiation information following a pe
 This IG is organized into three main sections:
 
 * [Chapter I](background.html): Background - Introduction and overview
-    * [Problematic](background.html#problematic) - Description of the problematic
+    * [Problem](background.html#problem) - Description of the problem
     * [Scope](background.html#scope) - Scope of the IG
     * [Use cases](background.html#usecases) - Key use cases covered by the IG
     * [Minimal Radiation Information](background.html#mindose) - Description of data shared through this IG
