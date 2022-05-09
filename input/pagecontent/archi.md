@@ -88,6 +88,8 @@ The contextual resources are resources managed by the FHIR server and related to
 
 When these resources are not present in the FHIR server, the Radiation Dose Summary Producer can take the responsibility on alimenting the FHIR server with these resources, by creating them from the RDSRs and images collected from modalities.
 
+The FHIR Server is a logical actor which could be part of an EMR related to the patient care. Also, it can be part of the Dose Management System, used to expose radiation summary to third party consumers.
+
 The FHIR server can implement the following CapabilityStatements:
 * [FHIRServer-RDSP](CapabilityStatement-FHIRServer-RDSP.html) - Requirements for FHIR server interacting with RDSP actor
 * [FHIRServer-RDSC](CapabilityStatement-FHIRServer-RDSC.html) -  Requirements for FHIR server interacting with RDSC actor
@@ -101,6 +103,8 @@ The Radiation Dose Summary Consumer (RDSC) actor is responsible on the collectio
 * Clinical Decision Support tools can use these radiation resources to feed their algorithms.
 * Clinical Quality Information tools can use these radiation resources to perform analyzes on radiations information, and provide metrics related to patients cohorts, or devices comparison, or limit values calculations, etc.
 * Other consumers may act as a light Dose registry, by collecting the radiation summary information for a patient or a group of patients in a regional or national infrastructure. Such registries can create valuable data for regulations purpose, or for population radiation estimations.
+
+Expertise is needed to understand the radiation dose data. The interpretation of the radiation information collected by the Radiation Dose Summary Consumer shall follow the facility reglementations and workflows, in order to avoid misuse.
 
 The RDSC actor can implement the following CapabilityStatement: [RDSC capability statement](CapabilityStatement-RDSC.html).
 
