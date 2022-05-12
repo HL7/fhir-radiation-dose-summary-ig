@@ -1,5 +1,4 @@
-This chapter describes the scope of this guide, provides background information about the radiation dose summary IG, key concepts,
-and describes the use cases supported by this implementation guide.
+This chapter describes the scope of this guide, provides background information about the radiation dose summary IG, key concepts, and describes the use cases supported by this implementation guide.
 
 1. [Problem](#problem) - Description of the problem
 2. [Scope](#scope) - Scope of the IG
@@ -46,9 +45,11 @@ Out Of Scope:
 
 Dealing with sharing details of radiation procedures, like the X-Ray parameters, the modality configuration, etc., is out of scope. Also, sharing the details of enhanced dose data, like the size specific dose estimation, is also out of scope. Other means exist to share this detailed information, mainly the DICOM Radiation Structured Reports (RDSRs).
 
-The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contains multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations.
+The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contain multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations. In parallel, the interpretation of radiation information is out of scope; this depends on facilities workflows, may be subject of interpretations, and may vary following regulations.
 
 Radiotherapy procedures are not covered by the scope of this work, only diagnostic imaging radiations is covered by this work. 
+
+The FHIR profiles defined in this IG are engineering solution in order to simplify sharing the radiation summary information between heterogenous applications. This implementation guide is not meant to describe how the Radiation Data is treated, and who can access and interpret the radiation information. These details are site specific and follow the international and national regulations and recommendations; also, they follows facilities culture and workflows. For instance, facilities should follow recommendations from the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}; patient radiation history should not be used for decision making prior to exams. 
 
 <a name="usecases"></a>
 
@@ -66,7 +67,7 @@ Three use cases were identified.
 * The modality shares the dose report to the Dose Management System, which may implement the IHE REM Dose Reporter actor. This dose information sharing can follow the REM profile schema. 
 * After analyzing the exam images, the radiologist sends its notes to the Radiology Information System (RIS).
 * In order to construct the final imaging report, the RIS needs to gather a summary of the radiation received by the patient. The RIS send a query to the Dose management system and get minimal dose information report.
-* The minimal dose information is then integrated to the final report, which can be a CDA report following the DICOM Imaging report specification in PS3.20.
+* The minimal dose information is then integrated to the final report, which can be a CDA report following the DICOM Imaging report specification in [PS3.20](https://dicom.nema.org/medical/dicom/current/output/chtml/part20/PS3.20.html){:target="_blank"}.
 * The final report is shared with the hospital EHR or with the regional/national radiology report repository, through IHE XDS-I.b for example.
 
 This use case is very common within RIS systems not supporting dose management modules. In fact, gathering of dose information from modalities can be very complex:
@@ -76,11 +77,11 @@ This use case is very common within RIS systems not supporting dose management m
 
 It is the role of the Dose management system to provide the RIS with the right information regarding the dose administered to the patients. Reporting the minimal dose information inside the final imaging report is recommended by many stakeholders and organizations, and sometimes it is a regulation. For example, in France there are the Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation, from the French Minister of Health and Solidarity, and describing some dose information that needs to be present in the final report.
 
-The same kind of regulations exists in California in the US about the CT exams, which is the Senate Bill No. 1237. 
+The same kind of regulations exists in California in the US about the CT exams, which is the Senate Bill No. 1237.
 
 #### Use case 2: Mobile applications access
 
-The exposure of the Dose Summary as FHIR resources opens the doors to the mobile applications to gather the dose information from the Dose management systems, or from the EMR if the Dose Summary is propagated to the EMR. Many applications may benefit from this additional patient data in order to add tracking of the patient dose information. Some patient facing applications can track the dose summary through multiple facilities. Other practitioner mobile applications can benefit from the Dose Summary data in order to collect more data for practitioner, or to improve their Clinical Decision Support (CDS) component.
+The exposure of the Dose Summary as FHIR resources simplifies the access to the radiation information following a performed exam, by mobile application. These mobile applications can be under the use case [Longitudinal Patient Dose Record](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"} described in IHE Radiation Exposure Monitoring Profile, from Radiology domain. The targeted end users of these mobile applications shall follow the facility regulations, and international recommendations like the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}, as radiation dose data have inherent complexities and expertise are required for accurate interpretation. 
 
 #### Use case 3: Business Intelligence
 
@@ -90,6 +91,14 @@ The exposure of the Dose Summary as a FHIR resources is beneficial for Business 
 * Comparison of average of Dose between facilities/hospital
 * Comparison of dose administration characteristics between patient cohorts
 * Comparison between dose administration levels between regions within a national FHIR server
+
+This use case is following the one described under IHE Radiation Exposure Monitoring profile, [Site Benchmarking](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"}. Due to inherent complexity of the radiation dose data, expertise is required for accurate interpretation of BI outputs. Business intelligence tools should be used following international recommendations and regulations. For instance, they should not be used for the purposes of medical decision making for patients undergoing medical imaging exams (see the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}).
+
+
+The defined FHIR profiles within this IG can be used on these use cases, and others. It can target many stakeholders, like:
+* communication to patients and physicians: through radiation summary reporting
+* legal: by following regional and national reporting regulations
+* research on radiation data: like data scientists through BI tools.
 
 
 <a name="mindose"></a>
@@ -2469,6 +2478,8 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 
 |Term|Definition|
 |-----|-----------------|
+|AAPM| American Association of Physicists in Medicine |
+|ACR| American College of Radiology |
 |ATNA| Audit Trail and Node Authentication |
 |CDA| Clinical Document Architecture |
 |CDS| Clinical Decision Support |
@@ -2482,6 +2493,8 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |FHIR| Fast Healthcare Interoperability Resources |
 |HAS| French High Authority of Health |
 |HL7| Health Level Seven|
+|HPS| Health Physics Society |
+|IEC| International Electrotechnical Commission |
 |IG| Implementation Guide |
 |IHE| Integrating the Healthcare Enterprise |
 |IOD| Information Object Definition |
@@ -2539,3 +2552,4 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 19. IHE Radiology (RAD), [Technical Framework Volume 1, Cross-enterprise Document Sharing for Imaging (XDS-I.b)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
 20. IHE Radiology (RAD), [Technical Framework Volume 1, Radiation Exposure Monitoring (REM)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
 21. HL7 International, [International Patient Summary Implementation Guide (IPS)](https://hl7.org/fhir/uv/ips/STU1/)
+22.  AAPM/ACR/HPS, [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}
