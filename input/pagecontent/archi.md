@@ -104,7 +104,7 @@ The Radiation Dose Summary Consumer (RDSC) actor is responsible on the collectio
 * Clinical Quality Information tools can use these radiation resources to perform analyzes on radiations information, and provide metrics related to patients cohorts, or devices comparison, or limit values calculations, etc.
 * Other consumers may act as a light Dose registry, by collecting the radiation summary information for a patient or a group of patients in a regional or national infrastructure. Such registries can create valuable data for regulations purpose, or for population radiation estimations.
 
-Expertise is needed to understand the radiation dose data. The interpretation of the radiation information collected by the Radiation Dose Summary Consumer shall follow the facility reglementations and workflows, in order to avoid misuse.
+Expertise is needed to understand the radiation dose data. The interpretation of the radiation information collected by the Radiation Dose Summary Consumer shall follow the facility regulations and workflows, in order to avoid misuse.
 
 The RDSC actor can implement the following CapabilityStatement: [RDSC capability statement](CapabilityStatement-RDSC.html).
 

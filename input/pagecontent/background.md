@@ -45,7 +45,7 @@ Out Of Scope:
 
 Dealing with sharing details of radiation procedures, like the X-Ray parameters, the modality configuration, etc., is out of scope. Also, sharing the details of enhanced dose data, like the size specific dose estimation, is also out of scope. Other means exist to share this detailed information, mainly the DICOM Radiation Structured Reports (RDSRs).
 
-The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contains multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations. In parallel, the interpretation of radiation information is out of scope; this depends on facilities workflows, may be subject of interpretations, and may varies following regulations.
+The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contain multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations. In parallel, the interpretation of radiation information is out of scope; this depends on facilities workflows, may be subject of interpretations, and may vary following regulations.
 
 Radiotherapy procedures are not covered by the scope of this work, only diagnostic imaging radiations is covered by this work. 
 
@@ -92,12 +92,12 @@ The exposure of the Dose Summary as a FHIR resources is beneficial for Business 
 * Comparison of dose administration characteristics between patient cohorts
 * Comparison between dose administration levels between regions within a national FHIR server
 
-This use case is following the one described under IHE Radiation Exposure Monitoring profile, [Site Benchmarking](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"}. Due to inheritent complexity of the radiation dose data, expertise is required for accurate interpretation of BI outputs. Business intelligence tools should be used following international recommendations and regulations. For instance, they should not be used for the purposes of medical decision making for patients undergoing medical imaging exams (see the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}).
+This use case is following the one described under IHE Radiation Exposure Monitoring profile, [Site Benchmarking](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"}. Due to inherent complexity of the radiation dose data, expertise is required for accurate interpretation of BI outputs. Business intelligence tools should be used following international recommendations and regulations. For instance, they should not be used for the purposes of medical decision making for patients undergoing medical imaging exams (see the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}).
 
 
 The defined FHIR profiles within this IG can be used on these use cases, and others. It can target many stakeholders, like:
 * communication to patients and physicians: through radiation summary reporting
-* legal: by following regional and national reporting reglmentations
+* legal: by following regional and national reporting regulations
 * research on radiation data: like data scientists through BI tools.
 
 
