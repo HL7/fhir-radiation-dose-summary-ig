@@ -1,7 +1,7 @@
 @startuml
 skinparam monochrome true
 
-object  NMRadiationDoseSummary #white { 
+object  RadiationDoseSummary #white { 
   id = 122
   study-instance-uid = 1.2.840.121.3.32.0.1.32
 }
@@ -24,8 +24,8 @@ object  Practitioner #white {
 }
 
 
-NMRadiationDoseSummary -d-> Patient : "subject"
-NMRadiationDoseSummary -d-> ImagingStudy : "partOf"
-NMRadiationDoseSummary -d-> Practitioner : "performer"
+RadiationDoseSummary -d-> Patient : "subject"
+RadiationDoseSummary -d-> ImagingStudy : "partOf"
+RadiationDoseSummary -d-> Practitioner : "performer"
 ImagingStudy -> Patient : "subject"
 @enduml

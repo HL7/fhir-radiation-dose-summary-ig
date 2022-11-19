@@ -6,7 +6,7 @@ Parent:         Observation
 Id:             irradiation-event-summary
 Title:          "Irradiation Event Summary"
 Description:    "General Structure describing a summary of an irradiation event"
-* ^abstract = true
+* ^abstract = false
 * insert RDSStructureDefinitionContent
 
 * identifier ^slicing.discriminator.type = #pattern
@@ -32,8 +32,11 @@ Description:    "General Structure describing a summary of an irradiation event"
 * effective[x] 1..1 MS
 * effective[x] ^short = "Irradiation event start date time"
 
+* value[x] 1..1
+* value[x] only string
+* valueString ^short = "Text Summary of the irradiation event."
+
 // Dose measurements - Irradiation Event Level
-* component 1..* MS
 * component.code from ComponentIrradiationEventVS (extensible)
 
 
@@ -41,6 +44,7 @@ ValueSet: ComponentIrradiationEventVS
 Id: component-irradiation-event-vs
 Title: "Irradiation Event component type"
 Description: "Value Set describing the list of minimal dose information related to irradiation event level"
+* ^experimental = false
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * DCM#113838 "DLP" // "Dose Length Product (DLP)"
 * DCM#113830 "Mean CTDIvol" // "Refers to the average value of the CTDIvol associated with this acquisition"
