@@ -25,7 +25,7 @@ There is no special supporting DataType profiles defined by this IG.
 There is no special supporting extensions defined by this IG.
 
 #### Profiles relationship
-![Profiles relationship](./archi.svg){: width="100%"}
+![Profiles relationship](./archi.svg){: width="80%"}
 
 <br clear="all" />
 
@@ -184,7 +184,6 @@ Many profiles defined in this IG are using DICOM IDs and UIDs as identifiers for
 
 | Profile | Identifier | Identifier.system | Identifier.type.code | Identifier.type.system | Identifier.type.display | DICOM Tag Mapping |
 |---------|------------|-------------------|----------------------|------------------------|-------------------------|---------|
-| [Irradiation Event Summary](StructureDefinition-irradiation-event-summary.html) | identifier:irradiationEventUID | urn:dicom:uid | irradiation-event-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Irradiation Event UID | (0008,3010) Irradiation Event UID |
 | [Modality Device](StructureDefinition-modality-device.html) | identifier:deviceSerialNumber | | SNO | [HL7 IdentifierType](http://terminology.hl7.org/CodeSystem/v2-0203){:target="_blank"} | Serial Number | (0018,1000) Device Serial Number |
 | [Modality Device](StructureDefinition-modality-device.html) | identifier:aeTitle | | application-entity | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Application Entity | N/A |
 | [Modality Device](StructureDefinition-modality-device.html) | identifier:deviceUID | urn:dicom:uid | device-uid | [DICOM Identifier Type](CodeSystem-dicom-identifier-type.html) | Device UID | (0018,1002) Device UID |

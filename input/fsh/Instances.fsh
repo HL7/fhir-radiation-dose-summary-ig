@@ -19,8 +19,8 @@ Description: "Radiation Dose Summary example 1"
 * partOf.identifier.value = "urn:oid:1.2.840.121.3.32.0.1.1323423"
 * status = #final
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
-* subject = Reference(Patient/56)
-* subject.display = "Pascale Dupont"
+* focus = Reference(Patient/56)
+* focus.display = "Pascale Dupont"
 * effectiveDateTime = "2015-01-01T22:23:30.000Z"
 * performer = Reference(Practitioner/33)
 * performer.display = "John Moore"
@@ -149,8 +149,8 @@ Description: "Radiation Dose Summary example 2"
 * partOf.identifier.value = "urn:oid:1.2.840.121.3.32.0.1.25"
 * status = #final
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
-* subject = Reference(Patient/56)
-* subject.display = "Pascale Dupont"
+* focus = Reference(Patient/56)
+* focus.display = "Pascale Dupont"
 * effectiveDateTime = "2019-01-23T12:00:30.000Z"
 * performer = Reference(Practitioner/33)
 * performer.display = "John Moore"
@@ -216,8 +216,8 @@ Description: "NM Radiation Dose Summary example 3"
 * partOf.identifier.value = "urn:oid:1.2.840.121.3.32.0.1.32"
 * status = #final
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
-* subject = Reference(Patient/56)
-* subject.display = "Pascale Dupont"
+* focus = Reference(Patient/56)
+* focus.display = "Pascale Dupont"
 * effectiveDateTime = "2019-01-23T12:00:30.000Z"
 * performer = Reference(Practitioner/33)
 * performer.display = "John Moore"
