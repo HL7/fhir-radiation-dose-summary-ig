@@ -57,15 +57,20 @@ Description:    "General Structure describing a summary of an irradiation act"
 
 * code MS
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
-* focus only Reference(Patient)
+
+* subject only Reference(Patient)
+* subject 1..1 MS
+* subject ^short = "Irradiated patient"
+
+* focus only Reference(ImagingStudy)
 * focus 1..1 MS
-* focus ^short = "Irradiated patient"
+* focus ^short = "The observation has a focus on the performed exam."
 
 // Irradiation Issued Date
 * effective[x] only dateTime
 * effective[x] 1..1 MS
 * effective[x] ^short = "Irradiation Start Date Time"
-* value[x] 1..1
+* value[x] 1..1 MS
 * value[x] only string
 * valueString ^short = "Text Summary of the irradiation act."
 * valueString ^comment = "The textual description of the irradiation act is defined by the site, and the creator of the resource may use a template defined locally by the facility. Templating of the text report is out of scope of this IG."
