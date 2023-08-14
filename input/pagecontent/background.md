@@ -2,7 +2,7 @@ This chapter describes the scope of this guide, provides background information 
 
 1. [Problem](#problem) - Description of the problem
 2. [Scope](#scope) - Scope of the IG
-3. [Use cases](#usecases) - Key use cases covered by the IG
+3. [Use case](#usecases) - Key use case covered by the IG
 4. [Minimal Radiation Information](#mindose) - Description of data shared through this IG
 5. [Underlying specifications](#underlying-specs) - Description of the underlying specifications and resources.
 6. [Glossary](#glossary) - Glossary of terms used in this IG
@@ -32,11 +32,11 @@ The emergence of HL7 FHIR simplified the exchange between backend applications a
 
 ### Scope
 
-Scope:
+In scope:
 * Summary of dose information by study through FHIR, based on jurisdictonal requirements
 * Diagnostic Imaging; modalities include CT, XA, RF, MG, NM
 
-Out Of Scope:
+Out of scope:
 * Details of the radiation administration and modality configuration
 * Enhanced data (SSDE, organ dose, etc.)
 * Cumulative calculation of longitudinal radiation dose
@@ -44,7 +44,7 @@ Out Of Scope:
 * Radiation Therapy dose
 * Radiotracer dose
 
-Other means exist to share this information, through DICOM Radiation Structured Reports (RDSRs).
+Other means exist to share this information through DICOM Radiation Structured Reports (RDSRs).
 
 The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contain multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations. In parallel, the interpretation of radiation information is out of scope; this depends on facilities workflows, may be subject of interpretations, and may vary following regulations.
 
@@ -53,9 +53,7 @@ The FHIR profiles defined in this IG are intended to simplify sharing radiation 
 <a name="usecases"></a>
 
 ### Use case
-This IG supports the following use case
-
-![Use case 1: Imaging report construction](./usecase1.svg){: width="800px"}
+This IG supports ![imaging report construction](./usecase1.svg){: width="800px"}
 
 <br clear="all" />
 
@@ -79,20 +77,20 @@ In this paragraph, we analyze the mapping between the identified minimal dose in
     * [CT Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html){:target="_blank"}
     * [Radiopharmaceutical Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_RadiopharmaceuticalRadiationDoseSRIODTemplates.html){:target="_blank"}
     * [TID 2008 - Radiation Exposure and Protection Information](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_A.html#sect_TID_2008){:target="_blank"}
-* France guidelines
+* French guidelines
     * French Society of Radiology - SFR, [Practical Guide for Interventional Radiology](http://gri.radiologie.fr/){:target="_blank"} (Guideline - 2013)
     * High Authority of Health - HAS, [Patient radiation protection and analysis of CPD practices and certification of healthcare establishments](https://www.has-sante.fr/upload/docs/application/pdf/2013-07/radioprotection_du_patient_et_analyse_des_pratiques_dpc_et_certification_des_etablissements_de_sante_format2clics.pdf){:target="_blank"} (Guideline - 2012)
     * [Presentation of the main radiation protection regulatory provisions applicable in medical and dental radiology](https://www.cd2-conseils.com/wp-content/uploads/2016/11/rp_asn_presentation-principales-dispositions-reglementaires_2016.pdf){:target="_blank"} (Guideline: 2016)
     * French Minister of Health and Solidarity, [Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation](https://www.legifrance.gouv.fr/eli/arrete/2006/9/22/SANY0623888A/jo/texte){:target="_blank"}, (Order - 2006)
 * Finnish Imaging Report specification, [KanTa Imaging CDA R2 document structures](http://www.hl7.fi/hl7-rajapintakartta/kanta-%E2%80%93-kuvantamisen-cda-r2-rakenne/){:target="_blank"} (2013)
-* US, California State
+* US guidelines
     * AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
     * [Senate Bill No. 1237, CHAPTER 521](http://www.leginfo.ca.gov/pub/09-10/bill/sen/sb_1201-1250/sb_1237_bill_20100929_chaptered.pdf){:target="_blank"}
     * AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
     * [Radiologist Compliance With California CT Dose Reporting Requirements: A Single-Center Review of Pediatric Chest CT](https://www.ajronline.org/doi/pdf/10.2214/AJR.14.13693){:target="_blank"}
     * University of California Dose Optimization and Standardization Endeavor (UC-DOSE). [Recommendations for compliance with California Senate Bill 1237 and related pending legislation.](http://files.ctctcdn.com/da9de144201/b78c37fa-a36b-4888-a418-fa21a314393e.pdf){:target="_blank"}
 
-The analysis of the different specifications allowed to obtain the following coverage between the minimal dose information and these specifications/guidelines:
+These specifications are summarized as follows:
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=1213 style='width:910.0pt;border-collapse:unset'>
     <tr style='height:15.6pt'>
@@ -2344,7 +2342,7 @@ The analysis of the different specifications allowed to obtain the following cov
     </table>
 
 
-### Concepts mapping
+### Concept mapping
 
 The identified minimal dose information that should be collected by the dose management system and shared with third parties applications are divided into contextual information data and dose measurements data.
 
@@ -2360,7 +2358,7 @@ Contextual Information data:
 | Related Imaging Study          | [EV (110180, DCM, Study Instance UID)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_110180){:target="_blank"} | Procedure |
 {:.table-striped .table-bordered}
 
-Dose measurements data:
+Dose measurement data:
 
 | Dose Measurements | Identifier | DICOM TID | Level | Type | Unit |
 |---------------------------------------|--------------------------------------------|--------------|
@@ -2385,7 +2383,7 @@ Dose measurements data:
 
 **Remarks**:
 * We highlighted the "Dose (RP) Total" and not the "Entrance Exposure at RP", as the latter  is related to the irradiation event level, and not the procedure level. IEC 61910-1 references the Dose (RP) Total in the Basic Dose Documentation conformance.
-* For NM, most of the minimal dose information related to procedure is described in the irradiation event level of the RRDSR structure. However, as there is only one irradiation event per RRDSR, we considered that this minimal dose information is related to the procedure level. However, this implies that for the same NM imaging procedure, multiple Radiation Dose Summaries can be reported. This should not be a problem, as in this case the Radiation Dose Summary is related to the administration act, more than the procedure act.
+* For NM, most of the minimal dose information related to procedure is described in the irradiation event level of the RRDSR structure. Since there is only one irradiation event per RRDSR, we considered that this minimal dose information is related to the procedure level. However, this implies that for the same NM imaging procedure, multiple Radiation Dose Summaries can be reported. This should not be a problem, as in this case the Radiation Dose Summary is related to the administration act, more than the procedure act.
 * The irradiation Issued Date has different significations, based on the targeted procedure type; in CT, it is the start date of the irradiation act, in XA/RF/MG, it is the Series Date Time, and in NM, it is the administration date time.
 * The associated procedure is referenced through the related Imaging Study.
 * The calibration factors are not reported as part of the minimal dose information. The generator of the Radiation Dose Summary resources shall consider these.

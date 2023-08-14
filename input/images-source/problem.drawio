@@ -1,0 +1,90 @@
+<mxfile host="Electron" modified="2023-08-14T19:48:03.274Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" etag="j6kLRLM4sa4-rwAUIofM" version="21.6.5" type="device">
+  <diagram name="Page-1" id="-dl2wjOuyUJ1gArcNqXz">
+    <mxGraphModel dx="1098" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P0WirJqRNze0UaOYiWo2-1" value="&lt;font color=&quot;#000000&quot;&gt;Dose Registry&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="350" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-2" target="P0WirJqRNze0UaOYiWo2-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.45;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-2" target="P0WirJqRNze0UaOYiWo2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-2" value="&lt;font color=&quot;#000000&quot;&gt;Dose Reporter&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="350" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-3" value="&lt;font color=&quot;#000000&quot;&gt;Image Manager&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="290" y="266" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-4" value="&lt;font color=&quot;#000000&quot;&gt;Image Archive&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="410" y="266" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-5" target="P0WirJqRNze0UaOYiWo2-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-5" value="&lt;font color=&quot;#000000&quot;&gt;Dose Consumer&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="110" y="266" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-6" target="P0WirJqRNze0UaOYiWo2-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="424" />
+              <mxPoint x="80" y="296" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-6" target="P0WirJqRNze0UaOYiWo2-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="424" />
+              <mxPoint x="80" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-6" target="P0WirJqRNze0UaOYiWo2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-6" value="&lt;font color=&quot;#050505&quot;&gt;Acquisition Modality&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="350" y="394" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-8" target="P0WirJqRNze0UaOYiWo2-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="594" y="194" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" edge="1" parent="1" source="P0WirJqRNze0UaOYiWo2-8" target="P0WirJqRNze0UaOYiWo2-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="554" y="169" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-8" value="?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="484" y="144" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-9" value="EHR" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="604" y="119" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-10" value="RIS" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#000000;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="604" y="179" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-21" value="RAD-64&amp;nbsp;Query Dose Information&lt;br&gt;RAD-65 Retrieve Dose Information" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="194" y="202" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-22" value="RAD-63&amp;nbsp;Submit Dose Information" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="194" y="106" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-23" value="RAD-64&amp;nbsp;Query Dose Information&lt;br&gt;RAD-65 Retrieve Dose Information" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="150" y="330" width="210" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-24" value="RAD-62 Store Dose Information" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="140" y="430" width="176" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P0WirJqRNze0UaOYiWo2-25" value="&lt;font color=&quot;#000000&quot;&gt;RAD-62 Store Dose Information&lt;br&gt;RAD-10 Storage Commitment&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=left;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="480" y="350" width="176" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
