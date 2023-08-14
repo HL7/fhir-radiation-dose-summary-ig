@@ -12,99 +12,64 @@ This chapter describes the scope of this guide, provides background information 
 
 ### Problem
 
-The IHE Dose Reporter actor from the IHE REM profile gathers Radiation information and dose reports from modalities. However, there is no standardization of the exposure of the gathered data to third parties in a light API based format. 
+The IHE Dose Reporter actor from the IHE REM profile gathers radiation dose information from modalities. However, there is no standardization to expose the dose information to the Radiology Information System (RIS)/Electorinic Health Record (EHR) in a lightweight API.
 
 ![Problem](./problem.svg){: width="800px"}
 
 <br clear="all" />
 
- Dose Management systems need to share information related to the exam to multiple third parties:
+Dose Management systems need to share information related to the exam to multiple third parties:
 
-* Mobile Applications: like patients related mobile applications, where a patient may want to centralize the reports of received radiation doses.
-* RIS/EHR: many RIS/EHR systems do not have capabilities to read DICOM SR documents and prefer to contact the hospital dose management system in order to gather a summary of the dose report; and in order to include the radiation summary under the final imaging report.
-* Third backend systems: some third backend applications may want to gather a summary of the exam’s radiations for some proprietary usage; gathering the complete RDSR is useless for most of the non Dose Management systems.
+* Several jurisdiction require reporting of dose information in the imaging report. For example, French regulations (Order of 22 September 2006 from the French Minister of Health and Solidarity) requires that ionizing radiation procedure reports include radiation summary information (e.g., the Dose Length Product Total data for CT RDSR). Similar US regulations include Senate Bill No. 1237 in California.
+* Gathering radiation dose information directly from modalities can be complex; dose can be represented in several formats, such as: RDSR (Radiation Dose Structured Report), MPPS (Modality Perfromed Procedure Step), SC (Secondary Capture requiring Optical Character Recognition), and DICOM image metadata.
+* Many RIS/EHR systems lack the ability to interpret these formats. Instead, it is preferable to request the required information from the hospital's Dose Management system to obtain dose infromation for the imaging report.
 
-The RDSRs have a complete and a strong structure for sharing the dose information from the modalities to the Dose Consumer/Reporter actors, and also between the Dose Reporter and the Dose Registry systems. However, most of third party applications have a very light needs for the Dose report. For example, RIS systems in France need only, for CT exams, the Dose Length Product Total data from the CT RDSR, in order to fit local regulations. 
+DICOM RDSRs (Radiation Dose Structured Reports) have an established and complete structure for sharing the dose information between modalities and the Dose Consumer/Reporter, and between the Dose Reporter and the Dose Registry. Many other applications have a minimalistic need for a dose summary. For example, local regulations in France require RIS systems to report  the Dose Length Product Total data from the CT RDSR. 
 
-The emergence of HL7 FHIR simplified the exchange between backend applications and third parties through the exchange of normalized resources having stable structures. This analysis allows to share minimal dose information through FHIR resources.
+The emergence of HL7 FHIR simplified the exchange between backend applications and third parties through the exchange of normalized resources having stable structures, enabling the exchange of minimal dose information between the Dose Management system and the EHR.
 
 <a name="scope"></a>
 
 ### Scope
 
 Scope:
-* Share a summary of dose information by exam through FHIR
-* Irradiations received by the patient
-* The targeted modalities are CT/XA/RF/MG/NM
+* Summary of dose information by study through FHIR, based on jurisdictonal requirements
+* Diagnostic Imaging; modalities include CT, XA, RF, MG, NM
 
 Out Of Scope:
-* Share details of the radiation administration
-* Share enhanced data (SSDE, Organ Dose, etc.) to third applications
-* Cumulative calculation of radiation over time, and through multiple procedures or equipments
-* Irradiations received by the practitioner
+* Details of the radiation administration and modality configuration
+* Enhanced data (SSDE, organ dose, etc.)
+* Cumulative calculation of longitudinal radiation dose
+* Occupational radiation dose
+* Radiation Therapy dose
+* Radiotracer dose
 
-Dealing with sharing details of radiation procedures, like the X-Ray parameters, the modality configuration, etc., is out of scope. Also, sharing the details of enhanced dose data, like the size specific dose estimation, is also out of scope. Other means exist to share this detailed information, mainly the DICOM Radiation Structured Reports (RDSRs).
+Other means exist to share this information, through DICOM Radiation Structured Reports (RDSRs).
 
 The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contain multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations. In parallel, the interpretation of radiation information is out of scope; this depends on facilities workflows, may be subject of interpretations, and may vary following regulations.
 
-Radiotherapy procedures are not covered by the scope of this work, only diagnostic imaging radiations is covered by this work. 
-
-The FHIR profiles defined in this IG are engineering solution in order to simplify sharing the radiation summary information between heterogenous applications. This implementation guide is not meant to describe how the Radiation Data is treated, and who can access and interpret the radiation information. These details are site specific and follow the international and national regulations and recommendations; also, they follows facilities culture and workflows. For instance, facilities should follow recommendations from the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}; patient radiation history should not be used for decision making prior to exams. 
+The FHIR profiles defined in this IG are intended to simplify sharing radiation summary information between heterogenous applications. This implementation guide is not meant to describe how radiation data is managed, and who can access and interpret it. Such details are site specific and follow international and national regulations and recommendations, such as those in the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}; patient radiation history should not be used for decision making prior to exams. 
 
 <a name="usecases"></a>
 
-### Use cases
-Three use cases were identified.
-
-
-#### Use case 1: Imaging report construction
+### Use case
+This IG supports the following use case
 
 ![Use case 1: Imaging report construction](./usecase1.svg){: width="800px"}
 
 <br clear="all" />
 
-* The Patient performs an irradiating exam within a modality.
-* The modality shares the dose report to the Dose Management System, which may implement the IHE REM Dose Reporter actor. This dose information sharing can follow the REM profile schema. 
-* After analyzing the exam images, the radiologist sends its notes to the Radiology Information System (RIS).
-* In order to construct the final imaging report, the RIS needs to gather a summary of the radiation received by the patient. The RIS send a query to the Dose management system and get minimal dose information report.
-* The minimal dose information is then integrated to the final report, which can be a CDA report following the DICOM Imaging report specification in [PS3.20](https://dicom.nema.org/medical/dicom/current/output/chtml/part20/PS3.20.html){:target="_blank"}.
-* The final report is shared with the hospital EHR or with the regional/national radiology report repository, through IHE XDS-I.b for example.
-
-This use case is very common within RIS systems not supporting dose management modules. In fact, gathering of dose information from modalities can be very complex:
-
-* It is based on multiple sources of data: RDSR, MPPS, SC & OCR, and DICOM images header.
-* The reporting of the dose information by the modalities may contain misinterpretations and errors
-
-It is the role of the Dose management system to provide the RIS with the right information regarding the dose administered to the patients. Reporting the minimal dose information inside the final imaging report is recommended by many stakeholders and organizations, and sometimes it is a regulation. For example, in France there are the Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation, from the French Minister of Health and Solidarity, and describing some dose information that needs to be present in the final report.
-
-The same kind of regulations exists in California in the US about the CT exams, which is the Senate Bill No. 1237.
-
-#### Use case 2: Mobile applications access
-
-The exposure of the Dose Summary as FHIR resources simplifies the access to the radiation information following a performed exam, by mobile application. These mobile applications can be under the use case [Longitudinal Patient Dose Record](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"} described in IHE Radiation Exposure Monitoring Profile, from Radiology domain. The targeted end users of these mobile applications shall follow the facility regulations, and international recommendations like the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}, as radiation dose data have inherent complexities and expertise are required for accurate interpretation. 
-
-#### Use case 3: Business Intelligence
-
-The exposure of the Dose Summary as a FHIR resources is beneficial for Business Intelligence applications exposing metrics on dose data. In fact, multiple metrics can be normalized within a FHIR server collecting the Dose Summary resources, like:
-
-* Comparison of average of Dose between modalities
-* Comparison of average of Dose between facilities/hospital
-* Comparison of dose administration characteristics between patient cohorts
-* Comparison between dose administration levels between regions within a national FHIR server
-
-This use case is following the one described under IHE Radiation Exposure Monitoring profile, [Site Benchmarking](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"}. Due to inherent complexity of the radiation dose data, expertise is required for accurate interpretation of BI outputs. Business intelligence tools should be used following international recommendations and regulations. For instance, they should not be used for the purposes of medical decision making for patients undergoing medical imaging exams (see the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}).
-
-
-The defined FHIR profiles within this IG can be used on these use cases, and others. It can target many stakeholders, like:
-* communication to patients and physicians: through radiation summary reporting
-* legal: by following regional and national reporting regulations
-* research on radiation data: like data scientists through BI tools.
-
+* The Patient undergoes an irradiating imaging study.
+* The modality transmits the dose report to the Dose Management System, which may implement the IHE REM Dose Reporter actor, implementing the REM profile transactions. 
+* After analyzing the exam images in PACS (Picture Archive and Communication System), the radiologist dictates a preliminary report narritive in the the RIS.
+* Prior to report finalization, the RIS queries the Dose management system to obtain dose information .
+* The dose information is integrated in the final report, which may be represented in CDA format following the DICOM Imaging report specification in PS3.20.
+* The final report is shared with the hospital EHR or with the regional/national radiology report repository, e.g., through IHE XDS-I.b.
 
 <a name="mindose"></a>
 
-### Minimal Radiation Information
-#### Identification
+## Minimal Radiation Information
+### Identification
 
 In this paragraph, we analyze the mapping between the identified minimal dose information and some specifications on dose information reporting coming from multiple stakeholders:
 
@@ -2379,9 +2344,7 @@ The analysis of the different specifications allowed to obtain the following cov
     </table>
 
 
-
-
-#### Concepts mapping
+### Concepts mapping
 
 The identified minimal dose information that should be collected by the dose management system and shared with third parties applications are divided into contextual information data and dose measurements data.
 
@@ -2421,20 +2384,20 @@ Dose measurements data:
 {:.table-striped .table-bordered}
 
 **Remarks**:
-* We highlighted the "Dose (RP) Total" and not the "Entrance Exposure at RP", as the latter one is related to the irradiation event level, and not the procedure level. Even if the PS3.20 is referencing the Entrance Exposure at RP, the IEC 61910-1 is referencing the Dose (RP) Total in the Basic Dose Documentation conformance.
-* For NM, most of the minimal dose information related to procedure are described in the irradiation event level of the RRDSR structure. However, as there is only one irradiation event per RRDSR, we considered that this minimal dose information is related to the procedure level. However, this implies that for the same NM imaging procedure, multiple Radiation Dose Summaries can be reported. This should not be a problem, as in this case the Radiation Dose Summary is related to the administration act, more than the procedure act.
+* We highlighted the "Dose (RP) Total" and not the "Entrance Exposure at RP", as the latter  is related to the irradiation event level, and not the procedure level. IEC 61910-1 references the Dose (RP) Total in the Basic Dose Documentation conformance.
+* For NM, most of the minimal dose information related to procedure is described in the irradiation event level of the RRDSR structure. However, as there is only one irradiation event per RRDSR, we considered that this minimal dose information is related to the procedure level. However, this implies that for the same NM imaging procedure, multiple Radiation Dose Summaries can be reported. This should not be a problem, as in this case the Radiation Dose Summary is related to the administration act, more than the procedure act.
 * The irradiation Issued Date has different significations, based on the targeted procedure type; in CT, it is the start date of the irradiation act, in XA/RF/MG, it is the Series Date Time, and in NM, it is the administration date time.
 * The associated procedure is referenced through the related Imaging Study.
-* The calibration factors are not reported as part of the minimal dose information. The generator of the Radiation Dose Summary resources shall take in consideration these calibration factors.
-* Based on the analyzes performed, there is no minimal dose information related to the level Irradiation Event and part of the modalities XA/RF/MG. 
+* The calibration factors are not reported as part of the minimal dose information. The generator of the Radiation Dose Summary resources shall consider these.
+* Based on the analysis performed, there is no minimal dose information related to the level Irradiation Event and part of the modalities XA/RF/MG. 
 
 <a name="underlying-specs"></a>
 
-### Underlying specifications
+## Underlying standards
 
 this IG is based on [HL7 FHIR](http://hl7.org/fhir/R4/index.html){:target="_blank"} standard, as well as [DICOM](https://www.dicomstandard.org/current){:target="_blank"} standard, and its packaged value sets [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"}. This IG uses also a profile from the specification [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}. Implementers of this specification must understand some basic information about the underlying specifications listed above.
 
-#### FHIR
+### FHIR
 This IG uses terminology, notations and design principles that are specific to the HL7 FHIR standard. Before reading the page [architecture and implementation](archi.html), it is important to be familiar with the basic principles of FHIR and how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to review the following prior to reading the rest of this implementation guide.
 
 * [FHIR overview](http://hl7.org/fhir/R4/overview.html){:target="_blank"}
@@ -2447,8 +2410,8 @@ This IG uses terminology, notations and design principles that are specific to t
 
 This implementation guide supports the recently published [FHIR R4](http://hl7.org/fhir/R4/index.html){:target="_blank"} version of the FHIR standard to ensure alignment with the current direction of the FHIR standard.
 
-#### FHIR resources used
-The table below identifies the specific FHIR Resources and their purposes that will be used in this IG. Implementers should familiarize themselves with these FHIR resources and their purposes.
+### FHIR resources used
+The table below identifies the specific FHIR Resources and their purpose in this IG. Implementers should familiarize themselves with these FHIR resources and their purposes.
 
 |FHIR Resource|Purpose|
 |-----|-----------------|
@@ -2460,19 +2423,19 @@ The table below identifies the specific FHIR Resources and their purposes that w
 |[Composition](http://hl7.org/fhir/R4/composition.html){:target="_blank"}| Used to create the irradiation report|
 {:.table-striped .table-bordered}
 
-#### DICOM® Standard
+### DICOM® Standard
 DICOM® is used as reference standard, as it provides a complete definition of the dose information that can be present in a radiation report. The DICOM® version used in this IG is the [2021d](https://dicom.nema.org/medical/dicom/2021d/output/){:target="_blank"} release. The packaged value sets coming from DICOM within [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"} are referenced many times in the different profiles of this IG.
 
 [DICOM®](https://www.dicomstandard.org/current){:target="_blank"}
 
-#### International Patient Summary IG (IPS)
+### International Patient Summary IG (IPS)
 Pregnancy Status Profile from [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"} is used within our IG ion order to report possible pregnancy of irradiated person.
 
 [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}
 
 <a name="glossary"></a>
 
-### Glossary
+## Glossary
 
 The following terms and initialisms/acronyms are used within the Radiation Dose Summary IG:
 
@@ -2529,7 +2492,7 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 
 <a name="references"></a>
 
-### References
+## References
 
 1. DICOM, [DICOM PS3.20: Imaging Reports using HL7 Clinical Document Architecture](http://dicom.nema.org/medical/dicom/current/output/html/part20.html){:target="_blank"}
 2. DICOM, [DICOM PS3.16: Content Mapping Resource](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/PS3.16.html){:target="_blank"}
