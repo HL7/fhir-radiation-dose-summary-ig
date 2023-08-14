@@ -1,3 +1,0 @@
-CT Irradiation Event Summary profile defines an overview of a CT irradiation event, performed by a CT modality and related to a CT procedure. This profile can be mapped to the SR template [TID 10013 CT Irradiation Event Data](https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} from DICOM standard.
-
-This profile is not aiming to report all the information related to a CT irradiation event, but only the most relevant information. Only few parameters are important to be reported, identified in [Minimal Radiation Information](background.html#minimal-radiation-information) section, from the page [Background](background.html). 

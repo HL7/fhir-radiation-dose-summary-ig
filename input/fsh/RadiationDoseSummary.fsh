@@ -9,7 +9,7 @@ Parent:         Observation
 Id:             radiation-dose-summary
 Title:          "Radiation Dose Summary"
 Description:    "General Structure describing a summary of an irradiation act"
-* ^abstract = true
+* ^abstract = false
 * insert RDSStructureDefinitionContent
 
 * identifier ^slicing.discriminator.type = #pattern
@@ -57,15 +57,23 @@ Description:    "General Structure describing a summary of an irradiation act"
 
 * code MS
 * code = LOINC#73569-6 "Radiation exposure and protection information [Description] Document Diagnostic imaging"
+
 * subject only Reference(Patient)
 * subject 1..1 MS
 * subject ^short = "Irradiated patient"
+
+* focus only Reference(ImagingStudy)
+* focus 1..1 MS
+* focus ^short = "The observation has a focus on the performed exam."
 
 // Irradiation Issued Date
 * effective[x] only dateTime
 * effective[x] 1..1 MS
 * effective[x] ^short = "Irradiation Start Date Time"
-* value[x] 0..0
+* value[x] 1..1 MS
+* value[x] only string
+* valueString ^short = "Text Summary of the irradiation act."
+* valueString ^comment = "The textual description of the irradiation act is defined by the site, and the creator of the resource may use a template defined locally by the facility. Templating of the text report is out of scope of this IG."
 * dataAbsentReason 0..0
 * specimen 0..0
 
@@ -73,14 +81,6 @@ Description:    "General Structure describing a summary of an irradiation act"
 * device 0..1 MS
 * device only Reference(ModalityDevice)
 * device ^short = "Irradiating modality"
-
-* hasMember ^slicing.discriminator.type = #profile
-* hasMember ^slicing.discriminator.path = "$this.resolve()"
-* hasMember ^slicing.rules = #open
-* hasMember ^slicing.description = "Description of the related observation"
-* hasMember contains irradiationEvent 0..* MS
-* hasMember[irradiationEvent] only Reference(IrradiationEventSummary)
-* hasMember[irradiationEvent] ^short = "Related irradiation events."
 
 // Irradiation Authorizing Person
 * performer ^slicing.discriminator.type = #type
@@ -93,21 +93,9 @@ Description:    "General Structure describing a summary of an irradiation act"
 * performer 1..1 MS
 * performer[irradiationAutorizingPerson] ^short = "Related irradiation authorizing person"
 
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.ordered = false
-* component ^slicing.description = "Slice on component.code"
-
 // Dose measurements - Procedure Level
-* component 1..* MS
+* component 0..*
 * component.code from ComponentRadiationDoseSummaryVS (extensible)
-* component contains procedureReported 1..1 MS
-* component[procedureReported].code = DCM#121058 "Procedure reported"
-* component[procedureReported].value[x] only CodeableConcept
-* component[procedureReported].valueCodeableConcept 1..1
-* component[procedureReported].valueCodeableConcept from ProcedureReportedTypeVS (required)
-* component[procedureReported] ^short = "Related Reported Procedure."
 
 
 
@@ -115,6 +103,7 @@ ValueSet: ProcedureReportedTypeVS
 Id: procedure-reported-type-rds-vs
 Title: "Procedure Reported Type Value Set"
 Description: "What is the type of procedure reported in the Radiation Dose Summary"
+* ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 //* SCT#373205008 "Nuclear medicine imaging procedure"
@@ -127,6 +116,7 @@ ValueSet: ComponentRadiationDoseSummaryVS
 Id: component-radiation-dose-summary-vs
 Title: "Radiation Dose Summary component type"
 Description: "Value Set describing the list of minimal dose information related to Procedure and Administration level"
+* ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * DCM#121058 "Procedure reported"
