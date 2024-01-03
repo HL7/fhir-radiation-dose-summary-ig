@@ -3,7 +3,6 @@ Id: dicom-identifier-type
 Title: "DICOM Identifier Type"
 Description: "Identifier types related to DICOM UIDs"
 
-* ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
 * ^hierarchyMeaning = #is-a

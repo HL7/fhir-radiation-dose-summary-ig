@@ -6,7 +6,7 @@ object  CTRadiationDoseSummary #white {
   study-instance-uid = 1.2.840.121.3.32.0.1.1323423 
 }
 
-object  Patient #white {
+object  Patient #white { 
   id = 56
   identifier = PAT3421|pidauth1
   name = Pascal Dupont
@@ -29,9 +29,25 @@ object  ModalityDevice #white {
   application-entity = CT01
 }
 
+object  "CTIrradiationEventSummary" as CTIrradiationEventSummary1  #white { 
+  id = 839
+  irradiation-event-uid = 1.2.840.121.3.32.0.1.1323423.1
+}
+
+object  "CTIrradiationEventSummary" as CTIrradiationEventSummary2 #white { 
+  id = 393
+  irradiation-event-uid = 1.2.840.121.3.32.0.1.1323423.2
+}
+
 CTRadiationDoseSummary -d-> Patient : "subject"
 CTRadiationDoseSummary -d-> ImagingStudy : "partOf"
 CTRadiationDoseSummary -d-> Practitioner : "performer"
 CTRadiationDoseSummary -d-> ModalityDevice : "device"
+CTRadiationDoseSummary -d-> CTIrradiationEventSummary1 : "hasMember"
+CTRadiationDoseSummary -d-> CTIrradiationEventSummary2 : "hasMember"
+Practitioner -[hidden]d-> CTIrradiationEventSummary1 : "hasMember"
+Practitioner -[hidden]d-> CTIrradiationEventSummary2 : "hasMember"
+CTIrradiationEventSummary1 -u-> Patient : "subject"
+CTIrradiationEventSummary2 -u-> Patient : "subject"
 ImagingStudy -> Patient : "subject"
 @enduml

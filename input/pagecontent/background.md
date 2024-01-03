@@ -20,6 +20,7 @@ The IHE Dose Reporter actor from the IHE REM profile gathers Radiation informati
 
  Dose Management systems need to share information related to the exam to multiple third parties:
 
+* Mobile Applications: like patients related mobile applications, where a patient may want to centralize the reports of received radiation doses.
 * RIS/EHR: many RIS/EHR systems do not have capabilities to read DICOM SR documents and prefer to contact the hospital dose management system in order to gather a summary of the dose report; and in order to include the radiation summary under the final imaging report.
 * Third backend systems: some third backend applications may want to gather a summary of the exam’s radiations for some proprietary usage; gathering the complete RDSR is useless for most of the non Dose Management systems.
 
@@ -52,13 +53,15 @@ The FHIR profiles defined in this IG are engineering solution in order to simpli
 
 <a name="usecases"></a>
 
-### Use case: Imaging report construction
+### Use cases
+Three use cases were identified.
+
+
+#### Use case 1: Imaging report construction
 
 ![Use case 1: Imaging report construction](./usecase1.svg){: width="800px"}
 
 <br clear="all" />
-
-The main use case identified for this implementation guide is the following: 
 
 * The Patient performs an irradiating exam within a modality.
 * The modality shares the dose report to the Dose Management System, which may implement the IHE REM Dose Reporter actor. This dose information sharing can follow the REM profile schema. 
@@ -75,6 +78,27 @@ This use case is very common within RIS systems not supporting dose management m
 It is the role of the Dose management system to provide the RIS with the right information regarding the dose administered to the patients. Reporting the minimal dose information inside the final imaging report is recommended by many stakeholders and organizations, and sometimes it is a regulation. For example, in France there are the Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation, from the French Minister of Health and Solidarity, and describing some dose information that needs to be present in the final report.
 
 The same kind of regulations exists in California in the US about the CT exams, which is the Senate Bill No. 1237.
+
+#### Use case 2: Mobile applications access
+
+The exposure of the Dose Summary as FHIR resources simplifies the access to the radiation information following a performed exam, by mobile application. These mobile applications can be under the use case [Longitudinal Patient Dose Record](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"} described in IHE Radiation Exposure Monitoring Profile, from Radiology domain. The targeted end users of these mobile applications shall follow the facility regulations, and international recommendations like the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}, as radiation dose data have inherent complexities and expertise are required for accurate interpretation. 
+
+#### Use case 3: Business Intelligence
+
+The exposure of the Dose Summary as a FHIR resources is beneficial for Business Intelligence applications exposing metrics on dose data. In fact, multiple metrics can be normalized within a FHIR server collecting the Dose Summary resources, like:
+
+* Comparison of average of Dose between modalities
+* Comparison of average of Dose between facilities/hospital
+* Comparison of dose administration characteristics between patient cohorts
+* Comparison between dose administration levels between regions within a national FHIR server
+
+This use case is following the one described under IHE Radiation Exposure Monitoring profile, [Site Benchmarking](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf#page=216){:target="_blank"}. Due to inherent complexity of the radiation dose data, expertise is required for accurate interpretation of BI outputs. Business intelligence tools should be used following international recommendations and regulations. For instance, they should not be used for the purposes of medical decision making for patients undergoing medical imaging exams (see the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}).
+
+
+The defined FHIR profiles within this IG can be used on these use cases, and others. It can target many stakeholders, like:
+* communication to patients and physicians: through radiation summary reporting
+* legal: by following regional and national reporting regulations
+* research on radiation data: like data scientists through BI tools.
 
 
 <a name="mindose"></a>
@@ -2375,7 +2399,7 @@ Contextual Information data:
 
 Dose measurements data:
 
-| Dose Measurements | Identifier | DICOM TID | Level | Type | Unit/ValueSet |
+| Dose Measurements | Identifier | DICOM TID | Level | Type | Unit |
 |---------------------------------------|--------------------------------------------|--------------|
 | Dose (RP) Total        | [EV (113725, DCM, Dose (RP) Total)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113725){:target="_blank"} | [TID 10007](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10007.html){:target="_blank"}| Procedure | Quantity | mGy |
 | Accumulated Average Glandular Dose        |      [EV (111637, DCM, Accumulated Average Glandular Dose)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_111637){:target="_blank"} | [TID 10005](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10005.html){:target="_blank"} | Procedure   | Quantity   | mGy |
@@ -2386,14 +2410,14 @@ Dose measurements data:
 | Total Number of Radiographic Frames        | [EV (113731, DCM, Total Number of Radiographic Frames)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113731){:target="_blank"} | [TID 10007](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10007.html){:target="_blank"} | Procedure  |  Integer    |  |
 | CT Dose Length Product Total   | [EV (113813, DCM, CT Dose Length Product Total)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113813){:target="_blank"} | [TID 10012](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10012.html){:target="_blank"} | Procedure  |  Quantity    | mGy.cm |
 | Administered activity          | [EV (113507, DCM, Administered activity)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113507){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration  |  Quantity    | MBq |
-| Radiopharmaceutical Agent      | [EV (349358000, SCT, Radiopharmaceutical agent)](http://snomed.info/id/349358000){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept | [Radiopharmaceuticals Value Set](ValueSet-radiopharmaceutical-rds-vs.html) |
-| Radionuclide                  | [EV (89457008, SCT, Radionuclide)](http://snomed.info/id/89457008){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept | [Isotopes Value Set](ValueSet-isotope-rds-vs.html) |
+| Radiopharmaceutical Agent      | [EV (349358000, SCT, Radiopharmaceutical agent)](http://snomed.info/id/349358000){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept |  |
+| Radionuclide                  | [EV (89457008, SCT, Radionuclide)](http://snomed.info/id/89457008){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept |  |
 | Radiopharmaceutical Volume     | [EV (123005, DCM, Radiopharmaceutical Volume)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_123005){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | Quantity | cm3 |
-| Route of administration        | [EV (410675002, SCT, Route of administration)](http://snomed.info/id/410675002){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept | [Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html){:target="_blank"} |
+| Route of administration        | [EV (410675002, SCT, Route of administration)](http://snomed.info/id/410675002){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept |  |
 | Mean CTDIvol                   | [EV (113830, DCM, Mean CTDIvol)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113830){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | Quantity | mGy |
 | DLP                           | [EV (113838, DCM, DLP)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113838){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | Quantity | mGy.cm |
-| Target Region                 | [EV (123014, DCM, Target Region)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_123014){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept | [Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html){:target="_blank"} |
-| CTDIw Phantom Type            | [EV (113835, DCM, CTDIw Phantom Type)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113835){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept | [Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html){:target="_blank"} |
+| Target Region                 | [EV (123014, DCM, Target Region)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_123014){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept |  |
+| CTDIw Phantom Type            | [EV (113835, DCM, CTDIw Phantom Type)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113835){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept |  |
 {:.table-striped .table-bordered}
 
 **Remarks**:
@@ -2408,7 +2432,7 @@ Dose measurements data:
 
 ### Underlying specifications
 
-This IG is based on [HL7 FHIR](http://hl7.org/fhir/R4/index.html){:target="_blank"} standard, as well as [DICOM](https://www.dicomstandard.org/current){:target="_blank"} standard, and its packaged value sets [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"}. This IG uses also a profile from the specification [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}. Implementers of this specification must understand some basic information about the underlying specifications listed above.
+this IG is based on [HL7 FHIR](http://hl7.org/fhir/R4/index.html){:target="_blank"} standard, as well as [DICOM](https://www.dicomstandard.org/current){:target="_blank"} standard, and its packaged value sets [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"}. This IG uses also a profile from the specification [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}. Implementers of this specification must understand some basic information about the underlying specifications listed above.
 
 #### FHIR
 This IG uses terminology, notations and design principles that are specific to the HL7 FHIR standard. Before reading the page [architecture and implementation](archi.html), it is important to be familiar with the basic principles of FHIR and how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to review the following prior to reading the rest of this implementation guide.

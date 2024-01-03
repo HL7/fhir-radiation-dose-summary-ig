@@ -18,7 +18,7 @@ This chapter describes testing data and testing plan, and provide some samples f
 
 | Actors | Roles |
 |--------------------------|-----------------------|
-| Radiation Dose Summary Producer (RDSP) actor| Produce the Radiation Dose Summary resource |
+| Radiation Dose Summary Producer (RDSP) actor| Produce the Radiation Dose Summary resource <br/> (O) Produce occasionally contextual resources  (Patient, Device, ImagingStudy, etc.) |
 | FHIR server | Host and Manage the Radiation Dose Summary resource <br/> Manage the contextual resources (Patient, Device, ImagingStudy, etc.)|
 |Radiation Dose Summary Consumer (RDSC) actor | Consume Radiation Dose Summary resource <br/> (O) Produce Radiation Summary Report |
 {:.table-striped .table-bordered}
@@ -31,6 +31,7 @@ Here are the different steps that needs to be performed:
 <br clear="all" />
 * The RDSP actor gathers an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR)
 * The RDSP actor collects the identifiers of the Patient, the Device, the Practitioner, and the ImagingStudy from the FHIR Server
+    * If some of the resources are not found, the RDSP actor constructs them in order to share them with the FHIR Server
 * The RDSP actor constructs the Radiation Dose Summary resource and POST it to the FHIR server
 * The RDSC actor queries the FHIR server and collects radiation summary information
 * Optionally, the RDSC actor enhances the FHIR server with the Radiation Summary Report.
@@ -105,7 +106,9 @@ Here is an example of the Radiation Dose Summary Profile resource related to CT 
 
 <br clear="all" />
 
-* [RadiationDoseSummary-139](Observation-139.html)
+* [CTRadiationDoseSummary-139](Observation-139.html)
+* [CTIrradiationEventSummary-839](Observation-839.html)
+* [CTIrradiationEventSummary-393](Observation-393.html)
 * [ImagingStudy-342](ImagingStudy-342.html)
 * [Patient-56](Patient-56.html)
 * [Practitioner-33](Practitioner-33.html)
@@ -119,11 +122,11 @@ A sample of Dose Summary Report profile exists with relationship to Indications 
 ##### X-Ray sample
 Here is an example of the Radiation Dose Summary Profile resource related to XA exam, and its dependencies:
 
-![Example 2](./example2.svg){: width="100%"}
+![Example 2](./example2.svg)
 
 <br clear="all" />
 
-* [RadiationDoseSummary-545](Observation-545.html)
+* [XRayRadiationDoseSummary-545](Observation-545.html)
 * [ImagingStudy-344](ImagingStudy-344.html)
 * [Patient-56](Patient-56.html)
 * [Practitioner-33](Practitioner-33.html)
@@ -132,10 +135,10 @@ Here is an example of the Radiation Dose Summary Profile resource related to XA 
 ##### NM sample
 Here is an example of the Radiation Dose Summary Profile resource related to Radiopharmaceutical administration, and its dependencies:
 
-![Example 3](./example3.svg){: width="70%"}
+![Example 3](./example3.svg)
 <br clear="all" />
 
-* [RadiationDoseSummary-122](Observation-122.html)
+* [NMRadiationDoseSummary-122](Observation-122.html)
 * [ImagingStudy-22](ImagingStudy-22.html)
 * [Patient-56](Patient-56.html)
 * [Practitioner-33](Practitioner-33.html)
