@@ -7,6 +7,8 @@ Parent:         Composition
 Id:             radiation-summary-report
 Title:          "Radiation Summary Report"
 Description:    "A report document describing the irradiation act"
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension[0].valueCode = #ii
 * insert RDSStructureDefinitionContent
 
 * type MS

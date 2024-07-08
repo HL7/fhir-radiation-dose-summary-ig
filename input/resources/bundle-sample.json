@@ -9,7 +9,7 @@
         "resourceType": "Observation",
         "meta": {
           "profile": [
-            "http://hl7.org/fhir/uv/radiation-dose-summary/StructureDefinition/xray-radiation-dose-summary"
+            "http://hl7.org/fhir/uv/radiation-dose-summary/StructureDefinition/radiation-dose-summary"
           ]
         },
         "partOf": [
@@ -44,6 +44,9 @@
           "reference": "urn:uuid:9dbc81e1-99c1-4b9c-8a5b-1d37ee18312f",
           "display": "Pascale Dupont"
         },
+		"focus": [{
+		  "reference" : "urn:uuid:f1738bb1-6f51-4d6b-ad7a-d8c933cf0cf1"
+        }],
         "effectiveDateTime": "2019-01-23T12:00:30.000Z",
         "performer": [
           {
@@ -51,6 +54,7 @@
             "display": "John Moore"
           }
         ],
+		"valueString" : "X-ray angiography performed, total dose 212 mGy",		
         "device": {
           "reference": "urn:uuid:c7627fe7-c072-4b9e-a4ee-94939b41664e",
           "display": "XA01"

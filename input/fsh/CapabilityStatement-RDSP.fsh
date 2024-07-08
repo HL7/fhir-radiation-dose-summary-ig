@@ -2,7 +2,8 @@ Instance: RDSP
 InstanceOf: CapabilityStatement
 Usage: #definition
 Description: "Minimal Capability Statement needed to be supported by RDSP Actor"
-
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* extension[0].valueCode = #ii
 * name = "RDSP"
 * title = "RDSP Actor minimal requirements"
 * date = "2021-06-28"
