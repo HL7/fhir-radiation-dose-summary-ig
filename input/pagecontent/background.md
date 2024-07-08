@@ -1,26 +1,25 @@
-This chapter describes the scope of this guide, provides background information about the radiation dose summary IG, key concepts,
-and describes the use cases supported by this implementation guide.
+This chapter describes the scope of this guide, provides background information about the radiation dose summary IG, key concepts, and describes the use cases supported by this implementation guide.
 
-1. [Problematic](#problematic) - Description of the problematic
+1. [Problem](#problem) - Description of the problem
 2. [Scope](#scope) - Scope of the IG
 3. [Use cases](#usecases) - Key use cases covered by the IG
 4. [Minimal Radiation Information](#mindose) - Description of data shared through this IG
-5. [Glossary](#glossary) - Glossary of terms used in this IG
-5. [References](#references) - Useful references
+5. [Underlying specifications](#underlying-specs) - Description of the underlying specifications and resources.
+6. [Glossary](#glossary) - Glossary of terms used in this IG
+7. [References](#references) - Useful references
 
-<a name="problematic"></a>
+<a name="problem"></a>
 
-### Problematic
+### Problem
 
 The IHE Dose Reporter actor from the IHE REM profile gathers Radiation information and dose reports from modalities. However, there is no standardization of the exposure of the gathered data to third parties in a light API based format. 
 
-![Problematic](./problematic.svg){: width="800px"}
+![Problem](./problem.svg){: width="800px"}
 
 <br clear="all" />
 
  Dose Management systems need to share information related to the exam to multiple third parties:
 
-* Mobile Applications: like patients related mobile applications, where a patient may want to centralize the report of doses injected to him
 * RIS/EHR: many RIS/EHR systems do not have capabilities to read DICOM SR documents and prefer to contact the hospital dose management system in order to gather a summary of the dose report; and in order to include the radiation summary under the final imaging report.
 * Third backend systems: some third backend applications may want to gather a summary of the exam’s radiations for some proprietary usage; gathering the complete RDSR is useless for most of the non Dose Management systems.
 
@@ -40,29 +39,32 @@ Scope:
 Out Of Scope:
 * Share details of the radiation administration
 * Share enhanced data (SSDE, Organ Dose, etc.) to third applications
+* Cumulative calculation of radiation over time, and through multiple procedures or equipments
 * Irradiations received by the practitioner
 
 Dealing with sharing details of radiation procedures, like the X-Ray parameters, the modality configuration, etc., is out of scope. Also, sharing the details of enhanced dose data, like the size specific dose estimation, is also out of scope. Other means exist to share this detailed information, mainly the DICOM Radiation Structured Reports (RDSRs).
 
+The defined profiles in this IG are describing radiation information within a unique irradiation act, which may contain multiple irradiation events. Calculating patient cumulative radiation over a period of time, and/or through multiple procedures and modalities, is out of scope, even if the current IG simplifies such computations. In parallel, the interpretation of radiation information is out of scope; this depends on facilities workflows, may be subject of interpretations, and may vary following regulations.
+
 Radiotherapy procedures are not covered by the scope of this work, only diagnostic imaging radiations is covered by this work. 
+
+The FHIR profiles defined in this IG are engineering solution in order to simplify sharing the radiation summary information between heterogenous applications. This implementation guide is not meant to describe how the Radiation Data is treated, and who can access and interpret the radiation information. These details are site specific and follow the international and national regulations and recommendations; also, they follows facilities culture and workflows. For instance, facilities should follow recommendations from the [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}; patient radiation history should not be used for decision making prior to exams. 
 
 <a name="usecases"></a>
 
-### Use cases
-Three use cases were identified.
-
-
-#### Use case 1: Imaging report construction
+### Use case: Imaging report construction
 
 ![Use case 1: Imaging report construction](./usecase1.svg){: width="800px"}
 
 <br clear="all" />
 
+The main use case identified for this implementation guide is the following: 
+
 * The Patient performs an irradiating exam within a modality.
 * The modality shares the dose report to the Dose Management System, which may implement the IHE REM Dose Reporter actor. This dose information sharing can follow the REM profile schema. 
 * After analyzing the exam images, the radiologist sends its notes to the Radiology Information System (RIS).
 * In order to construct the final imaging report, the RIS needs to gather a summary of the radiation received by the patient. The RIS send a query to the Dose management system and get minimal dose information report.
-* The minimal dose information is then integrated to the final report, which can be a CDA report following the DICOM Imaging report specification in PS3.20.
+* The minimal dose information is then integrated to the final report, which can be a CDA report following the DICOM Imaging report specification in [PS3.20](https://dicom.nema.org/medical/dicom/current/output/chtml/part20/PS3.20.html){:target="_blank"}.
 * The final report is shared with the hospital EHR or with the regional/national radiology report repository, through IHE XDS-I.b for example.
 
 This use case is very common within RIS systems not supporting dose management modules. In fact, gathering of dose information from modalities can be very complex:
@@ -72,20 +74,7 @@ This use case is very common within RIS systems not supporting dose management m
 
 It is the role of the Dose management system to provide the RIS with the right information regarding the dose administered to the patients. Reporting the minimal dose information inside the final imaging report is recommended by many stakeholders and organizations, and sometimes it is a regulation. For example, in France there are the Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation, from the French Minister of Health and Solidarity, and describing some dose information that needs to be present in the final report.
 
-The same kind of regulations exists in California in the US about the CT exams, which is the Senate Bill No. 1237. 
-
-#### Use case 2: Mobile applications access
-
-The exposure of the Dose Summary as FHIR resources opens the doors to the mobile applications to gather the dose information from the Dose management systems, or from the EMR if the Dose Summary is propagated to the EMR. Many applications may benefit from this additional patient data in order to add tracking of the patient dose information. Some patient facing applications can track the dose summary through multiple facilities. Other practitioner mobile applications can benefit from the Dose Summary data in order to collect more data for practitioner, or to improve their Clinical Decision Support (CDS) component.
-
-#### Use case 3: Business Intelligence
-
-The exposure of the Dose Summary as a FHIR resources is beneficial for Business Intelligence applications exposing metrics on dose data. In fact, multiple metrics can be normalized within a FHIR server collecting the Dose Summary resources, like:
-
-* Comparison of average of Dose between modalities
-* Comparison of average of Dose between facilities/hospital
-* Comparison of dose administration characteristics between patient cohorts
-* Comparison between dose administration levels between regions within a national FHIR server
+The same kind of regulations exists in California in the US about the CT exams, which is the Senate Bill No. 1237.
 
 
 <a name="mindose"></a>
@@ -108,9 +97,9 @@ In this paragraph, we analyze the mapping between the identified minimal dose in
     * French Minister of Health and Solidarity, [Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation](https://www.legifrance.gouv.fr/eli/arrete/2006/9/22/SANY0623888A/jo/texte){:target="_blank"}, (Order - 2006)
 * Finnish Imaging Report specification, [KanTa Imaging CDA R2 document structures](http://www.hl7.fi/hl7-rajapintakartta/kanta-%E2%80%93-kuvantamisen-cda-r2-rakenne/){:target="_blank"} (2013)
 * US, California State
-    * AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
+    * AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
     * [Senate Bill No. 1237, CHAPTER 521](http://www.leginfo.ca.gov/pub/09-10/bill/sen/sb_1201-1250/sb_1237_bill_20100929_chaptered.pdf){:target="_blank"}
-    * AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
+    * AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
     * [Radiologist Compliance With California CT Dose Reporting Requirements: A Single-Center Review of Pediatric Chest CT](https://www.ajronline.org/doi/pdf/10.2214/AJR.14.13693){:target="_blank"}
     * University of California Dose Optimization and Standardization Endeavor (UC-DOSE). [Recommendations for compliance with California Senate Bill 1237 and related pending legislation.](http://files.ctctcdn.com/da9de144201/b78c37fa-a36b-4888-a418-fa21a314393e.pdf){:target="_blank"}
 
@@ -2386,7 +2375,7 @@ Contextual Information data:
 
 Dose measurements data:
 
-| Dose Measurements | Identifier | DICOM TID | Level | Type | Unit |
+| Dose Measurements | Identifier | DICOM TID | Level | Type | Unit/ValueSet |
 |---------------------------------------|--------------------------------------------|--------------|
 | Dose (RP) Total        | [EV (113725, DCM, Dose (RP) Total)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113725){:target="_blank"} | [TID 10007](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10007.html){:target="_blank"}| Procedure | Quantity | mGy |
 | Accumulated Average Glandular Dose        |      [EV (111637, DCM, Accumulated Average Glandular Dose)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_111637){:target="_blank"} | [TID 10005](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10005.html){:target="_blank"} | Procedure   | Quantity   | mGy |
@@ -2397,14 +2386,14 @@ Dose measurements data:
 | Total Number of Radiographic Frames        | [EV (113731, DCM, Total Number of Radiographic Frames)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113731){:target="_blank"} | [TID 10007](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10007.html){:target="_blank"} | Procedure  |  Integer    |  |
 | CT Dose Length Product Total   | [EV (113813, DCM, CT Dose Length Product Total)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113813){:target="_blank"} | [TID 10012](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10012.html){:target="_blank"} | Procedure  |  Quantity    | mGy.cm |
 | Administered activity          | [EV (113507, DCM, Administered activity)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113507){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration  |  Quantity    | MBq |
-| Radiopharmaceutical Agent      | [EV (349358000, SCT, Radiopharmaceutical agent)](http://snomed.info/id/349358000){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept |  |
-| Radionuclide                  | [EV (89457008, SCT, Radionuclide)](http://snomed.info/id/89457008){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept |  |
+| Radiopharmaceutical Agent      | [EV (349358000, SCT, Radiopharmaceutical agent)](http://snomed.info/id/349358000){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept | [Radiopharmaceuticals Value Set](ValueSet-radiopharmaceutical-rds-vs.html) |
+| Radionuclide                  | [EV (89457008, SCT, Radionuclide)](http://snomed.info/id/89457008){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept | [Isotopes Value Set](ValueSet-isotope-rds-vs.html) |
 | Radiopharmaceutical Volume     | [EV (123005, DCM, Radiopharmaceutical Volume)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_123005){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | Quantity | cm3 |
-| Route of administration        | [EV (410675002, SCT, Route of administration)](http://snomed.info/id/410675002){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept |  |
+| Route of administration        | [EV (410675002, SCT, Route of administration)](http://snomed.info/id/410675002){:target="_blank"} | [TID 10022](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10022.html){:target="_blank"} | Administration | CodeableConcept | [Route of Administration](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_11.html){:target="_blank"} |
 | Mean CTDIvol                   | [EV (113830, DCM, Mean CTDIvol)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113830){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | Quantity | mGy |
 | DLP                           | [EV (113838, DCM, DLP)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113838){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | Quantity | mGy.cm |
-| Target Region                 | [EV (123014, DCM, Target Region)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_123014){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept |  |
-| CTDIw Phantom Type            | [EV (113835, DCM, CTDIw Phantom Type)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113835){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept |  |
+| Target Region                 | [EV (123014, DCM, Target Region)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_123014){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept | [Anatomy Imaged](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4030.html){:target="_blank"} |
+| CTDIw Phantom Type            | [EV (113835, DCM, CTDIw Phantom Type)](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html#DCM_113835){:target="_blank"} | [TID 10013](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_TID_10013.html){:target="_blank"} | Irradiation Event | CodeableConcept | [Phantom Devices](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4052.html){:target="_blank"} |
 {:.table-striped .table-bordered}
 
 **Remarks**:
@@ -2415,6 +2404,48 @@ Dose measurements data:
 * The calibration factors are not reported as part of the minimal dose information. The generator of the Radiation Dose Summary resources shall take in consideration these calibration factors.
 * Based on the analyzes performed, there is no minimal dose information related to the level Irradiation Event and part of the modalities XA/RF/MG. 
 
+<a name="underlying-specs"></a>
+
+### Underlying specifications
+
+This IG is based on [HL7 FHIR](http://hl7.org/fhir/R4/index.html){:target="_blank"} standard, as well as [DICOM](https://www.dicomstandard.org/current){:target="_blank"} standard, and its packaged value sets [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"}. This IG uses also a profile from the specification [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}. Implementers of this specification must understand some basic information about the underlying specifications listed above.
+
+#### FHIR
+This IG uses terminology, notations and design principles that are specific to the HL7 FHIR standard. Before reading the page [architecture and implementation](archi.html), it is important to be familiar with the basic principles of FHIR and how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to review the following prior to reading the rest of this implementation guide.
+
+* [FHIR overview](http://hl7.org/fhir/R4/overview.html){:target="_blank"}
+* [Developer's introduction](http://hl7.org/fhir/R4/overview-dev.html){:target="_blank"} (or [Clinical introduction](http://hl7.org/fhir/R4/overview-clinical.html){:target="_blank"})
+* [FHIR data types](http://hl7.org/fhir/R4/datatypes.html){:target="_blank"}
+* [Using codes](http://hl7.org/fhir/R4/terminologies.html){:target="_blank"}
+* [References between resources](http://hl7.org/fhir/R4/references.html){:target="_blank"}
+* [How to read resource & profile definitions](http://hl7.org/fhir/R4/formats.html){:target="_blank"}
+* [Base resource](http://hl7.org/fhir/R4/resource.html){:target="_blank"}
+
+This implementation guide supports the recently published [FHIR R4](http://hl7.org/fhir/R4/index.html){:target="_blank"} version of the FHIR standard to ensure alignment with the current direction of the FHIR standard.
+
+#### FHIR resources used
+The table below identifies the specific FHIR Resources and their purposes that will be used in this IG. Implementers should familiarize themselves with these FHIR resources and their purposes.
+
+|FHIR Resource|Purpose|
+|-----|-----------------|
+|[Observation](http://hl7.org/fhir/R4/observation.html){:target="_blank"}| Used to describe the radiation dose summary and the collected minimal dose information|
+|[Patient](http://hl7.org/fhir/R4/patient.html){:target="_blank"}| Used to reference the irradiated person|
+|[Practitioner](http://hl7.org/fhir/R4/practitioner.html){:target="_blank"}| Used to reference the related irradiation authorizing person|
+|[Device](http://hl7.org/fhir/R4/device.html){:target="_blank"}| Used to describe the irradiating modality|
+|[ImagingStudy](http://hl7.org/fhir/R4/imagingstudy.html){:target="_blank"}| Used to reference the performed exam|
+|[Composition](http://hl7.org/fhir/R4/composition.html){:target="_blank"}| Used to create the irradiation report|
+{:.table-striped .table-bordered}
+
+#### DICOM® Standard
+DICOM® is used as reference standard, as it provides a complete definition of the dose information that can be present in a radiation report. The DICOM® version used in this IG is the [2021d](https://dicom.nema.org/medical/dicom/2021d/output/){:target="_blank"} release. The packaged value sets coming from DICOM within [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"} are referenced many times in the different profiles of this IG.
+
+[DICOM®](https://www.dicomstandard.org/current){:target="_blank"}
+
+#### International Patient Summary IG (IPS)
+Pregnancy Status Profile from [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"} is used within our IG ion order to report possible pregnancy of irradiated person.
+
+[International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1/){:target="_blank"}
+
 <a name="glossary"></a>
 
 ### Glossary
@@ -2423,6 +2454,8 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 
 |Term|Definition|
 |-----|-----------------|
+|AAPM| American Association of Physicists in Medicine |
+|ACR| American College of Radiology |
 |ATNA| Audit Trail and Node Authentication |
 |CDA| Clinical Document Architecture |
 |CDS| Clinical Decision Support |
@@ -2436,6 +2469,8 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |FHIR| Fast Healthcare Interoperability Resources |
 |HAS| French High Authority of Health |
 |HL7| Health Level Seven|
+|HPS| Health Physics Society |
+|IEC| International Electrotechnical Commission |
 |IG| Implementation Guide |
 |IHE| Integrating the Healthcare Enterprise |
 |IOD| Information Object Definition |
@@ -2444,11 +2479,13 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 |MPPS| Modality Performed Procedure Step |
 |NM| Nuclear Medicine |
 |OCR| Optical Character Recognition |
+|PHI| Personal Health Information |
 |RDSC| Radiation Dose Summary Consumer |
 |RDSP| Radiation Dose Summary Producer |
 |RDSR| Radiation Dose Structured Report |
 |REM| Radiation Exposure Monitoring|
 |REM-NM| Radiation Exposure Monitoring for Nuclear Medicine |
+|REST| Representational State Transfer |
 |RF| Radio Fluoroscopy |
 |RIS| Radiology Information System |
 |RP|  Reference Point |
@@ -2470,24 +2507,25 @@ The following terms and initialisms/acronyms are used within the Radiation Dose 
 
 ### References
 
-1. DICOM, [DICOM PS3.20: Imaging Reports using HL7 Clinical Document Architecture](http://dicom.nema.org/medical/dicom/current/output/html/part20.html){:target="_blank"}
-2. DICOM, [DICOM PS3.16: Content Mapping Resource](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/PS3.16.html){:target="_blank"}
-3. DICOM, [X-Ray Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XRayRadiationDoseSRIODTemplates.html){:target="_blank"}
-4. DICOM, [CT Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html){:target="_blank"}
-5. DICOM, [Radiopharmaceutical Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_RadiopharmaceuticalRadiationDoseSRIODTemplates.html){:target="_blank"}
-6. DICOM, [TID 2008\. Radiation Exposure and Protection Information](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_A.html#sect_TID_2008){:target="_blank"}
+1. DICOM, [DICOM PS3.20: Imaging Reports using HL7 Clinical Document Architecture](http://dicom.nema.org/medical/dicom/current/output/html/part20.html){:target="_blank"}
+2. DICOM, [DICOM PS3.16: Content Mapping Resource](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/PS3.16.html){:target="_blank"}
+3. DICOM, [X-Ray Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_XRayRadiationDoseSRIODTemplates.html){:target="_blank"}
+4. DICOM, [CT Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CTRadiationDoseSRIODTemplates.html){:target="_blank"}
+5. DICOM, [Radiopharmaceutical Radiation Dose SR IOD Templates](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_RadiopharmaceuticalRadiationDoseSRIODTemplates.html){:target="_blank"}
+6. DICOM, [TID 2008\. Radiation Exposure and Protection Information](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_A.html#sect_TID_2008){:target="_blank"}
 7. French Society of Radiology - SFR,  [Practical Guide for Interventional Radiology](http://gri.radiologie.fr/){:target="_blank"}  (Guideline - 2013)
 8. French High Authority of Health - HAS,  [Patient radiation protection and analysis of CPD practices and certification of healthcare establishments](https://www.has-sante.fr/upload/docs/application/pdf/2013-07/radioprotection_du_patient_et_analyse_des_pratiques_dpc_et_certification_des_etablissements_de_sante_format2clics.pdf){:target="_blank"}  (Guideline - 2012)
-9. French nuclear safety authority, [Presentation of the main radiation protection regulatory provisions applicable in medical and dental radiology](https://www.cd2-conseils.com/wp-content/uploads/2016/11/rp_asn_presentation-principales-dispositions-reglementaires_2016.pdf){:target="_blank"}  (Guideline: 2016)
+9. French nuclear safety authority, [Presentation of the main radiation protection regulatory provisions applicable in medical and dental radiology](https://www.cd2-conseils.com/wp-content/uploads/2016/11/rp_asn_presentation-principales-dispositions-reglementaires_2016.pdf){:target="_blank"}  (Guideline: 2016)
 10. French Minister of Health and Solidarity,  [Order of 22 September 2006 relating to the radiation information to be included in an act report using ionizing radiation](https://www.legifrance.gouv.fr/eli/arrete/2006/9/22/SANY0623888A/jo/texte){:target="_blank"}, (Order - 2006)
 11. Finnish Imaging Report specification,  [KanTa Imaging CDA R2 document structures](http://www.hl7.fi/hl7-rajapintakartta/kanta-%E2%80%93-kuvantamisen-cda-r2-rakenne/){:target="_blank"}  (2013)
-12. Finnish Radiation and Nuclear Safety Authority, [Röntgentutkimuksesta potilaalle aiheutuvan säteilyaltistuksen määrittäminen](https://www.julkari.fi/bitstream/handle/10024/125145/rontgensateily.pdf){:target="_blank"} (X-ray examination of the patient radiation exposure determination)
-13. AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
+12. Finnish Radiation and Nuclear Safety Authority, [Röntgentutkimuksesta potilaalle aiheutuvan säteilyaltistuksen määrittäminen](https://www.julkari.fi/bitstream/handle/10024/125145/rontgensateily.pdf){:target="_blank"} (X-ray examination of the patient radiation exposure determination)
+13. AAPM, [Computed Tomography Dose Limit Reporting Guidelines for Section 3 – 115113](https://aapm.org/government_affairs/documents/SB-1237Section3_v7.pdf){:target="_blank"}
 14. [Senate Bill No. 1237, CHAPTER 521](http://www.leginfo.ca.gov/pub/09-10/bill/sen/sb_1201-1250/sb_1237_bill_20100929_chaptered.pdf){:target="_blank"}
-15. AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
+15. AAPM, [Experience with California Law on Reporting CT Dose](http://amos3.aapm.org/abstracts/pdf/77-22649-312436-91875.pdf){:target="_blank"}
 16. [Radiologist Compliance With California CT Dose Reporting Requirements: A Single-Center Review of Pediatric Chest CT](https://www.ajronline.org/doi/pdf/10.2214/AJR.14.13693){:target="_blank"}
 17. University of California Dose Optimization and Standardization Endeavor (UC-DOSE). [Recommendations for compliance with California Senate Bill 1237 and related pending legislation](http://files.ctctcdn.com/da9de144201/b78c37fa-a36b-4888-a418-fa21a314393e.pdf){:target="_blank"}
 18. IEC, [IEC 61910-1:2014 - Medical electrical equipment - Radiation dose documentation - Part 1: Radiation dose structured reports for radiography and radioscopy](https://webstore.iec.ch/publication/6091){:target="_blank"}
 19. IHE Radiology (RAD), [Technical Framework Volume 1, Cross-enterprise Document Sharing for Imaging (XDS-I.b)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
 20. IHE Radiology (RAD), [Technical Framework Volume 1, Radiation Exposure Monitoring (REM)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
 21. HL7 International, [International Patient Summary Implementation Guide (IPS)](https://hl7.org/fhir/uv/ips/STU1/)
+22.  AAPM/ACR/HPS, [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}
