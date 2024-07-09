@@ -20,13 +20,11 @@ Description:    "General Structure describing a summary of an irradiation act"
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Identifiers for the radiation dose"
 
-
 * identifier contains radiationSRUID 0..* MS
 * identifier[radiationSRUID].type = DCMIdType#sop-instance-uid "SOP Instance UID"
 * identifier[radiationSRUID].system = "urn:dicom:uid"
 * identifier[radiationSRUID].value 1..1
 * identifier[radiationSRUID] ^short = "Identifier related to SOP Instance UID if the resource is generated based on an RDSR"
-
 
 // Associated Procedure/Exam
 * partOf ^slicing.discriminator.type = #type
@@ -74,7 +72,6 @@ Description:    "General Structure describing a summary of an irradiation act"
 * effective[x] ^short = "Irradiation Start Date Time"
 * value[x] 1..1 MS
 * value[x] only string
-* valueString ^short = "Dose Summary text."
 * valueString ^short = "Dose Summary text."
 * valueString ^comment = "Textual representation of the dose summary based computed by the Dose Management system. Based on a locally defined template, definition of which is out of scope of this IG."
 * dataAbsentReason 0..0
