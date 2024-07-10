@@ -76,10 +76,8 @@ InstanceOf: ModalityDevice
 Usage: #example
 Description: "ModalityDevice for example 1"
 * id = "539"
-* identifier[0].type = HL7IdType#SNO "Serial Number"
-* identifier[0].value = "5445A343"
-* identifier[1].type = DCMIdType#application-entity "Application Entity"
-* identifier[1].value = "CT01" 
+* identifier[0].type = DCMIdType#application-entity "Application Entity"
+* identifier[0].value = "CT01" 
 * manufacturer = "Manufacturer-1"
 * serialNumber = "5445A343"
 * deviceName[0].type = #manufacturer-name
@@ -193,10 +191,8 @@ InstanceOf: ModalityDevice
 Usage: #example
 Description: "ModalityDevice for example 2"
 * id = "12"
-* identifier[0].type = HL7IdType#SNO "Serial Number"
-* identifier[0].value = "767ER"
-* identifier[1].type = DCMIdType#application-entity "Application Entity"
-* identifier[1].value = "XA01" 
+* identifier[0].type = DCMIdType#application-entity "Application Entity"
+* identifier[0].value = "XA01" 
 * manufacturer = "Manufacturer-1"
 * serialNumber = "767ER"
 * deviceName[0].type = #manufacturer-name

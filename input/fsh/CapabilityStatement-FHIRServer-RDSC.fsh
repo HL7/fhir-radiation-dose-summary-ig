@@ -2,7 +2,8 @@ Instance: FHIRServer-RDSC
 InstanceOf: CapabilityStatement
 Usage: #definition
 Description: "Capability Statement needed to be supported by a FHIR Server in order to respond to RDSC Actor with the Radiation Summary Report option."
-
+* extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* extension.valueCode = #ii
 * name = "FHIRServer_RDSC"
 * title = "FHIR Server supporting FHIR operations in order to interact with RDSC Actor"
 * date = "2021-06-28"

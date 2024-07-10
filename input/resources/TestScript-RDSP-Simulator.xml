@@ -1,6 +1,6 @@
 <TestScript xmlns="http://hl7.org/fhir">
     <id value="RDSP-Simulator"/>
-    <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/TestScript-RDSP-Simulator.json"/>
+    <url value="http://hl7.org/fhir/uv/radiation-dose-summary/TestScript/RDSP-Simulator"/>
     <name value="TestScript_RDSP_Simulator"/>
     <status value="active"/>
     <date value="2021-07-17"/>
@@ -16,7 +16,7 @@
         <name value="Abderrazek Boufahja"/>
         <telecom>
             <system value="email"/>
-            <value value="abderrazek.boufahja@ge.com"/>
+            <value value="abderrazek.boufahja@gehealthcare.com"/>
         </telecom>
     </contact>
     <description value="TestScript to validate the FHIR Server capabilities against an RDSP actor."/>
@@ -61,6 +61,9 @@
         <path value="Bundle/entry/resource/ImagingStudy/id"/>
         <sourceId value="bundle-post-response"/>
     </variable>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ii"/>
+    </extension>
     <test>
         <name value="RDS-Queries-verification-POST"/>
         <description value="This is a Test to validate the FHIR server capabilities according to Radiation Dose Summary searching possibilities."/>

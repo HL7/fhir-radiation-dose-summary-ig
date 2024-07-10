@@ -10,6 +10,8 @@ Id:             radiation-dose-summary
 Title:          "Radiation Dose Summary"
 Description:    "General Structure describing a summary of an irradiation act"
 * ^abstract = false
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension[0].valueCode = #ii
 * insert RDSStructureDefinitionContent
 
 * identifier ^slicing.discriminator.type = #pattern
@@ -18,13 +20,11 @@ Description:    "General Structure describing a summary of an irradiation act"
 * identifier ^slicing.ordered = false
 * identifier ^slicing.description = "Identifiers for the radiation dose"
 
-
 * identifier contains radiationSRUID 0..* MS
 * identifier[radiationSRUID].type = DCMIdType#sop-instance-uid "SOP Instance UID"
 * identifier[radiationSRUID].system = "urn:dicom:uid"
 * identifier[radiationSRUID].value 1..1
 * identifier[radiationSRUID] ^short = "Identifier related to SOP Instance UID if the resource is generated based on an RDSR"
-
 
 // Associated Procedure/Exam
 * partOf ^slicing.discriminator.type = #type
@@ -72,8 +72,8 @@ Description:    "General Structure describing a summary of an irradiation act"
 * effective[x] ^short = "Irradiation Start Date Time"
 * value[x] 1..1 MS
 * value[x] only string
-* valueString ^short = "Text Summary of the irradiation act."
-* valueString ^comment = "The textual description of the irradiation act is defined by the site, and the creator of the resource may use a template defined locally by the facility. Templating of the text report is out of scope of this IG."
+* valueString ^short = "Dose Summary text."
+* valueString ^comment = "Textual representation of the dose summary based computed by the Dose Management system. Based on a locally defined template, definition of which is out of scope of this IG."
 * dataAbsentReason 0..0
 * specimen 0..0
 
@@ -103,6 +103,8 @@ ValueSet: ProcedureReportedTypeVS
 Id: procedure-reported-type-rds-vs
 Title: "Procedure Reported Type Value Set"
 Description: "What is the type of procedure reported in the Radiation Dose Summary"
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension[0].valueCode = #ii
 * ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
@@ -116,10 +118,11 @@ ValueSet: ComponentRadiationDoseSummaryVS
 Id: component-radiation-dose-summary-vs
 Title: "Radiation Dose Summary component type"
 Description: "Value Set describing the list of minimal dose information related to Procedure and Administration level"
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* ^extension[0].valueCode = #ii
 * ^experimental = false
 * ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement."
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* DCM#121058 "Procedure reported"
 * DCM#113813 "CT Dose Length Product Total"
 * DCM#113725 "Dose (RP) Total"
 * DCM#111637 "Accumulated Average Glandular Dose"

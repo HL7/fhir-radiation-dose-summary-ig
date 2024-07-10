@@ -2,7 +2,8 @@ Instance: RDSC
 InstanceOf: CapabilityStatement
 Usage: #definition
 Description: "Capability Statement needed to be supported by a RDSC actor."
-
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
+* extension[0].valueCode = #ii
 * name = "RDSC"
 * title = "RDSC Actor requirements"
 * date = "2021-06-28"
