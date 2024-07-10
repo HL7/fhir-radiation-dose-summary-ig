@@ -10,7 +10,7 @@ name: RadiationDoseSummaryForDiagnosticProceduresOnFHIR
 title: Radiation Dose Summary for Diagnostic Procedures on FHIR
 status: draft
 publisher: 
-  - name: HL7 Imaging Integration Working Group
+  - name: HL7 International / Imaging Integration
   - url: http://www.hl7.org/Special/committees/imagemgt
 contact:
   - name: HL7 Imaging Integration Workgroup
@@ -20,7 +20,7 @@ contact:
   - name: Abderrazek Boufahja
     telecom:
       - system: email
-        value: abderrazek.boufahja@ge.com
+        value: abderrazek.boufahja@gehealthcare.com
 description: This IG standardizes the sharing of minimal radiation information following a performed exam. 
   Minimal radiation information is required by multiple stakeholders including RIS, EHR, and national/regional stakeholders and 
   their associated regulations. This IG standardizes data sharing from dose management systems to third parties. 
@@ -41,6 +41,10 @@ parameters:
 copyrightYear: 2020+
 releaseLabel: ci-build
 
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: ii
+    
 pages:
   index.md:
     title: Home

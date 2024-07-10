@@ -1,6 +1,6 @@
 <TestScript xmlns="http://hl7.org/fhir">
     <id value="RDS-sharing-verification"/>
-    <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/TestScript-RDS-sharing-verification.json"/>
+    <url value="http://hl7.org/fhir/uv/radiation-dose-summary/TestScript/RDS-sharing-verification"/>
     <name value="TestScript_RDS_Sharing_Verification"/>
     <status value="active"/>
     <date value="2021-07-17"/>
@@ -16,7 +16,7 @@
         <name value="Abderrazek Boufahja"/>
         <telecom>
             <system value="email"/>
-            <value value="abderrazek.boufahja@ge.com"/>
+            <value value="abderrazek.boufahja@gehealthcare.com"/>
         </telecom>
     </contact>
     <description value="TestScript to validate the sharing data between RDSP actor and a FHIR Server."/>
@@ -74,6 +74,9 @@
         <path value="Bundle/entry/resource/ImagingStudy/id"/>
         <sourceId value="imagingstudy-search-response"/>
     </variable>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ii"/>
+    </extension>
     <test>
         <name value="RDS_Sharing_Verification"/>
         <description value="This is a test to validate the sharing of data between RDSP actor and a FHIR Server. The RDSP actor gathers an RDSR from an irradiating modality (a CT RDSR, an X-Ray RDSR or an RRDSR). Once Data collected, the RDSP will collect the right IDs for the patient, practitioner, ImagingStudy and Device from the FHIR Server, then it will generate the radiation summary resources and share them with the FHIR Server. You can refer to the complete description under : http://hl7.org/fhir/uv/radiation-dose-summary/testing.html#scenario-1-rdsr-summary-to-fhir. This test is executed after this workflow is performed, and the scripts will check the data are well received by the FHIR Server."/>

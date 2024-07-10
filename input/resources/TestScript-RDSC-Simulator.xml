@@ -1,6 +1,6 @@
 <TestScript xmlns="http://hl7.org/fhir">
     <id value="RDSC-Simulator"/>
-    <url value="https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/TestScript-RDSC-Simulator.json"/>
+    <url value="http://hl7.org/fhir/uv/radiation-dose-summary/TestScript/RDSC-Simulator"/>
     <name value="TestScript_RDSC_Simulator"/>
     <status value="active"/>
     <date value="2021-07-17"/>
@@ -16,7 +16,7 @@
         <name value="Abderrazek Boufahja"/>
         <telecom>
             <system value="email"/>
-            <value value="abderrazek.boufahja@ge.com"/>
+            <value value="abderrazek.boufahja@gehealthcare.com"/>
         </telecom>
     </contact>
     <description value="TestScript to validate the FHIR Server searching capabilities."/>
@@ -65,6 +65,9 @@
         <path value="Observation/identifier/value"/>
         <sourceId value="rds-read-response"/>
     </variable>
+	<extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="ii"/>
+    </extension>
     <test>
         <name value="Observation_read"/>
         <description value="Read provided Observation - the radiation dose summary"/>
