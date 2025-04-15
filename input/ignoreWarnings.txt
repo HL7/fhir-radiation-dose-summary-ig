@@ -44,3 +44,6 @@ Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current
 
 # The mapping target is a DICOM value set that is not formally defined in FHIR
 Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov)
+
+# This extension is part of the baseline 4.0.1 Observation and not specialized in this IG
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
