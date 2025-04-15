@@ -5,10 +5,10 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.radiation-dose-summary
 canonical: http://hl7.org/fhir/uv/radiation-dose-summary
-version: 0.1.0
+version: 1.0.0
 name: RadiationDoseSummaryForDiagnosticProceduresOnFHIR
 title: Radiation Dose Summary for Diagnostic Procedures on FHIR
-status: draft
+status: active
 publisher: 
   - name: HL7 International / Imaging Integration
   - url: http://www.hl7.org/Special/committees/imagemgt
@@ -36,10 +36,9 @@ dependencies:
 
 parameters:
   show-inherited-invariants: false
-  generate-turtle: false
   usage-stats-opt-out: true
 copyrightYear: 2020+
-releaseLabel: ci-build
+releaseLabel: STU 1
 
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
