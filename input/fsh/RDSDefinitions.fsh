@@ -16,3 +16,5 @@ RuleSet: RDSStructureDefinitionContent
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #ii
+* ^extension[1].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[1].valueInteger = 2
