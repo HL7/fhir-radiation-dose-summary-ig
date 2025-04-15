@@ -2,3 +2,12 @@
 
 # Warning on codeSystem
 Error from server: Unable to provide support for code system http://ncit.nci.nih.gov
+
+# The FHIR DICOM Package is not a standard IG and it fails this validation check
+The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+
+# The DICOM value type codes only make sense in the context of this IG.
+Reference to draft CodeSystem http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type|0.1.0
+
+# The DICOM value type codes only make sense in the context of this IG.
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
