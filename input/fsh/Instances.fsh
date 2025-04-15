@@ -120,6 +120,9 @@ Description: "Indication Observation for example 1"
 * code.coding = DCM#121109 "Indications for Procedure"
 * subject = Reference(Patient/56)
 * subject.display = "Pascale Dupont"
+* effectiveDateTime = "2015-01-01T23:43:30.000Z"
+* performer = Reference(Practitioner/33)
+* performer.display = "John Moore"
 * valueString = "Exam to check right kidney"
 
 
@@ -130,8 +133,10 @@ Description: "Pregnancy Status for example 1"
 * id = "34"
 * status = #final
 * subject = Reference(Patient/56)
-* effectiveDateTime = "2015-01-01T23:43:30.000Z"
 * subject.display = "Pascale Dupont"
+* effectiveDateTime = "2015-01-01T23:43:30.000Z"
+* performer = Reference(Practitioner/33)
+* performer.display = "John Moore"
 * valueCodeableConcept = LOINC#LA26683-5 "Not pregnant"
 
 
