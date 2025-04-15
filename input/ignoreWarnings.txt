@@ -19,7 +19,7 @@ An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analy
 The ImplementationGuide uses package hl7.fhir.uv.ips#1.0.0 released on 2020-05-19, but the most recent appropriate version is 1.1.0. This reference is getting old and the more recent version should be considered
 
 # This code value is still used in the related DICOM SR template
-The code '349358000' is valid but is not active (from http://tx.fhir.org/r4)
+The code '349358000' is valid but is not active
 
 # This System is used in an example and does not need to be defined in FHIR terminology
 URL value 'urn:pid:ipdauth1' does not resolve
@@ -40,4 +40,7 @@ The repeating element has a pattern. The pattern will apply to all the repeats (
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
 # The mapping target is a DICOM value set that is not formally defined in FHIR
-Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov)
+Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html'
+
+# The mapping target is a DICOM value set that is not formally defined in FHIR
+Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov)
