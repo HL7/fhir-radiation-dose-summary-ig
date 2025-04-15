@@ -1,0 +1,10 @@
+{
+  "package-id" : "hl7.fhir.uv.radiation-dose-summary",
+  "version" : "1.0.0",
+  "path" : "http://hl7.org/fhir/uvradiation-dose-summary/STU1",
+  "mode": "milestone",
+  "status" : "trial-use",
+  "sequence" : "STU1",
+  "desc" : "The STU 1 publication for the Radiation Dose Summary for Diagnostic Procedures on FHIR Implementation Guide",
+  "first" : false
+}
