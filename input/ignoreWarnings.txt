@@ -39,11 +39,18 @@ The repeating element has a pattern. The pattern will apply to all the repeats (
 # This will be revisited in the final text version of this IG
 The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
+# This extension is part of the baseline 4.0.1 Observation and not specialized in this IG
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
 # The mapping target is a DICOM value set that is not formally defined in FHIR
 Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov)
 
 # The mapping target is a DICOM value set that is not formally defined in FHIR
-Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov
+Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html'
 
-# This extension is part of the baseline 4.0.1 Observation and not specialized in this IG
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+# Test suppression
+Unable to expand imported value set: Error from http://tx.fhir.org/r4
+
+# Test suppression
+Unable to provide support for code system http://ncit.nci.nih.gov
+
