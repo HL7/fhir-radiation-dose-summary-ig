@@ -43,5 +43,5 @@ The discriminator type 'pattern' is deprecated in R5+. For future compatibility,
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
 # The mapping target is a DICOM value set that is not formally defined in FHIR
-%http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html%
+radiopharmaceutical-rds-vs
 
