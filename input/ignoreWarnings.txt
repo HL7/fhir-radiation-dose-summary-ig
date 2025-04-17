@@ -43,5 +43,10 @@ The discriminator type 'pattern' is deprecated in R5+. For future compatibility,
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
 # The mapping target is a DICOM value set that is not formally defined in FHIR
-radiopharmaceutical-rds-vs
+id = 'isotope-rds-vs'
+id = 'radiopharmaceutical-rds-vs'
+
+# The FHIR DICOM Package is not a standard IG and it fails this validation check
+The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+
 
