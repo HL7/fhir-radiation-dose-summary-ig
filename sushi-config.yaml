@@ -31,7 +31,6 @@ fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.uv.ips: 1.0.0
   fhir.dicom:
-    id: DICOM
     uri: http://fhir.org/packages/fhir.dicom
     version: 2021.4.20210910
 
