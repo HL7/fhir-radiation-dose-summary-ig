@@ -44,3 +44,7 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 
 # The mapping target is a DICOM value set that is not formally defined in FHIR
 "Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov (and Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov)"
+Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov
+
+# The DICOM package does not conform to usual IG structure
+The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
