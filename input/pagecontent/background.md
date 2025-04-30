@@ -2408,7 +2408,7 @@ Dose measurements data:
 
 ### Underlying specifications
 
-This IG is based on [HL7 FHIR](http://hl7.org/fhir/R4/index.html){:target="_blank"} standard, as well as [DICOM](https://www.dicomstandard.org/current){:target="_blank"} standard, and its packaged value sets [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"}. This IG uses also a profile from the specification [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1.1){:target="_blank"}. Implementers of this specification must understand some basic information about the underlying specifications listed above.
+This IG is based on [HL7 FHIR](http://hl7.org/fhir/R4/index.html){:target="_blank"} standard, as well as [DICOM](https://www.dicomstandard.org/current){:target="_blank"} standard, and its packaged value sets [fhir.dicom](http://fhir.org/packages/fhir.dicom){:target="_blank"}. This IG uses also a profile from the specification [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1.1/){:target="_blank"}. Implementers of this specification must understand some basic information about the underlying specifications listed above.
 
 #### FHIR
 This IG uses terminology, notations and design principles that are specific to the HL7 FHIR standard. Before reading the page [architecture and implementation](archi.html), it is important to be familiar with the basic principles of FHIR and how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to review the following prior to reading the rest of this implementation guide.
@@ -2442,9 +2442,9 @@ DICOM® is used as reference standard, as it provides a complete definition of t
 [DICOM®](https://www.dicomstandard.org/current){:target="_blank"}
 
 #### International Patient Summary IG (IPS)
-Pregnancy Status Profile from [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1.1){:target="_blank"} is used within this IG in order to report a possible pregnancy of an irradiated person.
+Pregnancy Status Profile from [International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1.1/){:target="_blank"} is used within this IG in order to report a possible pregnancy of an irradiated person.
 
-[International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1.1){:target="_blank"}
+[International Patient Summary IG (IPS)](https://hl7.org/fhir/uv/ips/STU1.1/){:target="_blank"}
 
 <a name="glossary"></a>
 
@@ -2527,7 +2527,7 @@ The following terms and acronyms are used within the Radiation Dose Summary IG:
 18. IEC, [IEC 61910-1:2014 - Medical electrical equipment - Radiation dose documentation - Part 1: Radiation dose structured reports for radiography and radioscopy](https://webstore.iec.ch/publication/6091){:target="_blank"}
 19. IHE Radiology (RAD), [Technical Framework Volume 1, Cross-enterprise Document Sharing for Imaging (XDS-I.b)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
 20. IHE Radiology (RAD), [Technical Framework Volume 1, Radiation Exposure Monitoring (REM)](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol1.pdf){:target="_blank"}
-21. HL7 International, [International Patient Summary Implementation Guide (IPS)](https://hl7.org/fhir/uv/ips/STU1.1)
+21. HL7 International, [International Patient Summary Implementation Guide (IPS)](https://hl7.org/fhir/uv/ips/STU1.1/)
 22.  AAPM/ACR/HPS, [AAPM/ACR/HPS Joint Statement on Proper Use of Radiation Dose Metric Tracking for Patients Undergoing Medical Imaging Exams](https://www.aapm.org/org/policies/details.asp?id=1533&type=PP){:target="_blank"}
 
 ### IG Dependencies
