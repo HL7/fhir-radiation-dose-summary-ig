@@ -1,7 +1,6 @@
 == suppressed messages ==
-
-# Warning on codeSystem
-Error from server: Unable to provide support for code system http://ncit.nci.nih.gov
+# This code system reflects DICOM concepts. A project is underway to create a DICOM codeset that would include these codes. A THO exemption has been requested in the interim
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # The FHIR DICOM Package is not a standard IG and it fails this validation check
 The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
