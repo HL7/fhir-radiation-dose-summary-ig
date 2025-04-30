@@ -8,9 +8,6 @@ The canonical URL for an Implementation Guide must point directly to the impleme
 # This element is not included in this IG
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 
-# This IG was written against the 1.0 version of IPS. Aligning with current version is planned for final text version.
-The ImplementationGuide uses package hl7.fhir.uv.ips#1.0.0 released on 2020-05-19, but the most recent appropriate version is 1.1.0. This reference is getting old and the more recent version should be considered
-
 # This code value is still used in the related DICOM SR template
 The code '349358000' is valid but is not active
 
