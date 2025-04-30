@@ -10,8 +10,8 @@ Description: "List of Radipharmaceuticals. Value Set defined by DICOM Standard: 
 * ^extension[0].valueCode = #ii
 * ^experimental = false
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html
-* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4021.html
+* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html|2025.2.20250411
+* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4021.html|2025.2.20250411
 
 ValueSet: IsotopesVS
 Id: isotope-rds-vs
@@ -21,5 +21,5 @@ Description: "List for Isotopes in radiopharmaceuticals. Value Set defined by DI
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #ii
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
-* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html
-* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html
+* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html|2025.2.20250411
+* include codes from valueset http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_4020.html|2025.2.20250411
