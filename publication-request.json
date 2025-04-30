@@ -4,7 +4,7 @@
   "path" : "http://hl7.org/fhir/uv/radiation-dose-summary/STU1",
   "mode": "milestone",
   "status" : "trial-use",
-  "sequence" : "STU1",
+  "sequence" : "STU 1",
   "desc" : "The STU 1 publication for the Radiation Dose Summary for Diagnostic Procedures on FHIR Implementation Guide",
   "first" : false
 }
