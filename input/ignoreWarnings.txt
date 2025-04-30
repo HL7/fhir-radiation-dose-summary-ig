@@ -32,3 +32,7 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 
 # The DICOM package does not conform to usual IG structure
 The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+
+# The base valueset is a DICOM valuset and contains codes that cannot be expanded by the FHIR IG builder at present
+%Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html'%
+%Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html'
