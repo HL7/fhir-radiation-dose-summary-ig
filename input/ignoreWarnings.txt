@@ -6,12 +6,6 @@ Error from server: Unable to provide support for code system http://ncit.nci.nih
 # The FHIR DICOM Package is not a standard IG and it fails this validation check
 The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 
-# The DICOM value type codes only make sense in the context of this IG.
-Reference to draft CodeSystem http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type|0.1.0
-
-# The DICOM value type codes only make sense in the context of this IG.
-Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-
 # This element is not included in this IG
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 
@@ -27,12 +21,6 @@ URL value 'urn:pid:ipdauth1' does not resolve
 # This System is used in an example and does not need to be defined in FHIR terminology
 URL value 'urn:prid:ipractauth1' does not resolve
 
-# The mapping target is a DICOM value set that is not formally defined in FHIR
-URL value 'http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.4.11.html' does not resolve
-
-# The mapping target is a DICOM value set that is not formally defined in FHIR
-URL value 'http://dicom.nema.org/medical/Dicom/2016b/output/chtml/part03/sect_C.7.5.html' does not resolve
-
 # This repeating is intentional
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 
@@ -41,10 +29,6 @@ The discriminator type 'pattern' is deprecated in R5+. For future compatibility,
 
 # This extension is part of the baseline 4.0.1 Observation and not specialized in this IG
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
-
-# The mapping target is a DICOM value set that is not formally defined in FHIR
-%Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov%
-%Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_25.html': Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system http://ncit.nci.nih.gov%
 
 # The DICOM package does not conform to usual IG structure
 The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
