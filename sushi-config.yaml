@@ -29,11 +29,11 @@ jurisdiction: "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.uv.ips: 1.0.0
+  hl7.fhir.uv.ips: 1.1.0
   fhir.dicom:
     uri: http://fhir.org/packages/fhir.dicom
-    version: 2021.4.20210910
-
+    version: 2025.2.20250411
+    
 parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: true
