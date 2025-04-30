@@ -34,7 +34,7 @@ Description:    "Modality profiling as a Device resource"
 * manufacturer ^short = "The manufacturer of the modality, related to tag(0008,0070) manufacturer"
 * serialNumber ^short = "The serial number of the modality, which is the Device Serial Number"
 * type 1..1 MS
-* type from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (required)
+* type from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html|2025.2.20250411 (required)
 * type ^short = "Describes the main modality type (CT, MG, etc.)"
 * version ^short = "Describes the Software Versions of the device, related to tag(0018,1020) Software Versions"
 
