@@ -1,8 +1,8 @@
 // Define a rule set for commonly used rules for definition resources using other Sushi features
 RuleSet: RDSStructureDefinitionContent
-* ^status = #draft      // draft until final published
-* ^experimental = true  // true until ready for pilot, then false
-* ^version = "0.1.0"    // Follow IG Versioning rules
+* ^status = #active   // draft until final published
+* ^experimental = false  // true until ready for pilot, then false
+* ^version = "1.0.0"    // Follow IG Versioning rules
 * ^publisher = "HL7 International"
 * ^contact[0].name = "HL7 International / Imaging Integration"
 * ^contact[0].telecom[0].system = #url
@@ -16,3 +16,5 @@ RuleSet: RDSStructureDefinitionContent
 * ^jurisdiction.coding =  http://unstats.un.org/unsd/methods/m49/m49.htm#001
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[0].valueCode = #ii
+* ^extension[1].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[1].valueInteger = 2

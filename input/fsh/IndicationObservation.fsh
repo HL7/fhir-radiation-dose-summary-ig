@@ -1,4 +1,4 @@
-Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
+Alias: DCM = http://dicom.nema.org/resources/ontology/DCM|2025.2.20250411
 
 Profile:        IndicationObservation
 Parent:         Observation
@@ -16,7 +16,7 @@ Description:    "Indication observation related to the radiation administration"
 * subject 1..1 MS
 * subject ^short = "Related Patient"
 
-* value[x] 1..1 MS
+* value[x] 1..1
 * value[x] only CodeableConcept or string
 * value[x] ^short = "Indications description"
 

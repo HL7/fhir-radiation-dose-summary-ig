@@ -1,5 +1,5 @@
 Alias: LOINC =  http://loinc.org
-Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
+Alias: DCM = http://dicom.nema.org/resources/ontology/DCM|2025.2.20250411
 
 
 Profile:        RadiationSummaryReport

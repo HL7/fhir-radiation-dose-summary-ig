@@ -5,10 +5,10 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.radiation-dose-summary
 canonical: http://hl7.org/fhir/uv/radiation-dose-summary
-version: 0.1.0
+version: 1.0.0
 name: RadiationDoseSummaryForDiagnosticProceduresOnFHIR
 title: Radiation Dose Summary for Diagnostic Procedures on FHIR
-status: draft
+status: active
 publisher: 
   - name: HL7 International / Imaging Integration
   - url: http://www.hl7.org/Special/committees/imagemgt
@@ -29,21 +29,24 @@ jurisdiction: "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.uv.ips: 1.0.0
+  hl7.fhir.uv.ips: 1.1.0
   fhir.dicom:
     uri: http://fhir.org/packages/fhir.dicom
-    version: 2021.4.20210910
-
+    version: 2025.2.20250411
+    
 parameters:
   show-inherited-invariants: false
-  generate-turtle: false
   usage-stats-opt-out: true
 copyrightYear: 2020+
-releaseLabel: ci-build
+releaseLabel: STU 1
 
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: ii
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: "trial-use"
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
     
 pages:
   index.md:

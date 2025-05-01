@@ -1,4 +1,4 @@
-Alias: DCM = http://dicom.nema.org/resources/ontology/DCM
+Alias: DCM = http://dicom.nema.org/resources/ontology/DCM|2025.2.20250411
 Alias: SCT = http://snomed.info/sct
 Alias: LOINC =  http://loinc.org
 Alias: DCMIdType = http://hl7.org/fhir/uv/radiation-dose-summary/CodeSystem/dicom-identifier-type
@@ -88,10 +88,10 @@ Description:    "General Structure describing a summary of an irradiation act"
 * performer ^slicing.rules = #closed
 * performer ^slicing.description = "Description of the related performer" 
 
-* performer contains irradiationAutorizingPerson 1..1 MS
-* performer[irradiationAutorizingPerson] only Reference(Practitioner)
+* performer contains irradiationAuthorizingPerson 1..1 MS
+* performer[irradiationAuthorizingPerson] only Reference(Practitioner)
 * performer 1..1 MS
-* performer[irradiationAutorizingPerson] ^short = "Related irradiation authorizing person"
+* performer[irradiationAuthorizingPerson] ^short = "Related irradiation authorizing person"
 
 // Dose measurements - Procedure Level
 * component 0..*

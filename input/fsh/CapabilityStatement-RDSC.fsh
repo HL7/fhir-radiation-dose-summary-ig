@@ -12,7 +12,7 @@ Description: "Capability Statement needed to be supported by a RDSC actor."
 * format[0] = #xml
 * format[1] = #json
 * fhirVersion = #4.0.1
-* status = #draft 
+* status = #active 
 
 * implementationGuide = "http://hl7.org/fhir/uv/radiation-dose-summary/ImplementationGuide/hl7.fhir.uv.radiation-dose-summary"
 
