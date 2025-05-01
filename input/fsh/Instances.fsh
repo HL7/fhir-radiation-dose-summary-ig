@@ -23,8 +23,8 @@ Description: "Radiation Dose Summary example 1"
 * subject.display = "Pascale Dupont"
 * focus = Reference(ImagingStudy/342)
 * effectiveDateTime = "2015-01-01T22:23:30.000Z"
-* performer = Reference(Practitioner/33)
-* performer.display = "John Moore"
+* performer[irradiationAuthorizingPerson] = Reference(Practitioner/33)
+* performer[irradiationAuthorizingPerson].display = "John Moore"
 * valueString = "CT Dose Length Product Total = 203.12 mGy.cm"
 * device = Reference(Device/539)
 * device.display = "CT01"
@@ -76,14 +76,14 @@ InstanceOf: ModalityDevice
 Usage: #example
 Description: "ModalityDevice for example 1"
 * id = "539"
-* identifier[0].type = DCMIdType#application-entity "Application Entity"
-* identifier[0].value = "CT01" 
+* identifier[aeTitle].type = DCMIdType#application-entity "Application Entity"
+* identifier[aeTitle].value = "CT01"
 * manufacturer = "Manufacturer-1"
 * serialNumber = "5445A343"
-* deviceName[0].type = #manufacturer-name
-* deviceName[0].name = "Manufacturer-1"
-* deviceName[1].type = #model-name
-* deviceName[1].name = "Manufacturer-ModelName-1"
+* deviceName[manufacturer].type = #manufacturer-name
+* deviceName[manufacturer].name = "Manufacturer-1"
+* deviceName[manufacturerModelName].type = #model-name
+* deviceName[manufacturerModelName].name = "Manufacturer-ModelName-1"
 * type.coding = DCM#CT "Computed Tomography"
 
 
@@ -157,8 +157,8 @@ Description: "Radiation Dose Summary example 2"
 * subject.display = "Pascale Dupont"
 * focus = Reference(ImagingStudy/344)
 * effectiveDateTime = "2019-01-23T12:00:30.000Z"
-* performer = Reference(Practitioner/33)
-* performer.display = "John Moore"
+* performer[irradiationAuthorizingPerson] = Reference(Practitioner/33)
+* performer[irradiationAuthorizingPerson].display = "John Moore"
 * valueString = "Dose (RP) Total = 212 mGy, DAP Total = 13639 mGy.cm2, Fluoro DAP Total = 4523 mGy.cm2, Total Fluoro Time = 450s"
 * device = Reference(Device/12)
 * device.display = "XA01"
@@ -196,14 +196,14 @@ InstanceOf: ModalityDevice
 Usage: #example
 Description: "ModalityDevice for example 2"
 * id = "12"
-* identifier[0].type = DCMIdType#application-entity "Application Entity"
-* identifier[0].value = "XA01" 
+* identifier[aeTitle].type = DCMIdType#application-entity "Application Entity"
+* identifier[aeTitle].value = "XA01"
 * manufacturer = "Manufacturer-1"
 * serialNumber = "767ER"
-* deviceName[0].type = #manufacturer-name
-* deviceName[0].name = "Manufacturer-1"
-* deviceName[1].type = #model-name
-* deviceName[1].name = "Manufacturer-ModelName-1"
+* deviceName[manufacturer].type = #manufacturer-name
+* deviceName[manufacturer].name = "Manufacturer-1"
+* deviceName[manufacturerModelName].type = #model-name
+* deviceName[manufacturerModelName].name = "Manufacturer-ModelName-1"
 * type.coding = DCM#XA "X-Ray Angiography"
 
 
@@ -223,8 +223,8 @@ Description: "NM Radiation Dose Summary example 3"
 * subject.display = "Pascale Dupont"
 * focus = Reference(ImagingStudy/22)
 * effectiveDateTime = "2019-01-23T12:00:30.000Z"
-* performer = Reference(Practitioner/33)
-* performer.display = "John Moore"
+* performer[irradiationAuthorizingPerson] = Reference(Practitioner/33)
+* performer[irradiationAuthorizingPerson].display = "John Moore"
 * valueString = "Activity = 154 MBq (123-I)"
 * component[0].code = DCM#121058 "Procedure reported"
 * component[0].valueCodeableConcept.coding = DCM#113502 "Radiopharmaceutical Administration"
