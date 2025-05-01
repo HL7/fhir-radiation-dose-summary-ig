@@ -1,4 +1,4 @@
-Alias: DCM = http://dicom.nema.org/resources/ontology/DCM|2021.4.20210910
+Alias: DCM = http://dicom.nema.org/resources/ontology/DCM|2025.2.20250411
 
 Profile:        IndicationObservation
 Parent:         Observation
