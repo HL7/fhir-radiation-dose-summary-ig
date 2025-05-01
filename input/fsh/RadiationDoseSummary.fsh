@@ -88,10 +88,10 @@ Description:    "General Structure describing a summary of an irradiation act"
 * performer ^slicing.rules = #closed
 * performer ^slicing.description = "Description of the related performer" 
 
-* performer contains irradiationAutorizingPerson 1..1 MS
-* performer[irradiationAutorizingPerson] only Reference(Practitioner)
+* performer contains irradiationAuthorizingPerson 1..1 MS
+* performer[irradiationAuthorizingPerson] only Reference(Practitioner)
 * performer 1..1 MS
-* performer[irradiationAutorizingPerson] ^short = "Related irradiation authorizing person"
+* performer[irradiationAuthorizingPerson] ^short = "Related irradiation authorizing person"
 
 // Dose measurements - Procedure Level
 * component 0..*
