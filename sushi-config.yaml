@@ -32,7 +32,7 @@ dependencies:
   hl7.fhir.uv.ips: 2.0.0
   fhir.dicom:
     uri: http://fhir.org/packages/fhir.dicom
-    version: 2025.3.20250714
+    version: 2025.2.20250411
     
 parameters:
   show-inherited-invariants: false
