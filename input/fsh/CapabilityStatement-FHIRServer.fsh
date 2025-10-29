@@ -54,6 +54,7 @@ Description: "Capability Statement needed to be supported by a FHIR Server in or
 
 // Practitioner resource support
 * rest[0].resource[1].type = #Practitioner
+* rest[0].resource[1].documentation = "Search and Read of practitioner shall be supported." 
 * rest[0].resource[1].profile = ""
 * rest[0].resource[1].interaction[0].code = #create
 * rest[0].resource[1].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -82,6 +83,7 @@ Description: "Capability Statement needed to be supported by a FHIR Server in or
 
 // ImagingStudy resource support
 * rest[0].resource[2].type = #ImagingStudy
+* rest[0].resource[2].documentation = "Search and Read of ImagingStudy shall be supported." 
 * rest[0].resource[2].profile = ""
 * rest[0].resource[2].interaction[0].code = #create
 * rest[0].resource[2].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -105,6 +107,7 @@ Description: "Capability Statement needed to be supported by a FHIR Server in or
 
 // Device resource support
 * rest[0].resource[3].type = #Device
+* rest[0].resource[3].documentation = "Search and Read of Device shall be supported." 
 * rest[0].resource[3].profile = ""
 * rest[0].resource[3].interaction[0].code = #create
 * rest[0].resource[3].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -133,6 +136,7 @@ Description: "Capability Statement needed to be supported by a FHIR Server in or
 
 // Radiation Summary resource support
 * rest[0].resource[4].type = #Observation
+* rest[0].resource[4].documentation = "Create, Search and read Radiation Summary observations shall be supported." 
 * rest[0].resource[4].interaction[0].code = #create
 * rest[0].resource[4].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[4].interaction[0].extension.valueCode = #SHALL

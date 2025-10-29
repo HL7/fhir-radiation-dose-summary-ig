@@ -53,6 +53,7 @@ Description: "Capability Statement needed to be supported by a RDSC actor."
 
 // Radiation Summary resource support
 * rest[0].resource[4].type = #Observation
+* rest[0].resource[4].documentation = "Search and read Radiation Summary observations shall be supported." 
 * rest[0].resource[4].interaction[0].code = #read
 * rest[0].resource[4].interaction[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[4].interaction[0].extension.valueCode = #SHALL
