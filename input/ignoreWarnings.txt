@@ -30,3 +30,6 @@ The canonical URL http://fhir.org/packages/fhir.dicom doesn't point to an actual
 # These URL values are used in examples and do not need to be defined in FHIR terminology
 No definition could be found for URL value 'urn:pid:ipdauth1'
 No definition could be found for URL value 'urn:prid:ipractauth1'
+
+# Ignoring conformance language message for STU1
+The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause

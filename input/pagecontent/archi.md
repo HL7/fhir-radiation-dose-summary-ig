@@ -57,7 +57,7 @@ Generally, this actor can be implemented within a Dose Management System.
 
 The RDSP should implement the following CapabilityStatement: [RDSP capability statement](CapabilityStatement-RDSP.html).
 
-The RDSP actor SHALL adhere to the security considerations in the [security](archi.html#security-consideration) section. Sharing PHI shall comply with the local security requirements of the deploying facility.
+The RDSP actor SHALL adhere to the security considerations in the [security](archi.html#security-consideration) section. Sharing PHI SHALL comply with the local security requirements of the deploying facility.
 
 #### FHIR Server
 
@@ -88,7 +88,7 @@ The FHIR Server SHALL follow the different security considerations mentioned in 
 
 The Radiation Dose Summary Consumer (RDSC) actor is responsible for retrieving the Radiation Dose Summary observation (e.g., a RIS or EHR may enhance the final radiology report with radiation information). 
 
-Specialized expertise is required to understand  radiation dose data. The interpretation of the radiation information collected by the Radiation Dose Summary Consumer shall follow the local policies and jurisdictional requirements to avoid misuse.
+Specialized expertise is required to understand  radiation dose data. The interpretation of the radiation information collected by the Radiation Dose Summary Consumer SHALL follow the local policies and jurisdictional requirements to avoid misuse.
 
 The RDSC actor can implement the following CapabilityStatement: [RDSC capability statement](CapabilityStatement-RDSC.html).
 
@@ -186,7 +186,7 @@ Many profiles defined in this IG are using DICOM IDs and UIDs as identifiers for
 | [Radiation Dose Summary](StructureDefinition-radiation-dose-summary.html) | basedOn.identifier | | ACSN | [HL7 IdentifierType](http://terminology.hl7.org/CodeSystem/v2-0203){:target="_blank"} | Accession ID | (0008,0050) Accession Number |
 {:.table-striped .table-bordered}
 
-Following the notes within the [ImagingStudy](http://hl7.org/fhir/imagingstudy.html#notes) resource - <i>When encoding a DICOM UID in an Identifier datatype, use the Identifier system of "urn:dicom:uid"</i> - the identifiers related to DICOM tags having the Value Representation (VR) of type UID, shall have the <code>type.system=urn:dicom:uid</code>.
+Following the notes within the [ImagingStudy](http://hl7.org/fhir/imagingstudy.html#notes) resource - <i>When encoding a DICOM UID in an Identifier datatype, use the Identifier system of "urn:dicom:uid"</i> - the identifiers related to DICOM tags having the Value Representation (VR) of type UID, SHALL have the <code>type.system=urn:dicom:uid</code>.
 
 Here some examples :
 * Irradiation Event UID : 
