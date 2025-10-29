@@ -18,7 +18,7 @@
 	<artifact deprecated="true" id="StructureDefinition/ct-radiation-dose-summary" key="StructureDefinition-ct-radiation-dose-summary" name="CT Radiation Dose Summary"/>
 	<artifact deprecated="true" id="Observation/393" key="Observation-CTIrradiationEventSummary-393" name="CTIrradiationEventSummary-393"/>
 	<artifact deprecated="true" id="Observation/839" key="Observation-CTIrradiationEventSummary-839" name="CTIrradiationEventSummary-839"/>
-	<artifact id="CodeSystem/dicom-identifier-type" key="CodeSystem-dicom-identifier-type" name="DICOM Identifier Type"/>
+	<artifact deprecated="true" id="CodeSystem/dicom-identifier-type" key="CodeSystem-dicom-identifier-type" name="DICOM Identifier Type"/>
 	<artifact id="CapabilityStatement/FHIRServer-RDSC" key="CapabilityStatement-FHIRServer-RDSC" name="FHIR Server supporting FHIR operations in order to interact with RDSC Actor"/>
 	<artifact id="CapabilityStatement/FHIRServer" key="CapabilityStatement-FHIRServer" name="FHIR Server supporting FHIR operations in order to interact with RDSC and RDSP Actors"/>
 	<artifact id="CapabilityStatement/FHIRServer-RDSP" key="CapabilityStatement-FHIRServer-RDSP" name="FHIR Server supporting FHIR operations in order to interact with RDSP Actor"/>
