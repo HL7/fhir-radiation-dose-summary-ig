@@ -8,15 +8,6 @@ The canonical URL for an Implementation Guide must point directly to the impleme
 # This element is not included in this IG
 An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 
-# This code value is still used in the related DICOM SR template
-The code '349358000' is valid but is not active
-
-# This System is used in an example and does not need to be defined in FHIR terminology
-URL value 'urn:pid:ipdauth1' does not resolve
-
-# This System is used in an example and does not need to be defined in FHIR terminology
-URL value 'urn:prid:ipractauth1' does not resolve
-
 # This repeating is intentional
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 
@@ -28,6 +19,7 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 
 # The DICOM package does not conform to usual IG structure
 The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+The canonical URL http://fhir.org/packages/fhir.dicom doesn't point to an actual ImplementationGuide resource
 
 # The base valueset is a DICOM valuset (CID_18) and contains codes that cannot be expanded by the FHIR IG builder at present
 %Unable to expand included value set 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_18.html'%
