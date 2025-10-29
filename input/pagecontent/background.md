@@ -7,6 +7,10 @@ This chapter describes the scope of this guide, provides background information 
 5. [Underlying specifications](#underlying-specs) - Description of the underlying specifications and resources.
 6. [Glossary](#glossary) - Glossary of terms used in this IG
 7. [References](#references) - Useful references
+8. [IG Dependencies](#ig-dependencies) - Dependencies on other IGs
+9. [Global Profiles](#global-profiles) - Global profiles used in this IG
+10. [Copyrights](#copyrights) - Copyrights and acknowledgments
+11. [Expansion Parameters](#expansion-parameters) - Expansion parameters used in ValueSets
 
 <a name="problem"></a>
 
@@ -2534,14 +2538,18 @@ The following terms and acronyms are used within the Radiation Dose Summary IG:
 
 This IG Contains the following dependencies on other IGs.
 
-{% include dependency-table-short.xhtml %}
+{% include dependency-table-short-en.xhtml %}
 
 ### Global Profiles
 
-{% include globals-table.xhtml %}
+{% include globals-table-en.xhtml %}
 
 ### Copyrights
 
-{% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
+{% capture ip-statement %}{% include ip-statements-en.xhtml %}{% endcapture %}
 
 {{ ip-statement | remove: '<p>' | remove: '</p>'}}
+
+### Expansion Parameters
+
+{% include expansion-params-en.xhtml %}
