@@ -33,3 +33,7 @@ No definition could be found for URL value 'urn:prid:ipractauth1'
 
 # Use of SHALL appropriate for architectural requirements and capability statements
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'The RDSP actor SHALL adhere to the security considerations in the security section. Sharing PHI SHALL comply with the local security requirements of the deploying facility.'
+
+# This will be revisited in the final text version of this IG
+The concept '349358000' has a status of inactive and its use should be reviewed%
+None of the codings provided are in the value set 'Pregnancy Status - IPS' (http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips|2.0.0), and a coding is recommended to come from this value set (codes = http://loinc.org#LA26683-5)%
